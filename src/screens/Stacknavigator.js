@@ -4,11 +4,19 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 import Home from './Home';
 import Login from './Login';
+import Welcome from './Welcome';
+import Register from './Register';
 
 const AppNavigator = createStackNavigator(
   {
     Home: {
       screen: Home,
+      navigationOptions: () => ({
+        header: null,
+      }),
+    },
+    Welcome: {
+      screen: Welcome,
       navigationOptions: () => ({
         header: null,
       }),
@@ -19,9 +27,15 @@ const AppNavigator = createStackNavigator(
         header: null,
       }),
     },
+    Register: {
+      screen: Register,
+      navigationOptions: () => ({
+        header: null,
+      }),
+    },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
   },
 );
 
