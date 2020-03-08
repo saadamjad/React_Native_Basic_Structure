@@ -11,13 +11,144 @@ import {
   I18nManager,
   ScrollView,
 } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
+import Entypo from 'react-native-vector-icons/Entypo';
+import {SearchBar} from 'react-native-elements';
 export default class Login extends React.Component {
   constructor() {
     super();
-    this.state = {};
-  }
+    this.state = {
+      search: '',
+      iconColour: false,
+      Category: [
+        {
+          name: 'bikes',
+          Image: require('../assets/images/facebook.png'),
+        },
+        {
+          name: 'mobile',
+          Image: require('../assets/images/facebook.png'),
+        },
+        {
+          name: 'Home Appliencce',
+          Image: require('../assets/images/facebook.png'),
+        },
+        {
+          name: 'fright',
+          Image: require('../assets/images/facebook.png'),
+        },
+        {
+          name: 'Washing machine ',
+          Image: require('../assets/images/facebook.png'),
+        },
+        {
+          name: 'bikes',
+          Image: require('../assets/images/facebook.png'),
+        },
+      ],
+      bikesArray: [
+        {
+          name: 'honda bike ',
+          engineCapacity: '12 cc',
+          price: ' 11,500 ',
 
+          Image: require('../assets/images/21.png'),
+        },
+        {
+          name: ' unique  bikes',
+          engineCapacity: '12 cc',
+          price: ' 18,500 ',
+
+          Image: require('../assets/images/22.png'),
+        },
+        {
+          name: ' super star bikes',
+          engineCapacity: '12 cc',
+          price: ' 81,500 ',
+
+          Image: require('../assets/images/21.png'),
+        },
+        {
+          name: ' honda  bikes',
+          engineCapacity: '12 cc',
+          price: ' 10,500 ',
+
+          Image: require('../assets/images/scuty.png'),
+        },
+        // {
+        //   name: 'bikes',
+        //   engineCapacity:'12 cc',
+        //   price:' 101 ,500 ',
+
+        //   Image: require('../assets/images/facebook.png'),
+        // },
+      ],
+      MobileArray: [
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/mobilephone.jpg'),
+        },
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/phone.png'),
+        },
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/phone.png'),
+        },
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/mobilephone.jpg'),
+        },
+      ],
+      WachingMachine: [
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/mobilephone.jpg'),
+        },
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/phone.png'),
+        },
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/phone.png'),
+        },
+        {
+          name: 'Infenix ',
+          engineCapacity: '12 Gb / 250 hz / sd card',
+          price: ' 11,500 ',
+
+          Image: require('../assets/images/mobilephone.jpg'),
+        },
+      ],
+    };
+  }
+  updateSearch = search => {
+    this.setState({search});
+  };
   render() {
     return (
       <View
@@ -25,24 +156,765 @@ export default class Login extends React.Component {
           flex: 1,
           backgroundColor: 'white',
           height: 100,
-          // justifyContent: 'center',
         }}>
-        <Text style={{fontSize: 25, textAlign: 'center'}}>Home</Text>
-        <TouchableOpacity
-          style={{
-            backgroundColor: 'red',
-            height: 50,
-            position: 'absolute',
-            bottom: 20,
-            width: '90%',
-            alignSelf: 'center',
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: 10,
-          }}
-          onPress={() => this.props.navigation.navigate('Login')}>
-          <Text style={{fontSize: 20, color: 'white'}}> Press me </Text>
-        </TouchableOpacity>
+        <ScrollView
+          contentContainerStyle={{
+            flexGrow: 1,
+            backgroundColor: '#f5f5f5',
+            paddingBottom: 50,
+          }}>
+          <View
+            style={{
+              height: 50,
+              width: '100%',
+              // borderWidth: 1,
+              backgroundColor: 'red',
+              flexDirection: 'row',
+              paddingLeft: 20,
+              alignItems: 'center',
+            }}>
+            <FontAwesome name={'phone'} size={20} color="#74cbff" />
+            <Text
+              style={{marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              {' '}
+              0300- 53193358{' '}
+            </Text>
+          </View>
+
+          <View
+            style={{
+              height: 48,
+              // backgroundColor: this.props.reduxState.theme.searchBarColor,
+              width: '90%',
+              alignSelf: 'center',
+              marginVertical: 10,
+              // borderWidth: 1,
+              borderRadius: 10,
+
+              alignItems: 'center',
+              overflow: 'hidden',
+            }}>
+            <SearchBar
+              placeholder=" search what you are looking fo "
+              // onChangeText={this.updateSearch}
+              value={this.state.search}
+              onChangeText={text => this.setState({search: text})}
+              containerStyle={{
+                // backgroundColor: this.props.reduxState.theme.searchBarColor,
+                borderTopWidth: 0,
+                padding: 0,
+
+                // borderBottomWidth: 1,
+
+                width: '100%',
+                alignSelf: 'center',
+
+                borderRadius: 10,
+              }}
+              inputContainerStyle={{
+                // backgroundColor: this.props.reduxState.theme.searchBarColor,
+                height: '100%',
+              }}
+              inputStyle={{
+                borderWidth: 0,
+                borderWidth: 0,
+                // backgroundColor: 'red',
+                fontSize: 13,
+              }}
+              style={{borderWidth: 1}}
+              lightTheme={true}
+            />
+          </View>
+
+          <View
+            style={{
+              width: '70%',
+              alignSelf: 'center',
+              borderBottomWidth: 4,
+              height: 50,
+              borderRadius: 10,
+              borderColor: '#dadada',
+            }}>
+            <View
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                position: 'absolute',
+                bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: 'red',
+              }}></View>
+            {/* <Text
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                borderColor: 'red',
+                textAlign: 'center',
+                height: 50,
+                borderRadius: 15,
+                fontSize: 20,
+                fontWeight: '600',
+              }}>
+              {' '}
+              Category
+            </Text> */}
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+            {this.state.Category.map((item, i) => {
+              return (
+                <View
+                  style={{
+                    height: 90,
+                    width: 90,
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginVertical: 5,
+                    marginHorizontal: 10,
+                    borderRadius: 90,
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}>
+                  <Image
+                    source={item.Image}
+                    style={{height: '100%', width: '100%'}}
+                    resizeMode="contain"
+                  />
+                </View>
+              );
+            })}
+          </View>
+
+          <View
+            style={{
+              width: '100%',
+              height: 240,
+              elevation: 0,
+              // borderWidth: ,
+              borderColor: '#f1f1f1',
+              // borderWidth: 1,
+              marginVertical: 20,
+            }}>
+            <Image
+              source={require('../assets/images/aa.png')}
+              resizeMode="cover"
+              style={{height: '100%', width: '100%'}}
+            />
+          </View>
+          <View style={{borderWidth: 0, marginVertical: 10}}>
+            <Text
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                // borderBottomWidth: 4,
+                // borderColor: 'red',
+                textAlign: 'center',
+
+                borderRadius: 15,
+                fontSize: 20,
+                fontWeight: '600',
+              }}>
+              Bike
+            </Text>
+            <View
+              style={{
+                width: '60%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                // borderWidth: 1,
+                marginVertical: 5,
+
+                // position: 'absolute',
+                // bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: '#dadada',
+              }}></View>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('')}>
+              <Text
+                style={{
+                  // width: '40%',
+                  alignSelf: 'center',
+                  // borderBottomWidth: 4,
+                  // borderColor: 'red',
+                  textAlign: 'center',
+                  // height: 50,
+                  borderRadius: 15,
+                  fontSize: 15,
+
+                  color: 'red',
+                  fontWeight: '600',
+                }}>
+                View Brands
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+            {this.state.bikesArray.map((item, i) => {
+              return (
+                <View
+                  style={{
+                    height: 270,
+                    width: '45%',
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginVertical: 10,
+                    marginHorizontal: 5,
+                    borderRadius: 10,
+
+                    overflow: 'hidden',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}>
+                  <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
+                    <Image
+                      source={item.Image}
+                      style={{height: '100%', width: '100%'}}
+                      resizeMode="contain"
+                    />
+                    <View
+                      style={{
+                        height: 70,
+                        width: 40,
+                        // borderWidth: 1,
+                        position: 'absolute',
+                        left: 0,
+                        shadowColor: '#000',
+                        shadowOffset: {
+                          width: 0,
+                          height: 2,
+                        },
+                        shadowOpacity: 0.25,
+                        shadowRadius: 3.84,
+
+                        borderColor: '#e2e2e2',
+                        elevation: 7,
+                        backgroundColor: 'white',
+                      }}>
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          backgroundColor: '#c32020',
+
+                          // borderWidth: 1,
+                        }}>
+                        <Entypo name={'eye'} size={20} color="white" />
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          backgroundColor: 'white',
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderTopLeftRadius: 5,
+
+                          // borderWidth: 1,
+                        }}
+                        onPress={() =>
+                          this.setState({iconColour: !this.state.iconColour})
+                        }>
+                        <Entypo
+                          name={'heart-outlined'}
+                          size={20}
+                          color={this.state.iconColour ? 'red' : 'white'}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                  <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
+                    <Text
+                      style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
+                      {item.name}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 15,
+                        color: '#918f8f',
+                        marginLeft: 20,
+                        fontWeight: 'bold',
+                      }}>
+                      {item.engineCapacity}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 8,
+                        marginTop: 10,
+                        color: '#918f8f',
+                        marginLeft: 30,
+                        fontWeight: 'bold',
+                      }}>
+                      only
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: 'red',
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                      }}>
+                      Rs {item.price}{' '}
+                    </Text>
+                  </View>
+                </View>
+              );
+            })}
+          </View>
+
+          <View
+            style={{
+              width: '100%',
+              height: 240,
+              elevation: 0,
+              // borderWidth: ,
+              borderColor: '#f1f1f1',
+              // borderWidth: 1,
+              marginVertical: 20,
+            }}>
+            <Image
+              source={require('../assets/images/cover.jpg')}
+              resizeMode="cover"
+              style={{height: '100%', width: '100%'}}
+            />
+          </View>
+          <View style={{borderWidth: 0, marginVertical: 10}}>
+            <Text
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                // borderBottomWidth: 4,
+                // borderColor: 'red',
+                textAlign: 'center',
+
+                borderRadius: 15,
+                fontSize: 20,
+                fontWeight: '600',
+              }}>
+              Mobile Phones
+            </Text>
+            <View
+              style={{
+                width: '60%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                // borderWidth: 1,
+                marginVertical: 5,
+
+                // position: 'absolute',
+                // bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: '#dadada',
+              }}></View>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('')}>
+              <Text
+                style={{
+                  // width: '40%',
+                  alignSelf: 'center',
+                  // borderBottomWidth: 4,
+                  // borderColor: 'red',
+                  textAlign: 'center',
+                  // height: 50,
+                  borderRadius: 15,
+                  fontSize: 15,
+
+                  color: 'red',
+                  fontWeight: '600',
+                }}>
+                View Brands
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+            {this.state.MobileArray.map((item, i) => {
+              return (
+                <View
+                  style={{
+                    height: 270,
+                    width: '45%',
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginVertical: 10,
+                    marginHorizontal: 5,
+                    borderRadius: 10,
+
+                    overflow: 'hidden',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}>
+                  <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
+                    <Image
+                      source={item.Image}
+                      style={{height: '100%', width: '100%'}}
+                      resizeMode="contain"
+                    />
+                    <View
+                      style={{
+                        height: 70,
+                        width: 40,
+                        // borderWidth: 1,
+                        position: 'absolute',
+                        left: 0,
+                        shadowColor: '#000',
+                        shadowOffset: {
+                          width: 0,
+                          height: 2,
+                        },
+                        shadowOpacity: 0.25,
+                        shadowRadius: 3.84,
+
+                        borderColor: '#e2e2e2',
+                        elevation: 7,
+                        backgroundColor: 'white',
+                      }}>
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          backgroundColor: '#c32020',
+
+                          // borderWidth: 1,
+                        }}>
+                        <Entypo name={'eye'} size={20} color="white" />
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          backgroundColor: 'white',
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderTopLeftRadius: 5,
+
+                          // borderWidth: 1,
+                        }}
+                        onPress={() =>
+                          this.setState({iconColour: !this.state.iconColour})
+                        }>
+                        <Entypo
+                          name={'heart-outlined'}
+                          size={20}
+                          color={this.state.iconColour ? 'red' : 'white'}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                  <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
+                    <Text
+                      style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
+                      {item.name}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 15,
+                        color: '#918f8f',
+                        marginLeft: 20,
+                        fontWeight: 'bold',
+                      }}>
+                      {item.engineCapacity}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 8,
+                        marginTop: 10,
+                        color: '#918f8f',
+                        marginLeft: 30,
+                        fontWeight: 'bold',
+                      }}>
+                      only
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: 'red',
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                      }}>
+                      Rs {item.price}{' '}
+                    </Text>
+                  </View>
+                </View>
+              );
+            })}
+          </View>
+
+          <View
+            style={{
+              width: '100%',
+              height: 240,
+              elevation: 0,
+              // borderWidth: ,
+              borderColor: '#f1f1f1',
+              // borderWidth: 1,
+              marginVertical: 20,
+            }}>
+            <Image
+              source={require('../assets/images/homeappl.jpg')}
+              resizeMode="cover"
+              style={{height: '100%', width: '100%'}}
+            />
+          </View>
+          <View style={{borderWidth: 0, marginVertical: 10}}>
+            <Text
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                // borderBottomWidth: 4,
+                // borderColor: 'red',
+                textAlign: 'center',
+
+                borderRadius: 15,
+                fontSize: 20,
+                fontWeight: '600',
+              }}>
+              Washing Machines
+            </Text>
+            <View
+              style={{
+                width: '60%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                // borderWidth: 1,
+                marginVertical: 5,
+
+                // position: 'absolute',
+                // bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: '#dadada',
+              }}></View>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('')}>
+              <Text
+                style={{
+                  // width: '40%',
+                  alignSelf: 'center',
+                  // borderBottomWidth: 4,
+                  // borderColor: 'red',
+                  textAlign: 'center',
+                  // height: 50,
+                  borderRadius: 15,
+                  fontSize: 15,
+
+                  color: 'red',
+                  fontWeight: '600',
+                }}>
+                View Brands
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+            {this.state.WachingMachine.map((item, i) => {
+              return (
+                <View
+                  style={{
+                    height: 270,
+                    width: '45%',
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginVertical: 10,
+                    marginHorizontal: 5,
+                    borderRadius: 10,
+
+                    overflow: 'hidden',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}>
+                  <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
+                    <Image
+                      source={item.Image}
+                      style={{height: '100%', width: '100%'}}
+                      resizeMode="contain"
+                    />
+                    <View
+                      style={{
+                        height: 70,
+                        width: 40,
+                        // borderWidth: 1,
+                        position: 'absolute',
+                        left: 0,
+                        shadowColor: '#000',
+                        shadowOffset: {
+                          width: 0,
+                          height: 2,
+                        },
+                        shadowOpacity: 0.25,
+                        shadowRadius: 3.84,
+
+                        borderColor: '#e2e2e2',
+                        elevation: 7,
+                        backgroundColor: 'white',
+                      }}>
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          backgroundColor: '#c32020',
+
+                          // borderWidth: 1,
+                        }}>
+                        <Entypo name={'eye'} size={20} color="white" />
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          backgroundColor: 'white',
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderTopLeftRadius: 5,
+
+                          // borderWidth: 1,
+                        }}
+                        onPress={() =>
+                          this.setState({iconColour: !this.state.iconColour})
+                        }>
+                        <Entypo
+                          name={'heart-outlined'}
+                          size={20}
+                          color={this.state.iconColour ? 'red' : 'white'}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                  <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
+                    <Text
+                      style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
+                      {item.name}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 15,
+                        color: '#918f8f',
+                        marginLeft: 20,
+                        fontWeight: 'bold',
+                      }}>
+                      {item.engineCapacity}
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 8,
+                        marginTop: 10,
+                        color: '#918f8f',
+                        marginLeft: 30,
+                        fontWeight: 'bold',
+                      }}>
+                      only
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: 'red',
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                      }}>
+                      Rs {item.price}{' '}
+                    </Text>
+                  </View>
+                </View>
+              );
+            })}
+          </View>
+        </ScrollView>
       </View>
     );
   }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\skluh\\OneDrive\\Desktop\\saad React_native\\React_Native_Basic_Structure\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "E:\\PersonalWork\\React_Native_Basic_Structure\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\skluh\\.gradle\\caches\\transforms-2\\files-2.1\\296d1bc7fb1feb1e72e45b82b9d7ce70\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Saad amjad\\.gradle\\caches\\transforms-2\\files-2.1\\ddcdecf56cb9041facfcfe251fa2a2c9\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\skluh\\.gradle\\caches\\transforms-2\\files-2.1\\510eb15c14df7c3b3f30d59a2a1d324b\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\Saad amjad\\.gradle\\caches\\transforms-2\\files-2.1\\765a6e3abc53a5840921508da147575b\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -16,8 +16,8 @@ import {
   Alert,
 } from 'react-native';
 
-import {Entypo} from 'react-native-vector-icons/Entypo';
-
+// import {FontAwesome} from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {NavigationActions, StackActions} from 'react-navigation';
 
 export default class registration extends React.PureComponent {
@@ -31,6 +31,9 @@ export default class registration extends React.PureComponent {
   };
   handleTextChange = newText => this.setState({username: newText});
   handleTextChange1 = newText => this.setState({password: newText});
+  Login() {
+    this.props.navigation.navigate('Register');
+  }
   render() {
     return (
       <View style={styles.parent}>
@@ -47,7 +50,7 @@ export default class registration extends React.PureComponent {
             borderRadius: 10,
             // paddingLeft: 15,
             // paddingRight: 15,
-            justifyContent: 'center',
+            // justifyContent: 'center',
             alignItems: 'center',
             width: '90%',
             alignSelf: 'center',
@@ -63,9 +66,22 @@ export default class registration extends React.PureComponent {
 
             elevation: 5,
           }}>
+          <Text style={{color: 'red', fontSize: 19, paddingVertical: 10}}>
+            {' '}
+            Login{' '}
+          </Text>
           <View style={styles.et1}>
             <View style={styles.tocentertext}>
-              <Text style={{marginRight: 20}}>+92</Text>
+              <View
+                style={{
+                  width: '20%',
+                  // borderWidth: 1,
+                  height: '100%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Text style={{marginRight: 20}}>+92</Text>
+              </View>
               <TextInput
                 style={{marginLeft: 20}}
                 maxLength={11}
@@ -77,6 +93,17 @@ export default class registration extends React.PureComponent {
           </View>
 
           <View style={styles.et1}>
+            <View
+              style={{
+                width: '20%',
+                // borderWidth: 1,
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <FontAwesome name={'lock'} size={20} color="#74cbff" />
+            </View>
+
             <TextInput
               style={{
                 paddingLeft: 0,
@@ -98,7 +125,7 @@ export default class registration extends React.PureComponent {
           </TouchableOpacity>
 
           <TouchableOpacity
-            // onPress={() => this.checkinternet()}
+            onPress={() => this.Login()}
             style={{
               width: '90%',
               alignSelf: 'center',
@@ -107,15 +134,55 @@ export default class registration extends React.PureComponent {
               // borderWidth: 1,
               backgroundColor: '#bd2e1e',
               paddingVertical: 10,
-              borderRadius: 10,
+              marginVertical: 20,
+              borderRadius: 5,
             }}>
             <Text style={styles.logintext}> login</Text>
           </TouchableOpacity>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            <View
+              style={{
+                height: 30,
+                width: 30,
+                borderRadius: 30,
+                // borderWidth: 1,
+                marginHorizontal: 10,
+              }}>
+              <Image
+                source={require('../assets/images/googleplus.png')}
+                style={{width: '100%', height: '100%'}}
+                resizeMode="contain"
+              />
+            </View>
+            <View
+              style={{
+                height: 30,
+                width: 30,
+                borderRadius: 30,
+                // borderWidth: 1,
+                marginHorizontal: 10,
+              }}>
+              <Image
+                source={require('../assets/images/facebook.png')}
+                style={{width: '100%', height: '100%'}}
+                resizeMode="contain"
+              />
+            </View>
+          </View>
 
           <TouchableOpacity
             style={{marginTop: 10, borderWidth: 0}}
             onPress={() => this.props.navigation.navigate('Register')}>
-            <Text> dont have account ? Register </Text>
+            <Text>
+              {' '}
+              dont have account ?{' '}
+              <Text style={{color: 'red'}}> Signup now </Text>
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -152,8 +219,8 @@ const styles = StyleSheet.create({
     borderColor: '#d3d3d3',
 
     backgroundColor: 'white',
-    height: 70,
-    marginTop: 20,
+    height: 50,
+    marginTop: 10,
     borderBottomWidth: 1,
     width: '90%',
     alignSelf: 'center',
@@ -165,12 +232,12 @@ const styles = StyleSheet.create({
     borderColor: '#d3d3d3',
     borderRadius: 5,
     backgroundColor: 'white',
-    height: 70,
+    height: 50,
     marginTop: 10,
     borderBottomWidth: 1,
     width: '90%',
-    marginRight: 40,
-    marginLeft: 40,
+    // marginRight: 40,
+    // marginLeft: 40,
   },
   ext: {
     justifyContent: 'center',

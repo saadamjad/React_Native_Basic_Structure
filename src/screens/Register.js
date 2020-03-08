@@ -5,65 +5,190 @@ import {
   Image,
   ImageBackground,
   StyleSheet,
+  TextInput,
   TouchableOpacity,
+  Dimensions,
   StatusBar,
   AsyncStorage,
+  PureComponent,
+  Platform,
+  NetInfo,
+  Alert,
 } from 'react-native';
 
-export default class registration extends React.Component {
+// import {FontAwesome} from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {NavigationActions, StackActions} from 'react-navigation';
+import {ScrollView} from 'react-native-gesture-handler';
+
+export default class registration extends React.PureComponent {
+  state = {
+    username: '',
+    password: '',
+    lang: 'en',
+    pushtoken: '',
+    showPassword: true,
+    check: true,
+  };
+  handleTextChange = newText => this.setState({username: newText});
+  handleTextChange1 = newText => this.setState({password: newText});
+  Login() {
+    this.props.navigation.navigate('Home');
+  }
   render() {
     return (
       <View style={styles.parent}>
-        <StatusBar backgroundColor="blue" barStyle="light-content" />
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <View style={{height: '30%', width: '100%', borderWidth: 0}}>
           {/* <Image
-            source={require("./../assets/finallogo.png")}
+            source={require('./../assets/finallogo.png')}
             resizeMode="contain"
-            style={{ height: 200, width: 200 }}
-          ></Image> */}
-
-          <Text style={styles.welcome}> registration </Text>
-
-          <View>
-            <View style={{flexDirection: 'row'}}>
-              <Text style={styles.dummy}>
-                Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                {/* <Image
-                    source={require("./../assets/Artboardd.png")}
-                    resizeMode="stretch"
-                    style={{
-                      height: 16,
-                      marginLeft: 15,
-                      width: 16,
-
-                      borderColor: "red",
-                      tintColor: "red"
-                    }}
-                  ></Image> */}
-              </Text>
-            </View>
-
-            <Text style={styles.dummy}>
-              text used in laying out print, graphic or web designs.
-            </Text>
-          </View>
+            style={{height: 100, width: 150}}></Image> */}
         </View>
+        <View
+          style={{
+            height: '70%',
+            // borderWidth: 1,
+            borderRadius: 10,
+            // paddingLeft: 15,
+            // paddingRight: 15,
+            // justifyContent: 'center',
+            alignItems: 'center',
+            width: '90%',
+            alignSelf: 'center',
+            overflow: 'hidden',
+            backgroundColor: 'white',
+            shadowColor: '#000',
+            shadowOffset: {
+              width: 0,
+              height: 2,
+            },
+            shadowOpacity: 0.25,
+            shadowRadius: 3.84,
 
-        <View style={styles.buttonview}>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Login')}
-            style={styles.loginbtn}>
-            <View style={styles.tocenterview}>
-              <Text style={styles.logintext}>LOGIN</Text>
+            elevation: 5,
+          }}>
+          <Text
+            style={{
+              color: 'red',
+              fontSize: 19,
+              paddingVertical: 10,
+              fontWeight: '600',
+            }}>
+            {' '}
+            Signup{' '}
+          </Text>
+          <View style={styles.et1}>
+            <View style={styles.tocentertext}>
+              <View
+                style={{
+                  width: '20%',
+                  // borderWidth: 1,
+                  height: '100%',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    width: '20%',
+                    // borderWidth: 1,
+                    height: '100%',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}>
+                  <FontAwesome name={'lock'} size={20} color="#74cbff" />
+                </View>
+              </View>
+              <TextInput
+                style={{}}
+                maxLength={11}
+                keyboardType="numeric"
+                value={this.state.number}
+                onChangeText={this.handleTextChange}
+                placeholder="300-1234567"></TextInput>
             </View>
+          </View>
+
+          <View style={styles.et1}>
+            <View
+              style={{
+                width: '20%',
+                // borderWidth: 1,
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <FontAwesome name={'lock'} size={20} color="#74cbff" />
+            </View>
+
+            <TextInput
+              style={{
+                paddingLeft: 0,
+                // borderWidth: 1,
+                height: '100%',
+                width: '80%',
+                // paddingLeft: 40,
+              }}
+              value={this.state.password}
+              onChangeText={this.handleTextChange1}
+              secureTextEntry={true}
+              placeholder="  Email Address "></TextInput>
+          </View>
+
+          <View style={styles.et1}>
+            <View
+              style={{
+                width: '20%',
+                // borderWidth: 1,
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <FontAwesome name={'lock'} size={20} color="#74cbff" />
+            </View>
+
+            <TextInput
+              style={{
+                paddingLeft: 0,
+                // borderWidth: 1,
+                height: '100%',
+                width: '80%',
+                // paddingLeft: 40,
+              }}
+              value={this.state.password}
+              onChangeText={this.handleTextChange1}
+              secureTextEntry={true}
+              placeholder="  password "></TextInput>
+          </View>
+
+          <TouchableOpacity
+            style={{marginRight: 20, marginTop: 10, marginLeft: 20}}
+            onPress={() => this.props.navigation.navigate('VERIFY_NUM')}>
+            <Text>Forgot Password?</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={() => this.props.navigation.navigate('Register')}
-            style={styles.signupbtn}>
-            <View style={styles.tocenterview}>
-              <Text style={styles.signuptext}>REGISTER</Text>
-            </View>
+            onPress={() => this.Login()}
+            style={{
+              width: '90%',
+              alignSelf: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+              // borderWidth: 1,
+              backgroundColor: '#bd2e1e',
+              paddingVertical: 10,
+              marginVertical: 20,
+              borderRadius: 5,
+            }}>
+            <Text style={styles.logintext}> login</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{marginTop: 10, borderWidth: 0}}
+            onPress={() => this.props.navigation.navigate('Login')}>
+            <Text>
+              {' '}
+              already user ? <Text style={{color: 'red'}}> Login </Text>
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -74,61 +199,68 @@ export default class registration extends React.Component {
 const styles = StyleSheet.create({
   parent: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
-  },
-  welcome: {
-    color: 'orange',
-    fontSize: 25,
-    marginTop: -30,
-    fontFamily: 'opreg',
-  },
-  dummy: {
-    marginTop: 5,
-    marginRight: 20,
-    marginLeft: 20,
-    color: '#A0A0A0',
-    fontSize: 15,
-    fontFamily: 'opreg',
-    textAlign: 'center',
-    // borderWidth: 1
-  },
-  buttonview: {
-    marginRight: 20,
-    marginLeft: 20,
-    marginBottom: 30,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-  },
-  loginbtn: {
-    height: 50,
-    flex: 1,
-    marginRight: 5,
-    backgroundColor: '#103056',
-    borderRadius: 5,
-  },
-
-  signupbtn: {
-    height: 50,
-    flex: 1,
-    marginLeft: 5,
-    backgroundColor: '#C62930',
-    borderRadius: 5,
-  },
-  logintext: {
-    color: 'white',
-    fontSize: 15,
-    fontFamily: 'opreg',
-    alignItems: 'center',
+    backgroundColor: '#f8f8f8',
   },
   tocenterview: {
-    flex: 1,
+    // height:50,bw
     alignItems: 'center',
+    width: '90%',
+    alignSelf: 'center',
     justifyContent: 'center',
+    borderWidth: 1,
+    justifyContent: 'flex-end',
   },
-  signuptext: {
-    color: 'white',
+  hello: {
+    // marginTop: 20,
     fontSize: 15,
-    fontFamily: 'opreg',
+    color: 'black',
+  },
+  moving: {
+    fontSize: 25,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  et1: {
+    borderColor: '#d3d3d3',
+
+    backgroundColor: 'white',
+    height: 50,
+    marginTop: 10,
+    borderBottomWidth: 1,
+    width: '90%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  et2: {
+    borderColor: '#d3d3d3',
+    borderRadius: 5,
+    backgroundColor: 'white',
+    height: 50,
+    marginTop: 10,
+    borderBottomWidth: 1,
+    width: '90%',
+    // marginRight: 40,
+    // marginLeft: 40,
+  },
+  ext: {
+    justifyContent: 'center',
+    color: 'black',
+    fontSize: 15,
+    alignItems: 'center',
+  },
+  tocentertext: {
+    flex: 1,
+
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  logintext: {
+    color: 'white',
+    fontSize: 18,
+
     alignItems: 'center',
   },
 });
