@@ -20,32 +20,34 @@ export default class Login extends React.Component {
     super();
     this.state = {
       search: '',
-      iconColour: false,
+      iconColour: true,
+      washingMachine: true,
+      bike: true,
       Category: [
         {
           name: 'bikes',
-          Image: require('../assets/images/facebook.png'),
+          Image: require('../assets/images/download.jpg'),
         },
         {
           name: 'mobile',
-          Image: require('../assets/images/facebook.png'),
+          Image: require('../assets/images/mobilee.png'),
         },
         {
           name: 'Home Appliencce',
-          Image: require('../assets/images/facebook.png'),
+          Image: require('../assets/images/washing.jpg'),
         },
-        {
-          name: 'fright',
-          Image: require('../assets/images/facebook.png'),
-        },
-        {
-          name: 'Washing machine ',
-          Image: require('../assets/images/facebook.png'),
-        },
-        {
-          name: 'bikes',
-          Image: require('../assets/images/facebook.png'),
-        },
+        // {
+        //   name: 'fright',
+        //   Image: require('../assets/images/facebook.png'),
+        // },
+        // {
+        //   name: 'Washing machine ',
+        //   Image: require('../assets/images/facebook.png'),
+        // },
+        // {
+        //   name: 'bikes',
+        //   Image: require('../assets/images/facebook.png'),
+        // },
       ],
       bikesArray: [
         {
@@ -173,7 +175,7 @@ export default class Login extends React.Component {
               paddingLeft: 20,
               alignItems: 'center',
             }}>
-            <FontAwesome name={'phone'} size={20} color="#74cbff" />
+            <Entypo name={'phone'} size={20} color="white" />
             <Text
               style={{marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
               {' '}
@@ -234,6 +236,7 @@ export default class Login extends React.Component {
               height: 50,
               borderRadius: 10,
               borderColor: '#dadada',
+              justifyContent: 'center',
             }}>
             <View
               style={{
@@ -246,21 +249,21 @@ export default class Login extends React.Component {
                 borderRadius: 10,
                 borderColor: 'red',
               }}></View>
-            {/* <Text
+            <Text
               style={{
                 width: '40%',
                 alignSelf: 'center',
-                borderBottomWidth: 4,
+                // borderBottomWidth: 4,
                 borderColor: 'red',
                 textAlign: 'center',
-                height: 50,
+                // height: 20,
                 borderRadius: 15,
                 fontSize: 20,
                 fontWeight: '600',
               }}>
               {' '}
               Category
-            </Text> */}
+            </Text>
           </View>
 
           <View
@@ -272,17 +275,19 @@ export default class Login extends React.Component {
               // borderWidth: 1,
               alignItems: 'center',
               justifyContent: 'center',
+              overflow: 'hidden',
               paddingVertical: 10,
             }}>
             {this.state.Category.map((item, i) => {
               return (
-                <View
+                <TouchableOpacity
                   style={{
                     height: 90,
                     width: 90,
                     backgroundColor: 'white',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    overflow: 'hidden',
                     marginVertical: 5,
                     marginHorizontal: 10,
                     borderRadius: 90,
@@ -295,33 +300,18 @@ export default class Login extends React.Component {
                     shadowRadius: 3.84,
 
                     elevation: 2,
-                  }}>
+                  }}
+                  onPress={() => this.setState}>
                   <Image
                     source={item.Image}
-                    style={{height: '100%', width: '100%'}}
+                    style={{height: '50%', width: '50%'}}
                     resizeMode="contain"
                   />
-                </View>
+                </TouchableOpacity>
               );
             })}
           </View>
 
-          <View
-            style={{
-              width: '100%',
-              height: 240,
-              elevation: 0,
-              // borderWidth: ,
-              borderColor: '#f1f1f1',
-              // borderWidth: 1,
-              marginVertical: 20,
-            }}>
-            <Image
-              source={require('../assets/images/aa.png')}
-              resizeMode="cover"
-              style={{height: '100%', width: '100%'}}
-            />
-          </View>
           <View style={{borderWidth: 0, marginVertical: 10}}>
             <Text
               style={{
@@ -415,8 +405,8 @@ export default class Login extends React.Component {
                     />
                     <View
                       style={{
-                        height: 70,
-                        width: 40,
+                        height: 65,
+                        width: 39,
                         // borderWidth: 1,
                         position: 'absolute',
                         left: 0,
@@ -444,7 +434,7 @@ export default class Login extends React.Component {
 
                           // borderWidth: 1,
                         }}>
-                        <Entypo name={'eye'} size={20} color="white" />
+                        <Entypo name={'eye'} size={15} color="white" />
                       </TouchableOpacity>
                       <TouchableOpacity
                         style={{
@@ -462,11 +452,15 @@ export default class Login extends React.Component {
                         onPress={() =>
                           this.setState({iconColour: !this.state.iconColour})
                         }>
-                        <Entypo
-                          name={'heart-outlined'}
-                          size={20}
-                          color={this.state.iconColour ? 'red' : 'white'}
-                        />
+                        {this.state.iconColour ? (
+                          <Entypo name={'heart'} size={15} color="red" />
+                        ) : (
+                          <Entypo
+                            name={'heart-outlined'}
+                            size={15}
+                            color="red"
+                          />
+                        )}
                       </TouchableOpacity>
                     </View>
                   </View>
@@ -618,8 +612,8 @@ export default class Login extends React.Component {
                     />
                     <View
                       style={{
-                        height: 70,
-                        width: 40,
+                        height: 65,
+                        width: 39,
                         // borderWidth: 1,
                         position: 'absolute',
                         left: 0,
@@ -647,7 +641,7 @@ export default class Login extends React.Component {
 
                           // borderWidth: 1,
                         }}>
-                        <Entypo name={'eye'} size={20} color="white" />
+                        <Entypo name={'eye'} size={15} color="white" />
                       </TouchableOpacity>
                       <TouchableOpacity
                         style={{
@@ -665,11 +659,15 @@ export default class Login extends React.Component {
                         onPress={() =>
                           this.setState({iconColour: !this.state.iconColour})
                         }>
-                        <Entypo
-                          name={'heart-outlined'}
-                          size={20}
-                          color={this.state.iconColour ? 'red' : 'white'}
-                        />
+                        {this.state.iconColour ? (
+                          <Entypo name={'heart'} size={15} color="red" />
+                        ) : (
+                          <Entypo
+                            name={'heart-outlined'}
+                            size={15}
+                            color="red"
+                          />
+                        )}
                       </TouchableOpacity>
                     </View>
                   </View>
@@ -821,8 +819,8 @@ export default class Login extends React.Component {
                     />
                     <View
                       style={{
-                        height: 70,
-                        width: 40,
+                        height: 65,
+                        width: 39,
                         // borderWidth: 1,
                         position: 'absolute',
                         left: 0,
@@ -850,7 +848,7 @@ export default class Login extends React.Component {
 
                           // borderWidth: 1,
                         }}>
-                        <Entypo name={'eye'} size={20} color="white" />
+                        <Entypo name={'eye'} size={15} color="white" />
                       </TouchableOpacity>
                       <TouchableOpacity
                         style={{
@@ -866,13 +864,19 @@ export default class Login extends React.Component {
                           // borderWidth: 1,
                         }}
                         onPress={() =>
-                          this.setState({iconColour: !this.state.iconColour})
+                          this.setState({
+                            washingMachine: !this.state.washingMachine,
+                          })
                         }>
-                        <Entypo
-                          name={'heart-outlined'}
-                          size={20}
-                          color={this.state.iconColour ? 'red' : 'white'}
-                        />
+                        {this.state.washingMachine ? (
+                          <Entypo name={'heart'} size={15} color="red" />
+                        ) : (
+                          <Entypo
+                            name={'heart-outlined'}
+                            size={15}
+                            color="red"
+                          />
+                        )}
                       </TouchableOpacity>
                     </View>
                   </View>
