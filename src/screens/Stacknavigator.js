@@ -6,6 +6,7 @@ import Home from './Home';
 import Login from './Login';
 import Welcome from './Welcome';
 import Register from './Register';
+import Category from './Category';
 
 const AppNavigator = createStackNavigator(
   {
@@ -33,9 +34,15 @@ const AppNavigator = createStackNavigator(
         header: null,
       }),
     },
+    Category: {
+      screen: Category,
+      navigationOptions: () => ({
+        header: null,
+      }),
+    },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Welcome',
   },
 );
 

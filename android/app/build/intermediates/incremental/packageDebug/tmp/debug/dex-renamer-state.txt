@@ -1,4 +1,4 @@
-#Mon Mar 09 00:17:49 PKT 2020
-base.0=E\:\\PersonalWork\\React_Native_Basic_Structure\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sun Mar 15 00:27:49 PKT 2020
+base.0=/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -26,20 +26,20 @@ export default class Login extends React.Component {
       Category: [
         {
           name: 'bikes',
-          Image: require('../assets/images/download.jpg'),
+          Image: require('../assets/images/tv.png'),
         },
         {
           name: 'mobile',
-          Image: require('../assets/images/mobilee.png'),
+          Image: require('../assets/images/wash.png'),
         },
         {
           name: 'Home Appliencce',
-          Image: require('../assets/images/washing.jpg'),
+          Image: require('../assets/images/bike.png'),
         },
-        // {
-        //   name: 'fright',
-        //   Image: require('../assets/images/facebook.png'),
-        // },
+        {
+          name: 'fright',
+          Image: require('../assets/images/phone.png'),
+        },
         // {
         //   name: 'Washing machine ',
         //   Image: require('../assets/images/facebook.png'),
@@ -186,7 +186,7 @@ export default class Login extends React.Component {
           <View
             style={{
               height: 48,
-              // backgroundColor: this.props.reduxState.theme.searchBarColor,
+              backgroundColor: '#ECECEC',
               width: '90%',
               alignSelf: 'center',
               marginVertical: 10,
@@ -215,16 +215,18 @@ export default class Login extends React.Component {
               }}
               inputContainerStyle={{
                 // backgroundColor: this.props.reduxState.theme.searchBarColor,
+                backgroundColor: '#ECECEC',
                 height: '100%',
               }}
               inputStyle={{
                 borderWidth: 0,
                 borderWidth: 0,
-                // backgroundColor: 'red',
+                backgroundColor: '#ECECEC',
                 fontSize: 13,
               }}
               style={{borderWidth: 1}}
               lightTheme={true}
+              backgroundColor={'#ECECEC'}
             />
           </View>
 
@@ -282,8 +284,40 @@ export default class Login extends React.Component {
               return (
                 <TouchableOpacity
                   style={{
-                    height: 90,
-                    width: 90,
+                    height: 60,
+                    width: 60,
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    marginVertical: 5,
+                    marginHorizontal: 10,
+                    borderRadius: 90,
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}
+                  onPress={() => this.props.navigation.navigate('Category')}>
+                  <Image
+                    source={item.Image}
+                    style={{height: '50%', width: '50%'}}
+                    resizeMode="contain"
+                  />
+                </TouchableOpacity>
+              );
+            })}
+            {this.state.Category.map((item, i) => {
+              return (
+                <TouchableOpacity
+                  style={{
+                    height: 60,
+                    width: 60,
                     backgroundColor: 'white',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -311,7 +345,22 @@ export default class Login extends React.Component {
               );
             })}
           </View>
-
+          <View
+            style={{
+              width: '100%',
+              height: 240,
+              elevation: 0,
+              // borderWidth: ,
+              borderColor: '#f1f1f1',
+              // borderWidth: 1,
+              marginVertical: 20,
+            }}>
+            <Image
+              source={require('../assets/images/kitchen.png')}
+              resizeMode="contain"
+              style={{height: '100%', width: '100%'}}
+            />
+          </View>
           <View style={{borderWidth: 0, marginVertical: 10}}>
             <Text
               style={{
