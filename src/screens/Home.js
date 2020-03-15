@@ -15,6 +15,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
+import MainHeader from '../Component/MainHeader';
+
 export default class Login extends React.Component {
   constructor() {
     super();
@@ -38,7 +40,7 @@ export default class Login extends React.Component {
         },
         {
           name: 'fright',
-          Image: require('../assets/images/phone.png'),
+          Image: require('../assets/images/phone1.png'),
         },
         // {
         //   name: 'Washing machine ',
@@ -165,12 +167,13 @@ export default class Login extends React.Component {
             backgroundColor: '#f5f5f5',
             paddingBottom: 50,
           }}>
+            <MainHeader navigation={this.props.navigation} />
           <View
             style={{
               height: 50,
               width: '100%',
               // borderWidth: 1,
-              backgroundColor: 'red',
+              backgroundColor: '#DD3333',
               flexDirection: 'row',
               paddingLeft: 20,
               alignItems: 'center',
@@ -180,6 +183,11 @@ export default class Login extends React.Component {
               style={{marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
               {' '}
               0300- 53193358{' '}
+            </Text>
+            <Text
+              style={{textAlign:'right',marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              {' '}
+              نقدوآسان اقساط کا بااعتماد ادارہ{' '}
             </Text>
           </View>
 
@@ -249,14 +257,14 @@ export default class Login extends React.Component {
                 bottom: -4,
                 // height: 50,
                 borderRadius: 10,
-                borderColor: 'red',
+                borderColor: '#DD3333',
               }}></View>
             <Text
               style={{
                 width: '40%',
                 alignSelf: 'center',
                 // borderBottomWidth: 4,
-                borderColor: 'red',
+                borderColor: '#DD3333',
                 textAlign: 'center',
                 // height: 20,
                 borderRadius: 15,
@@ -367,7 +375,7 @@ export default class Login extends React.Component {
                 width: '40%',
                 alignSelf: 'center',
                 // borderBottomWidth: 4,
-                // borderColor: 'red',
+                // borderColor: '#DD3333',
                 textAlign: 'center',
 
                 borderRadius: 15,
@@ -397,13 +405,13 @@ export default class Login extends React.Component {
                   // width: '40%',
                   alignSelf: 'center',
                   // borderBottomWidth: 4,
-                  // borderColor: 'red',
+                  // borderColor: '#DD3333',
                   textAlign: 'center',
                   // height: 50,
                   borderRadius: 15,
                   fontSize: 15,
 
-                  color: 'red',
+                  color: '#DD3333',
                   fontWeight: '600',
                 }}>
                 View Brands
@@ -540,7 +548,7 @@ export default class Login extends React.Component {
                     <Text
                       style={{
                         fontSize: 20,
-                        color: 'red',
+                        color: '#DD3333',
                         fontWeight: 'bold',
                         textAlign: 'center',
                       }}>
@@ -574,7 +582,7 @@ export default class Login extends React.Component {
                 width: '40%',
                 alignSelf: 'center',
                 // borderBottomWidth: 4,
-                // borderColor: 'red',
+                // borderColor: '#DD3333',
                 textAlign: 'center',
 
                 borderRadius: 15,
@@ -604,13 +612,13 @@ export default class Login extends React.Component {
                   // width: '40%',
                   alignSelf: 'center',
                   // borderBottomWidth: 4,
-                  // borderColor: 'red',
+                  // borderColor: '#DD3333',
                   textAlign: 'center',
                   // height: 50,
                   borderRadius: 15,
                   fontSize: 15,
 
-                  color: 'red',
+                  color: '#DD3333',
                   fontWeight: '600',
                 }}>
                 View Brands
@@ -747,7 +755,7 @@ export default class Login extends React.Component {
                     <Text
                       style={{
                         fontSize: 20,
-                        color: 'red',
+                        color: '#DD3333',
                         fontWeight: 'bold',
                         textAlign: 'center',
                       }}>
@@ -781,7 +789,7 @@ export default class Login extends React.Component {
                 width: '40%',
                 alignSelf: 'center',
                 // borderBottomWidth: 4,
-                // borderColor: 'red',
+                // borderColor: '#DD3333',
                 textAlign: 'center',
 
                 borderRadius: 15,
@@ -811,13 +819,13 @@ export default class Login extends React.Component {
                   // width: '40%',
                   alignSelf: 'center',
                   // borderBottomWidth: 4,
-                  // borderColor: 'red',
+                  // borderColor: '#DD3333',
                   textAlign: 'center',
                   // height: 50,
                   borderRadius: 15,
                   fontSize: 15,
 
-                  color: 'red',
+                  color: '#DD3333',
                   fontWeight: '600',
                 }}>
                 View Brands
@@ -956,7 +964,7 @@ export default class Login extends React.Component {
                     <Text
                       style={{
                         fontSize: 20,
-                        color: 'red',
+                        color: '#DD3333',
                         fontWeight: 'bold',
                         textAlign: 'center',
                       }}>

@@ -71,7 +71,7 @@ export default class registration extends React.PureComponent {
           }}>
           <Text
             style={{
-              color: 'red',
+              color: '#DD3333',
               fontSize: 19,
               paddingVertical: 10,
               fontWeight: '600',
@@ -97,7 +97,7 @@ export default class registration extends React.PureComponent {
                     justifyContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <FontAwesome name={'lock'} size={20} color="#74cbff" />
+                  <FontAwesome name={'lock'} size={20} color="#cccccc" />
                 </View>
               </View>
               <TextInput
@@ -119,7 +119,7 @@ export default class registration extends React.PureComponent {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <FontAwesome name={'lock'} size={20} color="#74cbff" />
+              <FontAwesome name={'lock'} size={20} color="#cccccc" />
             </View>
 
             <TextInput
@@ -145,7 +145,7 @@ export default class registration extends React.PureComponent {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <FontAwesome name={'lock'} size={20} color="#74cbff" />
+              <FontAwesome name={'lock'} size={20} color="#cccccc" />
             </View>
 
             <TextInput
@@ -189,7 +189,7 @@ export default class registration extends React.PureComponent {
             onPress={() => this.props.navigation.navigate('Login')}>
             <Text>
               {' '}
-              already user ? <Text style={{color: 'red'}}> Login </Text>
+              already user ? <Text style={{color: '#DD3333'}}> Login </Text>
             </Text>
           </TouchableOpacity>
         </View>

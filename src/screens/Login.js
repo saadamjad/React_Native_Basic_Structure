@@ -66,7 +66,7 @@ export default class registration extends React.PureComponent {
 
             elevation: 5,
           }}>
-          <Text style={{color: 'red', fontSize: 19, paddingVertical: 10}}>
+          <Text style={{color: '#DD3333', fontSize: 19, paddingVertical: 10}}>
             {' '}
             Login{' '}
           </Text>
@@ -101,7 +101,7 @@ export default class registration extends React.PureComponent {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <FontAwesome name={'lock'} size={20} color="#74cbff" />
+              <FontAwesome name={'lock'} size={20} color="#cccccc" />
             </View>
 
             <TextInput
@@ -181,7 +181,7 @@ export default class registration extends React.PureComponent {
             <Text>
               {' '}
               dont have account ?{' '}
-              <Text style={{color: 'red'}}> Signup now </Text>
+              <Text style={{color: '#DD3333'}}> Signup now </Text>
             </Text>
           </TouchableOpacity>
         </View>
@@ -258,4 +258,5 @@ const styles = StyleSheet.create({
 
     alignItems: 'center',
   },
+  
 });

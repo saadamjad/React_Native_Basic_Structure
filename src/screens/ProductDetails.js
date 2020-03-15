@@ -12,7 +12,7 @@ import {
   ScrollView,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
+import MainHeader from '../Component/MainHeader';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 export default class ProductDetails extends React.Component {
@@ -191,12 +191,13 @@ export default class ProductDetails extends React.Component {
             backgroundColor: '#f5f5f5',
             paddingBottom: 50,
           }}>
+             <MainHeader backBtn={true}  navigation={this.props.navigation} />
           <View
             style={{
               height: 50,
               width: '100%',
               // borderWidth: 1,
-              backgroundColor: 'red',
+              backgroundColor: '#DD3333',
               flexDirection: 'row',
               paddingLeft: 20,
               alignItems: 'center',
@@ -207,6 +208,12 @@ export default class ProductDetails extends React.Component {
               {' '}
               0300- 53193358{' '}
             </Text>
+            <Text
+              style={{textAlign:'right',marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              {' '}
+              نقدوآسان اقساط کا بااعتماد ادارہ{' '}
+            </Text>
+            
           </View>
 
           <View
@@ -354,14 +361,14 @@ export default class ProductDetails extends React.Component {
                 bottom: -4,
                 // height: 50,
                 borderRadius: 10,
-                borderColor: 'red',
+                borderColor: '#DD3333',
               }}></View>
             <Text
               style={{
                 width: '40%',
                 alignSelf: 'center',
                 // borderBottomWidth: 4,
-                borderColor: 'red',
+                borderColor: '#DD3333',
                 textAlign: 'center',
                 // height: 20,
                 borderRadius: 15,
@@ -523,14 +530,14 @@ export default class ProductDetails extends React.Component {
                 bottom: -4,
                 // height: 50,
                 borderRadius: 10,
-                borderColor: 'red',
+                borderColor: '#DD3333',
               }}></View>
             <Text
               style={{
                 width: '40%',
                 alignSelf: 'flex-start',
                 // borderBottomWidth: 4,
-                borderColor: 'red',
+                borderColor: '#DD3333',
                 textAlign: 'left',
                 // height: 20,
                 borderRadius: 15,
@@ -573,14 +580,14 @@ export default class ProductDetails extends React.Component {
                 bottom: -4,
                 // height: 50,
                 borderRadius: 10,
-                borderColor: 'red',
+                borderColor: '#DD3333',
               }}></View>
             <Text
               style={{
                 width: '40%',
                 alignSelf: 'flex-start',
                 // borderBottomWidth: 4,
-                borderColor: 'red',
+                borderColor: '#DD3333',
                 textAlign: 'left',
                 // height: 20,
                 borderRadius: 15,
@@ -629,14 +636,14 @@ export default class ProductDetails extends React.Component {
                 bottom: -4,
                 // height: 50,
                 borderRadius: 10,
-                borderColor: 'red',
+                borderColor: '#DD3333',
               }}></View>
             <Text
               style={{
                 width: '80%',
                 alignSelf: 'center',
                 // borderBottomWidth: 4,
-                borderColor: 'red',
+                borderColor: '#DD3333',
                 textAlign: 'center',
                 // height: 20,
                 borderRadius: 15,
@@ -777,7 +784,7 @@ export default class ProductDetails extends React.Component {
                     <Text
                       style={{
                         fontSize: 20,
-                        color: 'red',
+                        color: '#DD3333',
                         fontWeight: 'bold',
                         textAlign: 'center',
                       }}>
