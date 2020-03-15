@@ -487,7 +487,8 @@ export default class Category extends React.Component {
             }}>
             {this.state.bikesArray.map((item, i) => {
               return (
-                <View
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate('ProductDetails')}
                   style={{
                     height: 270,
                     width: '45%',
@@ -497,7 +498,7 @@ export default class Category extends React.Component {
                     marginVertical: 10,
                     marginHorizontal: 5,
                     borderRadius: 10,
-
+               
                     overflow: 'hidden',
                     shadowColor: '#000',
                     shadowOffset: {
@@ -610,7 +611,7 @@ export default class Category extends React.Component {
                       Rs {item.price}{' '}
                     </Text>
                   </View>
-                </View>
+                </TouchableOpacity>
               );
             })}
           </View>

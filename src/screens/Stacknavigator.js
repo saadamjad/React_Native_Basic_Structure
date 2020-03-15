@@ -7,6 +7,7 @@ import Login from './Login';
 import Welcome from './Welcome';
 import Register from './Register';
 import Category from './Category';
+import ProductDetails from './ProductDetails';
 
 const AppNavigator = createStackNavigator(
   {
@@ -40,9 +41,15 @@ const AppNavigator = createStackNavigator(
         header: null,
       }),
     },
+    ProductDetails: {
+      screen: ProductDetails,
+      navigationOptions: () => ({
+        header: null,
+      }),
+    },
   },
   {
-    initialRouteName: 'Welcome',
+    initialRouteName: 'ProductDetails',
   },
 );
 
