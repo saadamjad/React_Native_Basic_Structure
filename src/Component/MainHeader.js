@@ -20,15 +20,15 @@ export default class MainHeader extends Component {
       <View style={{height: 55, flexDirection: 'row', justifyContent: 'center', alignContent: 'stretch', alignItems: 'center', backgroundColor: this.props.backgroundColor,paddingRight:20}}>
       <View style={{alignSelf:'flex-start',left:-50}}>
        {this.props.backBtn?
-          <TouchableWithoutFeedback onPress={() => this.props.navigation.goBack()} style={{backgroundColor:'grey',justifyContent: 'flex-start',alignSelf:'flex-start'}}>
-            <Entypo name={'chevron-left'} color={this.props.color} size={25} style={{padding: 15}} />
+          <TouchableWithoutFeedback onPress={() => this.props.navigation.goBack()} style={{backgroundColor:'#DD3333',justifyContent: 'flex-start',alignSelf:'flex-start'}}>
+            <Entypo name={'chevron-left'} color={'#DD3333'} size={25} style={{padding: 15}} />
           </TouchableWithoutFeedback>:
-          <TouchableWithoutFeedback onPress={() => this.props.navigation.openDrawer()} style={{backgroundColor:'grey',justifyContent: 'flex-start',alignSelf:'flex-start'}}>
-            <Entypo name={'menu'} color={this.props.color} size={25} style={{padding: 15}} />
+          <TouchableWithoutFeedback onPress={() => this.props.navigation.openDrawer()} style={{backgroundColor:'#DD3333',justifyContent: 'flex-start',alignSelf:'flex-start'}}>
+            <Entypo name={'menu'} color={'#DD3333'} size={25} style={{padding: 15}} />
           </TouchableWithoutFeedback>
         }
         </View>
-        <Image style={{height:34,width:190,alignSelf:'center'}}  source={require('./../assets/images/logo.png')}/>
+        <Image style={{left:-12,height:31,width:181,alignSelf:'center'}}  source={require('./../assets/images/logo.png')}/>
 
         {/* <Text style={{padding: 5, color:this.props.color, textAlign: 'center', justifyContent: 'center', fontSize: 22}}>{'osama'}</Text> */}
 

@@ -28,9 +28,9 @@ export default class SideBar extends Component {
             { id: '1', name: "Home", key: "Home", icon:<Entypo name={'home'} color={'white'} size={17}/>},
             { id: '2', name: "Your Profile", key: "MyProfile",icon:<Entypo name={'user'} color={'white'} size={17}/>  },
             { id: '5', name: "Your Order", key: "MyOrders",icon:<MaterialIcons name={'settings-backup-restore'} color={'white'} size={17}/>  },
-            { id: '6', name: "Favourites", key: "Location",icon:<Entypo name={'heart'} color={'white'} size={17}/>  },
+            { id: '6', name: "Favourites", key: "Favourite",icon:<Entypo name={'heart'} color={'white'} size={17}/>  },
             { id: '7', name: "About us", key: "AboutUs", icon:<Entypo name={'info'} color={'white'} size={17}/> },
-            { id: '8', name: "Logout", key: "Logout", icon:<Entypo name={'log-out'} color={'white'} size={17}/> },
+            { id: '8', name: "Logout", key: "Login", icon:<Entypo name={'log-out'} color={'white'} size={17}/> },
           ]})
       
       
@@ -43,8 +43,8 @@ logout=async()=>{
   this.props.navigation.navigate('Login')
 }
   _renderItem = ({item}) => (
-    <TouchableOpacity style={{ paddingLeft:20,flexDirection: 'row', backgroundColor:'white',alignItems:"center"}}
-          onPress={()=>this.props.navigation.navigate(item.key)}
+    <TouchableOpacity activeOpacity={1} style={{ paddingLeft:20,flexDirection: 'row', backgroundColor:'white',alignItems:"center"}}
+          onPress={()=> this.props.navigation.navigate(item.key)}
            >
         <View style={{zIndex:30,padding:10,paddingVertical:item.name=='Logout'?140: 15,backgroundColor:'#B51616',borderTopStartRadius:item.name=='Home'?20:0,borderTopEndRadius:item.name=='Home'?20:0}}>       
           {item.icon}

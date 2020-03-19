@@ -193,30 +193,36 @@ export default class MyOrders extends React.Component {
             paddingBottom: 50,
           }}>
              <MainHeader navigation={this.props.navigation} />
-          <View
+             <Row
             style={{
-              height: 50,
+              height: 40,
               width: '100%',
               // borderWidth: 1,
               backgroundColor: '#DD3333',
               flexDirection: 'row',
               paddingLeft: 20,
-              alignItems: 'center',
+            //   alignItems: 'center',
+            // justifyContent:'center',
+            alignItems:'center'
             }}>
+            <Col style={{ flexDirection: 'row',alignItems:'center'}}>
             <Entypo name={'phone'} size={20} color="white" />
             <Text
-              style={{marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              style={{marginHorizontal: 5,fontSize:12, color: 'white', fontWeight: '400'}}>
               {' '}
               0300- 53193358{' '}
             </Text>
+            </Col>
+            <Col>
             <Text
-              style={{textAlign:'right',marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              style={{textAlign:'right',marginHorizontal: 5,paddingLeft:10, color: 'white',fontSize:12, fontWeight: '400'}}>
               {' '}
               نقدوآسان اقساط کا بااعتماد ادارہ{' '}
             </Text>
-            
-          </View>
+            </Col>
+          </Row>
 
+         
          
 
         

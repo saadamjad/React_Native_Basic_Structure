@@ -16,7 +16,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 import MainHeader from '../Component/MainHeader';
-
+import { Row, Col } from 'native-base';
+import {getAllProducts} from './../Apis/Apis'
 export default class Login extends React.Component {
   constructor() {
     super();
@@ -26,6 +27,32 @@ export default class Login extends React.Component {
       washingMachine: true,
       bike: true,
       Category: [
+        {
+          name: 'bikes',
+          Image: require('../assets/images/tv.png'),
+        },
+        {
+          name: 'mobile',
+          Image: require('../assets/images/wash.png'),
+        },
+        {
+          name: 'Home Appliencce',
+          Image: require('../assets/images/bike.png'),
+        },
+        {
+          name: 'fright',
+          Image: require('../assets/images/phone1.png'),
+        },
+        // {
+        //   name: 'Washing machine ',
+        //   Image: require('../assets/images/facebook.png'),
+        // },
+        // {
+        //   name: 'bikes',
+        //   Image: require('../assets/images/facebook.png'),
+        // },
+      ],
+      Category1: [
         {
           name: 'bikes',
           Image: require('../assets/images/tv.png'),
@@ -150,6 +177,13 @@ export default class Login extends React.Component {
       ],
     };
   }
+  componentDidMount=async()=>{
+    const responseTotal = await getAllProducts()
+    console.log('Home _retrieveData responseTotal: ', responseTotal)
+    this.setState({
+      productSet:responseTotal
+    })
+  }
   updateSearch = search => {
     this.setState({search});
   };
@@ -168,28 +202,36 @@ export default class Login extends React.Component {
             paddingBottom: 50,
           }}>
             <MainHeader navigation={this.props.navigation} />
-          <View
+            <Row
             style={{
-              height: 50,
+              height: 40,
               width: '100%',
               // borderWidth: 1,
               backgroundColor: '#DD3333',
               flexDirection: 'row',
               paddingLeft: 20,
-              alignItems: 'center',
+            //   alignItems: 'center',
+            // justifyContent:'center',
+            alignItems:'center'
             }}>
+            <Col style={{ flexDirection: 'row',alignItems:'center'}}>
             <Entypo name={'phone'} size={20} color="white" />
             <Text
-              style={{marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              style={{marginHorizontal: 5,fontSize:12, color: 'white', fontWeight: '400'}}>
               {' '}
               0300- 53193358{' '}
             </Text>
+            </Col>
+            <Col>
             <Text
-              style={{textAlign:'right',marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              style={{textAlign:'right',marginHorizontal: 5,paddingLeft:10, color: 'white',fontSize:12, fontWeight: '400'}}>
               {' '}
               نقدوآسان اقساط کا بااعتماد ادارہ{' '}
             </Text>
-          </View>
+            </Col>
+          </Row>
+
+         
 
           <View
             style={{
@@ -288,7 +330,7 @@ export default class Login extends React.Component {
               overflow: 'hidden',
               paddingVertical: 10,
             }}>
-            {this.state.Category.map((item, i) => {
+             {this.state.Category.map((item, i) => {
               return (
                 <TouchableOpacity
                   style={{
@@ -320,7 +362,7 @@ export default class Login extends React.Component {
                 </TouchableOpacity>
               );
             })}
-            {this.state.Category.map((item, i) => {
+           {this.state.Category.map((item, i) => {
               return (
                 <TouchableOpacity
                   style={{
@@ -343,7 +385,7 @@ export default class Login extends React.Component {
 
                     elevation: 2,
                   }}
-                  onPress={() => this.setState}>
+                  onPress={() => this.props.navigation.navigate('Category')}>
                   <Image
                     source={item.Image}
                     style={{height: '50%', width: '50%'}}
@@ -430,9 +472,10 @@ export default class Login extends React.Component {
               justifyContent: 'center',
               paddingVertical: 10,
             }}>
-            {this.state.bikesArray.map((item, i) => {
+            {this.state.productSet&&this.state.productSet.map((item, i) => {
               return (
-                <View
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate('ProductDetails')}
                   style={{
                     height: 270,
                     width: '45%',
@@ -456,7 +499,7 @@ export default class Login extends React.Component {
                   }}>
                   <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
                     <Image
-                      source={item.Image}
+                      source={{uri:item.images[0].src}}
                       style={{height: '100%', width: '100%'}}
                       resizeMode="contain"
                     />
@@ -526,15 +569,15 @@ export default class Login extends React.Component {
                       style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
                       {item.name}
                     </Text>
-                    <Text
+                    {/* <Text
                       style={{
                         fontSize: 15,
                         color: '#918f8f',
                         marginLeft: 20,
                         fontWeight: 'bold',
                       }}>
-                      {item.engineCapacity}
-                    </Text>
+                      {item.stock_status}
+                    </Text> */}
                     <Text
                       style={{
                         fontSize: 8,
@@ -555,7 +598,7 @@ export default class Login extends React.Component {
                       Rs {item.price}{' '}
                     </Text>
                   </View>
-                </View>
+                </TouchableOpacity>
               );
             })}
           </View>

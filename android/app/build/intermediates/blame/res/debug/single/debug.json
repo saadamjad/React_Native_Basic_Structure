@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_mtrl_fab_ripple_color.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/mtrl_fab_ripple_color.xml"
-    },
-    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_mtrl_fab_ripple_color.xml.flat",
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/mtrl_fab_ripple_color.xml"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -60,6 +60,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/drawable/design_password_eye.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_evilicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_evilicons.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_ic_keyboard_arrow_left_black_24dp.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/drawable/ic_keyboard_arrow_left_black_24dp.xml"
     },
@@ -74,6 +78,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_mtrl_calendar_days_of_week.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/mtrl_calendar_days_of_week.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontisto.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontisto.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-v21_abc_edit_text_material.xml.flat",
@@ -256,6 +264,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/layout/abc_screen_content_include.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_entypo.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_entypo.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/layout/abc_select_dialog_material.xml"
     },
@@ -300,8 +312,20 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_logo.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_logo.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_octicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_octicons.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_mtrl_picker_text_input_date.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/mtrl_picker_text_input_date.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-hdpi/node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -330,6 +354,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_phone.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_phone.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_abc_slide_in_top.xml.flat",
@@ -404,12 +432,20 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeratings_src_images_star.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeratings_src_images_star.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_21.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_21.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -422,6 +458,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_test_action_chip.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/test_action_chip.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeratings_src_images_heart.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeratings_src_images_heart.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -446,6 +486,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7bd7484a6436046f51b00bdfda3bf7a9/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_zocial.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_zocial.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_text_view_without_line_height.xml.flat",
@@ -484,8 +528,16 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/color/abc_tint_seek_thumb.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_tv.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_tv.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_design_layout_tab_icon.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_simplelineicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_simplelineicons.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_mtrl_btn_ripple_color.xml.flat",
@@ -518,6 +570,18 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_navigation_empty_icon.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/drawable/navigation_empty_icon.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_wash.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_wash.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_hero.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_hero.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_focus.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_focus.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_design_layout_tab_text.xml.flat",
@@ -572,6 +636,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_phone1.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_phone1.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
@@ -608,12 +676,20 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ff1c464dba7a61f29a4db8421d9d1952/res/anim/catalyst_push_up_out.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_cover.jpg.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_cover.jpg"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_abc_ic_search_api_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_ic_search_api_material.xml"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-hdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_googleplus.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_googleplus.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -674,6 +750,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_facebook.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_facebook.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -768,6 +848,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/color/abc_primary_text_material_light.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_suziki.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_suziki.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_small_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_ratingbar_small_material.xml"
     },
@@ -804,8 +888,16 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome5free.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_mtrl_tabs_ripple_color.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/mtrl_tabs_ripple_color.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_homeappl.jpg.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_homeappl.jpg"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_abc_tint_switch_track.xml.flat",
@@ -818,6 +910,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_scuty.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_scuty.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -960,6 +1056,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_ic_menu_overflow_material.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-xxxhdpi/node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_fragment_fade_enter.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/5928cd8885ddf54abef3a7bc49a81ebc/res/anim/fragment_fade_enter.xml"
     },
@@ -1002,6 +1102,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_test_toolbar_surface.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/test_toolbar_surface.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_materialicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_materialicons.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_abc_search_url_text.xml.flat",
@@ -1052,12 +1156,20 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/interpolator/mtrl_fast_out_slow_in.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_materialcommunityicons.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/animator_mtrl_extended_fab_change_size_motion_spec.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/animator/mtrl_extended_fab_change_size_motion_spec.xml"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_design_error.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_user.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_user.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -1168,6 +1280,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeratings_src_images_bell.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeratings_src_images_bell.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_mtrl_error.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/mtrl_error.xml"
     },
@@ -1202,6 +1318,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnative_libraries_newappscreen_components_logo.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnative_libraries_newappscreen_components_logo.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
@@ -1592,6 +1712,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_test_toolbar_elevation.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/test_toolbar_elevation.xml"
     },
@@ -1626,6 +1750,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_abc_tab_indicator_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_ionicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_ionicons.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_btn_radio_on_mtrl.xml.flat",
@@ -1684,6 +1812,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/drawable/ic_calendar_black_24dp.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_kitchen.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_kitchen.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
@@ -1698,6 +1830,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_abc_hint_foreground_material_dark.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backiconmask.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backiconmask.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_abc_action_mode_bar.xml.flat",
@@ -1788,6 +1924,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/anim/design_bottom_sheet_slide_out.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_app.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/app.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
@@ -1826,6 +1966,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_abc_screen_simple.xml.flat",
@@ -1924,6 +2068,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/color-v23/abc_tint_switch_track.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_done.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_done.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_btn_checkbox_unchecked_to_checked_mtrl_animation.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xml"
     },
@@ -1940,6 +2088,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/layout/abc_action_menu_layout.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-xhdpi/node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_mtrl_calendar_year.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/mtrl_calendar_year.xml"
     },
@@ -1950,6 +2102,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_abc_item_background_holo_dark.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeratings_src_images_rocket.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeratings_src_images_rocket.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -1992,8 +2148,16 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_feather.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_feather.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_fontawesome.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_fontawesome.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -2034,6 +2198,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeratings_src_images_airbnbstarselected.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeratings_src_images_airbnbstarselected.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_abc_btn_radio_material.xml.flat",
@@ -2176,6 +2344,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_22.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_22.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_mtrl_bottom_sheet_slide_out.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/anim/mtrl_bottom_sheet_slide_out.xml"
     },
@@ -2248,12 +2420,16 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_abc_fade_out.xml.flat",
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/anim/abc_fade_out.xml"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-v21_abc_list_divider_material.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-v21/abc_list_divider_material.xml"
     },
     {
-        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_abc_fade_out.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/anim/abc_fade_out.xml"
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_bike.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_bike.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_design_bottom_sheet_slide_in.xml.flat",
@@ -2274,6 +2450,10 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7bd7484a6436046f51b00bdfda3bf7a9/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_map.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_map.png"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_redbox_item_title.xml.flat",
@@ -2324,6 +2504,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/material_on_background_emphasis_medium.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/color_mtrl_text_btn_text_color_selector.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/color/mtrl_text_btn_text_color_selector.xml"
     },
@@ -2352,8 +2536,16 @@
         "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnativeratings_src_images_airbnbstar.png.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/node_modules_reactnativeratings_src_images_airbnbstar.png"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_btn_radio_to_on_mtrl_ring_outer_path_animation.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_foundation.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_foundation.json"
     },
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/anim_abc_popup_exit.xml.flat",
@@ -2456,6 +2648,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable/abc_ic_ab_back_material.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_nativebase_dist_src_basic_icon_nbicons.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_nativebase_dist_src_basic_icon_nbicons.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/layout_design_text_input_end_icon.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/layout/design_text_input_end_icon.xml"
     },
@@ -2512,6 +2708,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/drawable/ic_keyboard_arrow_right_black_24dp.xml"
     },
     {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_antdesign.json.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_antdesign.json"
+    },
+    {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/interpolator_btn_checkbox_checked_mtrl_animation_interpolator_1.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml"
     },
@@ -2558,5 +2758,9 @@
     {
         "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_mobilephone.jpg.flat",
+        "source": "/Users/macbook/React_Native_Basic_Structure/android/app/src/main/res/drawable-mdpi/src_assets_images_mobilephone.jpg"
     }
 ]

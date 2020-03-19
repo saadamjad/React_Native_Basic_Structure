@@ -136,6 +136,9 @@ export default class registration extends React.PureComponent {
               paddingVertical: 10,
               marginVertical: 20,
               borderRadius: 5,
+              borderRadius: 5,
+              borderBottomEndRadius:0,
+              borderTopStartRadius:0,
             }}>
             <Text style={styles.logintext}> login</Text>
           </TouchableOpacity>

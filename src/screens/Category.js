@@ -15,6 +15,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MainHeader from '../Component/MainHeader';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
+import { Row, Col } from 'native-base';
 export default class Category extends React.Component {
   constructor() {
     super();
@@ -189,28 +190,36 @@ export default class Category extends React.Component {
             paddingBottom: 50,
           }}>
              <MainHeader backBtn={true} navigation={this.props.navigation} />
-          <View
+             <Row
             style={{
-              height: 50,
+              height: 40,
               width: '100%',
               // borderWidth: 1,
               backgroundColor: '#DD3333',
               flexDirection: 'row',
               paddingLeft: 20,
-              alignItems: 'center',
+            //   alignItems: 'center',
+            // justifyContent:'center',
+            alignItems:'center'
             }}>
+            <Col style={{ flexDirection: 'row',alignItems:'center'}}>
             <Entypo name={'phone'} size={20} color="white" />
             <Text
-              style={{marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              style={{marginHorizontal: 5,fontSize:12, color: 'white', fontWeight: '400'}}>
               {' '}
               0300- 53193358{' '}
             </Text>
+            </Col>
+            <Col>
             <Text
-              style={{textAlign:'right',marginHorizontal: 10, color: 'white', fontWeight: '400'}}>
+              style={{textAlign:'right',marginHorizontal: 5,paddingLeft:10, color: 'white',fontSize:12, fontWeight: '400'}}>
               {' '}
               نقدوآسان اقساط کا بااعتماد ادارہ{' '}
             </Text>
-          </View>
+            </Col>
+          </Row>
+
+         
 
           <View
             style={{
@@ -702,6 +711,7 @@ export default class Category extends React.Component {
             {this.state.MobileArray.map((item, i) => {
               return (
                 <View
+                
                   style={{
                     height: 270,
                     width: '45%',
@@ -845,7 +855,7 @@ export default class Category extends React.Component {
               style={{height: '100%', width: '100%'}}
             />
           </View>
-          <View style={{borderWidth: 0, marginVertical: 10}}>
+          {/* <View style={{borderWidth: 0, marginVertical: 10}}>
             <Text
               style={{
                 width: '40%',
@@ -895,7 +905,7 @@ export default class Category extends React.Component {
             </TouchableOpacity>
           </View>
 
-          <View
+         <View 
             style={{
               flexDirection: 'row',
               flexWrap: 'wrap',
@@ -1036,7 +1046,7 @@ export default class Category extends React.Component {
                 </View>
               );
             })}
-          </View>
+          </View> */}
         </ScrollView>
       </View>
     );

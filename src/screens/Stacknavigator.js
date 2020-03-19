@@ -84,6 +84,7 @@ import SideBar from './SideBar'
 import MyProfile from './MyProfile';
 import MyOrders from './MyOrders';
 
+import Favourite from './Favourite';
 
 
 const LoginNavigation = createStackNavigator({
@@ -92,7 +93,7 @@ const LoginNavigation = createStackNavigator({
   Register: { screen: Register },
 
 },{
-  initialRouteName: "Welcome",
+  initialRouteName: "Login",
   headerMode: "none"
 });
 
@@ -101,7 +102,7 @@ const LoginNavigation = createStackNavigator({
 const HomeNavigator = createStackNavigator({
   Home: { screen: Home },
   Category:{screen:Category},
-  ProductDetails:{screen:ProductDetails},
+
 
 },{
   initialRouteName: "Home",
@@ -114,9 +115,11 @@ const Drawer = createDrawerNavigator(
   {
     Home: { screen: HomeNavigator },
 
+
     AboutUs:{screen:AboutUs},
     MyProfile:{screen: MyProfile},
-    MyOrders:{screen:MyOrders}
+    MyOrders:{screen:MyOrders},  ProductDetails:{screen:ProductDetails},
+    Favourite:{screen:Favourite}
 
   },
   {

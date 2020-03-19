@@ -39,7 +39,7 @@ export default class registration extends React.PureComponent {
     return (
       <View style={styles.parent}>
        
-        <View style={{height: '30%', width: '100%', borderWidth: 0,alignItems:'center'}}>
+        <View style={{height: '25%', width: '100%', borderWidth: 0,alignItems:'center'}}>
           <Image
             source={require('./../assets/images/logo.png')}
             resizeMode="contain"
@@ -56,6 +56,7 @@ export default class registration extends React.PureComponent {
             // justifyContent: 'center',
             alignItems: 'center',
             width: '90%',
+            paddingVertical:20,
             alignSelf: 'center',
             overflow: 'hidden',
             backgroundColor: 'white',
@@ -180,8 +181,11 @@ export default class registration extends React.PureComponent {
               paddingVertical: 10,
               marginVertical: 20,
               borderRadius: 5,
+              borderRadius: 5,
+              borderBottomEndRadius:0,
+              borderTopStartRadius:0,
             }}>
-            <Text style={styles.logintext}> login</Text>
+            <Text style={styles.logintext}> Register</Text>
           </TouchableOpacity>
 
           <TouchableOpacity

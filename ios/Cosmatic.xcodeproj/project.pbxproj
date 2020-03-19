@@ -421,11 +421,11 @@
 				A697068071384ABC9BF01EBD /* MaterialCommunityIcons.ttf in Resources */,
 				2BFD88635BD84A7CA5283F4B /* MaterialIcons.ttf in Resources */,
 				D9EB0CF902704751993BE5A6 /* Octicons.ttf in Resources */,
+				DDB16B1954334C1EB0E50552 /* Zocial.ttf in Resources */,
 				9E0E129595BF4A7F94753D8C /* Roboto_medium.ttf in Resources */,
 				6E743963D044427BBA5359AF /* Roboto.ttf in Resources */,
 				43C7E38BED84471295E6EE8E /* rubicon-icon-font.ttf in Resources */,
 				194A35DD932A42188A92079A /* SimpleLineIcons.ttf in Resources */,
-				DDB16B1954334C1EB0E50552 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
