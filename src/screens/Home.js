@@ -17,7 +17,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 import MainHeader from '../Component/MainHeader';
 import { Row, Col } from 'native-base';
-import {getAllProducts} from './../Apis/Apis'
+import {getAllProducts,getAllCategories} from './../Apis/Apis'
 export default class Login extends React.Component {
   constructor() {
     super();
@@ -178,11 +178,23 @@ export default class Login extends React.Component {
     };
   }
   componentDidMount=async()=>{
-    const responseTotal = await getAllProducts()
-    console.log('Home _retrieveData responseTotal: ', responseTotal)
-    this.setState({
-      productSet:responseTotal
-    })
+    // const responseTotal = await getAllProducts()
+    // console.log('Home _retrieveData responseTotal: ', responseTotal)
+    // this.setState({
+    //   productSet:responseTotal
+    // })
+
+    // const responseate= await getAllCategories()
+    // console.log(responseate)
+    // this.setState({
+    //   categorySet:responseate
+    // })
+
+    // const responseate= await getProductByID(12)
+    // console.log(responseate)
+    // this.setState({
+    //   productSet:responseate
+    // })
   }
   updateSearch = search => {
     this.setState({search});
@@ -362,8 +374,9 @@ export default class Login extends React.Component {
                 </TouchableOpacity>
               );
             })}
-           {this.state.Category.map((item, i) => {
-              return (
+           {this.state.categorySet&&this.state.categorySet.map((item, i) => {
+             console.log(item)
+             return (
                 <TouchableOpacity
                   style={{
                     height: 60,
@@ -385,12 +398,14 @@ export default class Login extends React.Component {
 
                     elevation: 2,
                   }}
-                  onPress={() => this.props.navigation.navigate('Category')}>
+                  onPress={() => this.props.navigation.navigate('Category',{id:item.id})}>
+                    {item.image&&
                   <Image
-                    source={item.Image}
+                    source={{uri:item.image.src}}
                     style={{height: '50%', width: '50%'}}
                     resizeMode="contain"
                   />
+                    }
                 </TouchableOpacity>
               );
             })}

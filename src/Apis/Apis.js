@@ -19,8 +19,53 @@ export const getAllProducts = async () => {
         res.status = response.status
       })
       .catch(function (handleError) {
-        console.log('error recieved in getAllProducts : ', response)
+        console.log('error recieved in getAllProducts : ', handleError)
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
   }
+
+  export const getAllCategories = async () => {
+    const headersconfig = {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+     
+      }
+    }
+    var res = {}
+    await axios.get(baseUrl + 'products/categories?'+keys, headersconfig)
+      .then(function (response) {
+        console.log('response recieved in getAllCategories : ', response)
+        res = response.data
+        res.status = response.status
+      })
+      .catch(function (handleError) {
+        console.log('error recieved in getAllCategories : ', handleError)
+      })
+    // console.log('RETURN getActionsForIntervention res: ', res)
+    return res
+  }
+
+  export const getProductByID = async (id) => {
+    const headersconfig = {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+     
+      }
+    }
+    var res = {}
+    await axios.get(baseUrl + 'products/categories/'+id+'?'+keys, headersconfig)
+      .then(function (response) {
+        console.log('response recieved in getProductByID : ', response)
+        res = response.data
+        res.status = response.status
+      })
+      .catch(function (handleError) {
+        console.log('error recieved in getProductByID : ', handleError)
+      })
+    // console.log('RETURN getActionsForIntervention res: ', res)
+    return res
+  }
+  

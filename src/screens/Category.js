@@ -16,6 +16,8 @@ import MainHeader from '../Component/MainHeader';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 import { Row, Col } from 'native-base';
+import { getProductByID } from '../Apis/Apis';
+// import console = require('console');
 export default class Category extends React.Component {
   constructor() {
     super();
@@ -175,6 +177,10 @@ export default class Category extends React.Component {
   updateSearch = search => {
     this.setState({search});
   };
+  async componentDidMount(){
+    const response = await getProductByID(this.props.navigation.getParam('id'))
+    console.log(response)
+  }
   render() {
     return (
       <View

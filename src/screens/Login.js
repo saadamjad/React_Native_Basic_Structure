@@ -38,10 +38,10 @@ export default class registration extends React.PureComponent {
     return (
       <View style={styles.parent}>
         <View style={{height: '30%', width: '100%', borderWidth: 0,alignItems:'center'}}>
-          <Image
+          {/* <Image
             source={require('./../assets/images/logo.png')}
             resizeMode="contain"
-            style={{height: 170, width: 300}}></Image>
+            style={{height: 170, width: 300}}></Image> */}
         </View>
         <View
           style={{
