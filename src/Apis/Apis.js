@@ -34,7 +34,7 @@ export const getAllProducts = async () => {
       }
     }
     var res = {}
-    await axios.get(baseUrl + 'products/categories?'+keys, headersconfig)
+    await axios.get(baseUrl + 'products/categories?per_page=100&'+keys, headersconfig)
       .then(function (response) {
         console.log('response recieved in getAllCategories : ', response)
         res = response.data
@@ -47,7 +47,7 @@ export const getAllProducts = async () => {
     return res
   }
 
-  export const getProductByID = async (id) => {
+  export const getProductByCateId = async (id) => {
     const headersconfig = {
       headers: {
         Accept: 'application/json',

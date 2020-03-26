@@ -17,7 +17,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 import MainHeader from '../Component/MainHeader';
 import { Row, Col } from 'native-base';
-import {getAllProducts,getAllCategories} from './../Apis/Apis'
+import {getAllProducts,getProductByCateId,getAllCategories} from './../Apis/Apis'
 export default class Login extends React.Component {
   constructor() {
     super();
@@ -28,21 +28,29 @@ export default class Login extends React.Component {
       bike: true,
       Category: [
         {
-          name: 'bikes',
-          Image: require('../assets/images/tv.png'),
-        },
-        {
-          name: 'mobile',
-          Image: require('../assets/images/wash.png'),
-        },
-        {
-          name: 'Home Appliencce',
-          Image: require('../assets/images/bike.png'),
-        },
-        {
-          name: 'fright',
+          name: 'Smart Phones',
           Image: require('../assets/images/phone1.png'),
+          id:125
         },
+        {
+          name: 'LCDs',
+          Image: require('../assets/images/lcd.png'),
+          id:177
+        },
+        {
+          name: 'Bike',
+          Image: require('../assets/images/bike.png'),
+          id:142
+        },
+        {
+          name: 'Air Conditioners',
+          id:182,
+          Image: require('../assets/images/air.png'),
+        },
+        // {
+        //   name: 'fright',
+        //   Image: require('../assets/images/phone1.png'),
+        // },
         // {
         //   name: 'Washing machine ',
         //   Image: require('../assets/images/facebook.png'),
@@ -184,11 +192,11 @@ export default class Login extends React.Component {
     //   productSet:responseTotal
     // })
 
-    // const responseate= await getAllCategories()
-    // console.log(responseate)
-    // this.setState({
-    //   categorySet:responseate
-    // })
+    const responseate= await getAllCategories()
+    console.log(responseate)
+    this.setState({
+      categorySet:responseate
+    })
 
     // const responseate= await getProductByID(12)
     // console.log(responseate)
@@ -196,9 +204,20 @@ export default class Login extends React.Component {
     //   productSet:responseate
     // })
   }
+  getProductByCategoryID=async(id)=>{
+
+    const responseate= await getProductByCateId(id)
+    console.log(responseate)
+    this.setState({
+      productSet:responseate
+    })
+  }
   updateSearch = search => {
     this.setState({search});
   };
+  getProduct=(id)=>{
+    this.getProductByCategoryID(id)
+  }
   render() {
     return (
       <View
@@ -365,7 +384,7 @@ export default class Login extends React.Component {
 
                     elevation: 2,
                   }}
-                  onPress={() => this.props.navigation.navigate('Category')}>
+                  onPress={()=>this.getProduct(item.id)}>
                   <Image
                     source={item.Image}
                     style={{height: '50%', width: '50%'}}
@@ -374,41 +393,7 @@ export default class Login extends React.Component {
                 </TouchableOpacity>
               );
             })}
-           {this.state.categorySet&&this.state.categorySet.map((item, i) => {
-             console.log(item)
-             return (
-                <TouchableOpacity
-                  style={{
-                    height: 60,
-                    width: 60,
-                    backgroundColor: 'white',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    overflow: 'hidden',
-                    marginVertical: 5,
-                    marginHorizontal: 10,
-                    borderRadius: 90,
-                    shadowColor: '#000',
-                    shadowOffset: {
-                      width: 0,
-                      height: 2,
-                    },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
-
-                    elevation: 2,
-                  }}
-                  onPress={() => this.props.navigation.navigate('Category',{id:item.id})}>
-                    {item.image&&
-                  <Image
-                    source={{uri:item.image.src}}
-                    style={{height: '50%', width: '50%'}}
-                    resizeMode="contain"
-                  />
-                    }
-                </TouchableOpacity>
-              );
-            })}
+  
           </View>
           <View
             style={{
