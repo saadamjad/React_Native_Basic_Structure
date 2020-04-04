@@ -29,22 +29,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Cosmatic-tvOS.xcscheme</key>
+		<key>Pods-ParadiseCenter-tvOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Cosmatic-tvOSTests.xcscheme</key>
+		<key>Pods-ParadiseCenter-tvOSTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Cosmatic.xcscheme</key>
+		<key>Pods-ParadiseCenter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CosmaticTests.xcscheme</key>
+		<key>Pods-ParadiseCenterTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -185,6 +185,11 @@
 			<false/>
 		</dict>
 		<key>react-native-safe-area-context.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>react-native-webview.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

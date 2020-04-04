@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/values-v21/values-v21.xml",

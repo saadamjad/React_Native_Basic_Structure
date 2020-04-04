@@ -18,8 +18,23 @@ export default class SideBar extends Component {
       userType:'',
     }
   }
-  componentDidMount(){
+
+  componentDidMount=async()=>{
     this._retrieveData()
+    try {
+      let value = await AsyncStorage.getItem('user');
+      if (value !== null) {
+        // We have data!!
+        console.log(value);
+        value =JSON.parse(value)
+        this.setState({
+          user:value
+        })
+        console.log(value);
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
     
   }
   _retrieveData = async () => {
@@ -44,7 +59,7 @@ logout=async()=>{
 }
   _renderItem = ({item}) => (
     <TouchableOpacity activeOpacity={1} style={{ paddingLeft:20,flexDirection: 'row', backgroundColor:'white',alignItems:"center"}}
-          onPress={()=> this.props.navigation.navigate(item.key)}
+          onPress={()=>item.name=='Logout'?this.logout(): this.props.navigation.navigate(item.key)}
            >
         <View style={{zIndex:30,padding:10,paddingVertical:item.name=='Logout'?140: 15,backgroundColor:'#B51616',borderTopStartRadius:item.name=='Home'?20:0,borderTopEndRadius:item.name=='Home'?20:0}}>       
           {item.icon}
@@ -61,6 +76,7 @@ logout=async()=>{
   render() {
     return (
       <View style={{flex: 1, flexDirection: 'column'}}>
+        {this.state.user?
         <View style={{paddingTop:30}}>
          <TouchableOpacity
                   style={{
@@ -91,8 +107,8 @@ logout=async()=>{
                     resizeMode="contain"
                   />
                 </TouchableOpacity>
-                <Text style={{textAlign:'center',color:'#171717' , fontSize:18,fontWeight:'bold'}}>Bastian Schweinsteiger</Text>
-            </View>
+                <Text style={{textAlign:'center',color:'#171717' , fontSize:18,fontWeight:'bold'}}>{this.state.user.user.username}</Text>
+            </View>:   <View style={{paddingTop:30,marginBottom:50}}/>}
           <FlatList
             data={this.state.datas}
             keyExtractor={this._keyExtractor}

@@ -7,17 +7,18 @@ import {
   Text,
   View,
   TextInput,
-  ActivityIndicator,
+  AsyncStorage,
   I18nManager,
   ScrollView,
+  Alert,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
+import ImageSlider from 'react-native-image-slider';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 import MainHeader from '../Component/MainHeader';
-import { Row, Col } from 'native-base';
-import {getAllProducts,getProductByCateId,getAllCategories} from './../Apis/Apis'
+import { Row, Col, Spinner } from 'native-base';
+import {getAllProducts,getProductByCateId,getAllCategories, getFav, addToFav} from './../Apis/Apis'
 export default class Login extends React.Component {
   constructor() {
     super();
@@ -26,26 +27,44 @@ export default class Login extends React.Component {
       iconColour: true,
       washingMachine: true,
       bike: true,
+      CateName:'All',
       Category: [
         {
           name: 'Smart Phones',
           Image: require('../assets/images/phone1.png'),
+          selectedImage: require('../assets/images/phone1_white.png'),
           id:125
         },
         {
           name: 'LCDs',
           Image: require('../assets/images/lcd.png'),
+          selectedImage: require('../assets/images/lcd_white.png'),
           id:177
         },
         {
           name: 'Bike',
           Image: require('../assets/images/bike.png'),
+          selectedImage: require('../assets/images/bike_white.png'),
           id:142
         },
         {
           name: 'Air Conditioners',
           id:182,
           Image: require('../assets/images/air.png'),
+          selectedImage: require('../assets/images/air_white.png'),
+        },
+      
+        {
+          name: 'Refrigerator',
+          id:0,
+          Image: require('../assets/images/tv.png'),
+          selectedImage: require('../assets/images/air_white.png'),
+        },
+        {
+          name: 'Washing Machines',
+          id:0,
+          Image: require('../assets/images/wash.png'),
+          selectedImage: require('../assets/images/air_white.png'),
         },
         // {
         //   name: 'fright',
@@ -60,143 +79,42 @@ export default class Login extends React.Component {
         //   Image: require('../assets/images/facebook.png'),
         // },
       ],
-      Category1: [
-        {
-          name: 'bikes',
-          Image: require('../assets/images/tv.png'),
-        },
-        {
-          name: 'mobile',
-          Image: require('../assets/images/wash.png'),
-        },
-        {
-          name: 'Home Appliencce',
-          Image: require('../assets/images/bike.png'),
-        },
-        {
-          name: 'fright',
-          Image: require('../assets/images/phone1.png'),
-        },
-        // {
-        //   name: 'Washing machine ',
-        //   Image: require('../assets/images/facebook.png'),
-        // },
-        // {
-        //   name: 'bikes',
-        //   Image: require('../assets/images/facebook.png'),
-        // },
-      ],
-      bikesArray: [
-        {
-          name: 'honda bike ',
-          engineCapacity: '12 cc',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/21.png'),
-        },
-        {
-          name: ' unique  bikes',
-          engineCapacity: '12 cc',
-          price: ' 18,500 ',
-
-          Image: require('../assets/images/22.png'),
-        },
-        {
-          name: ' super star bikes',
-          engineCapacity: '12 cc',
-          price: ' 81,500 ',
-
-          Image: require('../assets/images/21.png'),
-        },
-        {
-          name: ' honda  bikes',
-          engineCapacity: '12 cc',
-          price: ' 10,500 ',
-
-          Image: require('../assets/images/scuty.png'),
-        },
-        // {
-        //   name: 'bikes',
-        //   engineCapacity:'12 cc',
-        //   price:' 101 ,500 ',
-
-        //   Image: require('../assets/images/facebook.png'),
-        // },
-      ],
-      MobileArray: [
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/mobilephone.jpg'),
-        },
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/phone.png'),
-        },
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/phone.png'),
-        },
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/mobilephone.jpg'),
-        },
-      ],
-      WachingMachine: [
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/mobilephone.jpg'),
-        },
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/phone.png'),
-        },
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/phone.png'),
-        },
-        {
-          name: 'Infenix ',
-          engineCapacity: '12 Gb / 250 hz / sd card',
-          price: ' 11,500 ',
-
-          Image: require('../assets/images/mobilephone.jpg'),
-        },
-      ],
+  
     };
   }
   componentDidMount=async()=>{
-    // const responseTotal = await getAllProducts()
-    // console.log('Home _retrieveData responseTotal: ', responseTotal)
-    // this.setState({
-    //   productSet:responseTotal
-    // })
-
-    const responseate= await getAllCategories()
-    console.log(responseate)
+    const responseTotal = await getAllProducts()
+    console.log('Home _retrieveData responseTotal: ', responseTotal)
     this.setState({
-      categorySet:responseate
+      productSet:responseTotal,
+      orignalData:responseTotal
     })
+    const responseatePhone= await getProductByCateId(125)
+
+    this.setState({
+      productSetPhone:responseatePhone
+    })
+    const responseateLcd= await getProductByCateId(177)
+
+    this.setState({
+      productSetLcd:responseateLcd
+    })
+    const responseateBike= await getProductByCateId(142)
+  
+    this.setState({
+      productSetBike:responseateBike
+    })
+    const responseateair= await getProductByCateId(182)
+
+    this.setState({
+      productSetAir:responseateair
+    })
+
+    // const responseate= await getAllCategories()
+    // console.log(responseate)
+    // this.setState({
+    //   categorySet:responseate
+    // })
 
     // const responseate= await getProductByID(12)
     // console.log(responseate)
@@ -205,18 +123,102 @@ export default class Login extends React.Component {
     // })
   }
   getProductByCategoryID=async(id)=>{
-
-    const responseate= await getProductByCateId(id)
-    console.log(responseate)
-    this.setState({
-      productSet:responseate
-    })
+    if(id==125){
+      console.log(id)
+      this.setState({
+        productSet:this.state.productSetPhone
+      })
+    }
+    else if(id==177){
+      console.log(id)
+      this.setState({
+        productSet:this.state.productSetLcd
+      })
+    }
+    else if(id==142){
+      console.log(id)
+      this.setState({
+        productSet:this.state.productSetBike
+      })
+    }
+    else if(id==182){
+      console.log(id)
+      this.setState({
+        productSet:this.state.productSetAir
+      })
+    }
+    else{
+      const responseate= await getProductByCateId(id)
+      console.log('car',responseate)
+      this.setState({
+        productSet:responseate
+      })
+    }
+   
   }
   updateSearch = search => {
     this.setState({search});
   };
-  getProduct=(id)=>{
-    this.getProductByCategoryID(id)
+  getProduct=(id,name)=>{
+    this.setState({
+      CateName:name,
+      productSet:undefined,
+      selectedID:id
+    })
+    this.getProductByCategoryID(id,name)
+  }
+  addToFav=async(item)=>{
+   
+    try {
+      let value = await AsyncStorage.getItem('user');
+
+      if(value==null||value==undefined||value=='')
+      {
+        Alert.alert(
+          'You are not logged in',
+          'Please log in to continue',
+          [
+            // {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+            {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+            {text: 'Login', onPress: () => this.props.navigation.navigate('Login')},
+          ],
+          { cancelable: false }
+        )
+      }
+      else{
+        this.setState({
+          [item.id]:item.id
+        })
+        let product = []
+        if (value !== null) {
+          // We have data!!
+          console.log(value);
+          value =JSON.parse(value)
+          const  responseFav = await getFav(value.cookie)
+          console.log(responseFav)
+            if(!responseFav.product){
+         
+              product.push(item.id)
+              product = JSON.stringify(product)
+              
+            }
+            else{
+              console.log(responseFav.product)
+          product =  JSON.parse(responseFav.product)
+              product.push(item.id)
+              product = JSON.stringify(product)
+            }
+            const  response = await addToFav(value.cookie,product)
+            console.log(response)
+         
+        }
+      }
+    
+    } catch (error) {
+      // Error retrieving data
+      console.log(error)
+    }
+
   }
   render() {
     return (
@@ -264,7 +266,8 @@ export default class Login extends React.Component {
 
          
 
-          <View
+          <TouchableOpacity
+          onPress={()=>this.props.navigation.navigate('Search')}
             style={{
               height: 48,
               backgroundColor: '#ECECEC',
@@ -281,7 +284,9 @@ export default class Login extends React.Component {
               placeholder=" search what you are looking fo "
               // onChangeText={this.updateSearch}
               value={this.state.search}
-              onChangeText={text => this.setState({search: text})}
+              // onChangeText={text => this.setState({search: text})}
+              onPress={()=>this.props.navigation.navigate('Search',{'data':this.state.orignalData})}
+              onFocus={()=>this.props.navigation.navigate('Search',{'data':this.state.orignalData})}
               containerStyle={{
                 // backgroundColor: this.props.reduxState.theme.searchBarColor,
                 borderTopWidth: 0,
@@ -309,8 +314,31 @@ export default class Login extends React.Component {
               lightTheme={true}
               backgroundColor={'#ECECEC'}
             />
+          </TouchableOpacity>
+          <View
+            style={{
+              width: '100%',
+              height: 240,
+              elevation: 0,
+              // borderWidth: ,
+              borderColor: '#f1f1f1',
+              // borderWidth: 1,
+              marginVertical: 20,
+            }}>
+            {/* <Image
+              source={require('../assets/images/kitchen.png')}
+              resizeMode="contain"
+              style={{height: '100%', width: '100%'}}
+            /> */}
+                    <ImageSlider   loopBothSides
+          autoPlayWithInterval={3000} images={[
+                   
+           require('../assets/images/kitchen.png'),
+           require('../assets/images/cover.jpg'),
+           require('../assets/images/cover2.jpg'),
+          ]}/>
           </View>
-
+        
           <View
             style={{
               width: '70%',
@@ -359,15 +387,18 @@ export default class Login extends React.Component {
               alignItems: 'center',
               justifyContent: 'center',
               overflow: 'hidden',
-              paddingVertical: 10,
+              paddingVertical: 10,marginTop:30
             }}>
              {this.state.Category.map((item, i) => {
+          
               return (
+           
                 <TouchableOpacity
+                disabled={item.id==0&&true}
                   style={{
                     height: 60,
                     width: 60,
-                    backgroundColor: 'white',
+                    backgroundColor: this.state.selectedID==item.id?'#DD3333':'white',
                     alignItems: 'center',
                     justifyContent: 'center',
                     overflow: 'hidden',
@@ -384,9 +415,9 @@ export default class Login extends React.Component {
 
                     elevation: 2,
                   }}
-                  onPress={()=>this.getProduct(item.id)}>
+                  onPress={()=>this.getProduct(item.id,item.name)}>
                   <Image
-                    source={item.Image}
+                    source={this.state.selectedID==item.id?item.selectedImage:item.Image}
                     style={{height: '50%', width: '50%'}}
                     resizeMode="contain"
                   />
@@ -397,68 +428,40 @@ export default class Login extends React.Component {
           </View>
           <View
             style={{
-              width: '100%',
-              height: 240,
-              elevation: 0,
-              // borderWidth: ,
-              borderColor: '#f1f1f1',
-              // borderWidth: 1,
-              marginVertical: 20,
+              width: '70%',
+              alignSelf: 'center',
+              borderBottomWidth: 4,
+              height: 50,
+              borderRadius: 10,
+              borderColor: '#dadada',
+              justifyContent: 'center',
             }}>
-            <Image
-              source={require('../assets/images/kitchen.png')}
-              resizeMode="contain"
-              style={{height: '100%', width: '100%'}}
-            />
-          </View>
-          <View style={{borderWidth: 0, marginVertical: 10}}>
-            <Text
+            <View
               style={{
                 width: '40%',
                 alignSelf: 'center',
+                borderBottomWidth: 4,
+                position: 'absolute',
+                bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: '#DD3333',
+              }}></View>
+            <Text
+              style={{
+                width: '80%',
+                alignSelf: 'center',
                 // borderBottomWidth: 4,
-                // borderColor: '#DD3333',
+                borderColor: '#DD3333',
                 textAlign: 'center',
-
+                // height: 20,
                 borderRadius: 15,
                 fontSize: 20,
                 fontWeight: '600',
               }}>
-              Bike
+              {' '}
+              {this.state.CateName}
             </Text>
-            <View
-              style={{
-                width: '60%',
-                alignSelf: 'center',
-                borderBottomWidth: 4,
-                // borderWidth: 1,
-                marginVertical: 5,
-
-                // position: 'absolute',
-                // bottom: -4,
-                // height: 50,
-                borderRadius: 10,
-                borderColor: '#dadada',
-              }}></View>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('')}>
-              <Text
-                style={{
-                  // width: '40%',
-                  alignSelf: 'center',
-                  // borderBottomWidth: 4,
-                  // borderColor: '#DD3333',
-                  textAlign: 'center',
-                  // height: 50,
-                  borderRadius: 15,
-                  fontSize: 15,
-
-                  color: '#DD3333',
-                  fontWeight: '600',
-                }}>
-                View Brands
-              </Text>
-            </TouchableOpacity>
           </View>
 
           <View
@@ -472,10 +475,12 @@ export default class Login extends React.Component {
               justifyContent: 'center',
               paddingVertical: 10,
             }}>
-            {this.state.productSet&&this.state.productSet.map((item, i) => {
+                 {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
+            {this.state.productSet?this.state.productSet.map((item, i) => {
               return (
+                i<4&&
                 <TouchableOpacity
-                onPress={()=>this.props.navigation.navigate('ProductDetails')}
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item})}
                   style={{
                     height: 270,
                     width: '45%',
@@ -505,7 +510,7 @@ export default class Login extends React.Component {
                     />
                     <View
                       style={{
-                        height: 65,
+                        height: 30,
                         width: 39,
                         // borderWidth: 1,
                         position: 'absolute',
@@ -522,7 +527,7 @@ export default class Login extends React.Component {
                         elevation: 7,
                         backgroundColor: 'white',
                       }}>
-                      <TouchableOpacity
+                      {/* <TouchableOpacity
                         style={{
                           height: '50%',
                           width: '100%',
@@ -535,7 +540,7 @@ export default class Login extends React.Component {
                           // borderWidth: 1,
                         }}>
                         <Entypo name={'eye'} size={15} color="white" />
-                      </TouchableOpacity>
+                      </TouchableOpacity> */}
                       <TouchableOpacity
                         style={{
                           height: '50%',
@@ -550,13 +555,16 @@ export default class Login extends React.Component {
                           // borderWidth: 1,
                         }}
                         onPress={() =>
-                          this.setState({iconColour: !this.state.iconColour})
+                          // this.setState({iconColour: !this.state.iconColour})
+                          this.addToFav(item)
                         }>
-                        {this.state.iconColour ? (
-                          <Entypo name={'heart'} size={15} color="red" />
+                        {this.state[item.id]==item.id ? (
+                          <Entypo      name={'heart'} size={15} color="red" />
                         ) : (
                           <Entypo
-                            name={'heart-outlined'}
+                     
+
+                          name={'heart-outlined'} 
                             size={15}
                             color="red"
                           />
@@ -600,76 +608,29 @@ export default class Login extends React.Component {
                   </View>
                 </TouchableOpacity>
               );
-            })}
+            }):<Spinner color={'#DD3333'}/>}
+       
+            
           </View>
-
           <View
             style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
               width: '100%',
-              height: 240,
-              elevation: 0,
-              // borderWidth: ,
-              borderColor: '#f1f1f1',
+              // padding: 1,
+              flex:1,
               // borderWidth: 1,
-              marginVertical: 20,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
             }}>
-            <Image
-              source={require('../assets/images/cover.jpg')}
-              resizeMode="cover"
-              style={{height: '100%', width: '100%'}}
+          <Image
+              source={require('../assets/images/kitchen.png')}
+              resizeMode="contain"
+              style={{height: 250, width: '100%'}}
             />
-          </View>
-          <View style={{borderWidth: 0, marginVertical: 10}}>
-            <Text
-              style={{
-                width: '40%',
-                alignSelf: 'center',
-                // borderBottomWidth: 4,
-                // borderColor: '#DD3333',
-                textAlign: 'center',
-
-                borderRadius: 15,
-                fontSize: 20,
-                fontWeight: '600',
-              }}>
-              Mobile Phones
-            </Text>
+            </View>
             <View
-              style={{
-                width: '60%',
-                alignSelf: 'center',
-                borderBottomWidth: 4,
-                // borderWidth: 1,
-                marginVertical: 5,
-
-                // position: 'absolute',
-                // bottom: -4,
-                // height: 50,
-                borderRadius: 10,
-                borderColor: '#dadada',
-              }}></View>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('')}>
-              <Text
-                style={{
-                  // width: '40%',
-                  alignSelf: 'center',
-                  // borderBottomWidth: 4,
-                  // borderColor: '#DD3333',
-                  textAlign: 'center',
-                  // height: 50,
-                  borderRadius: 15,
-                  fontSize: 15,
-
-                  color: '#DD3333',
-                  fontWeight: '600',
-                }}>
-                View Brands
-              </Text>
-            </TouchableOpacity>
-          </View>
-
-          <View
             style={{
               flexDirection: 'row',
               flexWrap: 'wrap',
@@ -680,9 +641,12 @@ export default class Login extends React.Component {
               justifyContent: 'center',
               paddingVertical: 10,
             }}>
-            {this.state.MobileArray.map((item, i) => {
+                 {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
+            {this.state.productSet?this.state.productSet.slice(4, this.state.productSet.length).map((item, i) => {
               return (
-                <View
+            
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item})}
                   style={{
                     height: 270,
                     width: '45%',
@@ -706,13 +670,13 @@ export default class Login extends React.Component {
                   }}>
                   <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
                     <Image
-                      source={item.Image}
+                      source={{uri:item.images[0].src}}
                       style={{height: '100%', width: '100%'}}
                       resizeMode="contain"
                     />
                     <View
                       style={{
-                        height: 65,
+                        height: 30,
                         width: 39,
                         // borderWidth: 1,
                         position: 'absolute',
@@ -729,7 +693,7 @@ export default class Login extends React.Component {
                         elevation: 7,
                         backgroundColor: 'white',
                       }}>
-                      <TouchableOpacity
+                      {/* <TouchableOpacity
                         style={{
                           height: '50%',
                           width: '100%',
@@ -742,7 +706,7 @@ export default class Login extends React.Component {
                           // borderWidth: 1,
                         }}>
                         <Entypo name={'eye'} size={15} color="white" />
-                      </TouchableOpacity>
+                      </TouchableOpacity> */}
                       <TouchableOpacity
                         style={{
                           height: '50%',
@@ -757,13 +721,16 @@ export default class Login extends React.Component {
                           // borderWidth: 1,
                         }}
                         onPress={() =>
-                          this.setState({iconColour: !this.state.iconColour})
+                          // this.setState({iconColour: !this.state.iconColour})
+                          this.addToFav(item)
                         }>
-                        {this.state.iconColour ? (
-                          <Entypo name={'heart'} size={15} color="red" />
+                        {this.state[item.id]==item.id ? (
+                          <Entypo      name={'heart'} size={15} color="red" />
                         ) : (
                           <Entypo
-                            name={'heart-outlined'}
+                     
+
+                          name={'heart-outlined'} 
                             size={15}
                             color="red"
                           />
@@ -776,15 +743,15 @@ export default class Login extends React.Component {
                       style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
                       {item.name}
                     </Text>
-                    <Text
+                    {/* <Text
                       style={{
                         fontSize: 15,
                         color: '#918f8f',
                         marginLeft: 20,
                         fontWeight: 'bold',
                       }}>
-                      {item.engineCapacity}
-                    </Text>
+                      {item.stock_status}
+                    </Text> */}
                     <Text
                       style={{
                         fontSize: 8,
@@ -805,220 +772,13 @@ export default class Login extends React.Component {
                       Rs {item.price}{' '}
                     </Text>
                   </View>
-                </View>
+                </TouchableOpacity>
               );
-            })}
+            }):<Spinner color={'#DD3333'}/>}
+       
+            
           </View>
-
-          <View
-            style={{
-              width: '100%',
-              height: 240,
-              elevation: 0,
-              // borderWidth: ,
-              borderColor: '#f1f1f1',
-              // borderWidth: 1,
-              marginVertical: 20,
-            }}>
-            <Image
-              source={require('../assets/images/homeappl.jpg')}
-              resizeMode="cover"
-              style={{height: '100%', width: '100%'}}
-            />
-          </View>
-          <View style={{borderWidth: 0, marginVertical: 10}}>
-            <Text
-              style={{
-                width: '40%',
-                alignSelf: 'center',
-                // borderBottomWidth: 4,
-                // borderColor: '#DD3333',
-                textAlign: 'center',
-
-                borderRadius: 15,
-                fontSize: 20,
-                fontWeight: '600',
-              }}>
-              Washing Machines
-            </Text>
-            <View
-              style={{
-                width: '60%',
-                alignSelf: 'center',
-                borderBottomWidth: 4,
-                // borderWidth: 1,
-                marginVertical: 5,
-
-                // position: 'absolute',
-                // bottom: -4,
-                // height: 50,
-                borderRadius: 10,
-                borderColor: '#dadada',
-              }}></View>
-            <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('')}>
-              <Text
-                style={{
-                  // width: '40%',
-                  alignSelf: 'center',
-                  // borderBottomWidth: 4,
-                  // borderColor: '#DD3333',
-                  textAlign: 'center',
-                  // height: 50,
-                  borderRadius: 15,
-                  fontSize: 15,
-
-                  color: '#DD3333',
-                  fontWeight: '600',
-                }}>
-                View Brands
-              </Text>
-            </TouchableOpacity>
-          </View>
-
-          <View
-            style={{
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-              width: '100%',
-              // padding: 1,
-              // borderWidth: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingVertical: 10,
-            }}>
-            {this.state.WachingMachine.map((item, i) => {
-              return (
-                <View
-                  style={{
-                    height: 270,
-                    width: '45%',
-                    backgroundColor: 'white',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginVertical: 10,
-                    marginHorizontal: 5,
-                    borderRadius: 10,
-
-                    overflow: 'hidden',
-                    shadowColor: '#000',
-                    shadowOffset: {
-                      width: 0,
-                      height: 2,
-                    },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
-
-                    elevation: 2,
-                  }}>
-                  <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
-                    <Image
-                      source={item.Image}
-                      style={{height: '100%', width: '100%'}}
-                      resizeMode="contain"
-                    />
-                    <View
-                      style={{
-                        height: 65,
-                        width: 39,
-                        // borderWidth: 1,
-                        position: 'absolute',
-                        left: 0,
-                        shadowColor: '#000',
-                        shadowOffset: {
-                          width: 0,
-                          height: 2,
-                        },
-                        shadowOpacity: 0.25,
-                        shadowRadius: 3.84,
-
-                        borderColor: '#e2e2e2',
-                        elevation: 7,
-                        backgroundColor: 'white',
-                      }}>
-                      <TouchableOpacity
-                        style={{
-                          height: '50%',
-                          width: '100%',
-                          flex: 1,
-                          // borderWidth: 1,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          backgroundColor: '#c32020',
-
-                          // borderWidth: 1,
-                        }}>
-                        <Entypo name={'eye'} size={15} color="white" />
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                        style={{
-                          height: '50%',
-                          width: '100%',
-                          flex: 1,
-                          backgroundColor: 'white',
-                          // borderWidth: 1,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          borderTopLeftRadius: 5,
-
-                          // borderWidth: 1,
-                        }}
-                        onPress={() =>
-                          this.setState({
-                            washingMachine: !this.state.washingMachine,
-                          })
-                        }>
-                        {this.state.washingMachine ? (
-                          <Entypo name={'heart'} size={15} color="red" />
-                        ) : (
-                          <Entypo
-                            name={'heart-outlined'}
-                            size={15}
-                            color="red"
-                          />
-                        )}
-                      </TouchableOpacity>
-                    </View>
-                  </View>
-                  <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
-                    <Text
-                      style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
-                      {item.name}
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 15,
-                        color: '#918f8f',
-                        marginLeft: 20,
-                        fontWeight: 'bold',
-                      }}>
-                      {item.engineCapacity}
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 8,
-                        marginTop: 10,
-                        color: '#918f8f',
-                        marginLeft: 30,
-                        fontWeight: 'bold',
-                      }}>
-                      only
-                    </Text>
-                    <Text
-                      style={{
-                        fontSize: 20,
-                        color: '#DD3333',
-                        fontWeight: 'bold',
-                        textAlign: 'center',
-                      }}>
-                      Rs {item.price}{' '}
-                    </Text>
-                  </View>
-                </View>
-              );
-            })}
-          </View>
-        </ScrollView>
+ </ScrollView>
       </View>
     );
   }

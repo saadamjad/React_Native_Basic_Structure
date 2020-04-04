@@ -387,7 +387,7 @@ export default class AboutUs extends React.Component {
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Head Office</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0300-8487711</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}> 0300-8487711</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Email</Text>
@@ -433,7 +433,7 @@ export default class AboutUs extends React.Component {
                   }}
                   >
                   <Image
-                    source={require('./../assets/images/map.png')}
+                    source={require('./../assets/images/map1.png')}
                     style={{height: 160, width: '100%'}}
                     resizeMode="cover"
                   />
@@ -453,20 +453,20 @@ export default class AboutUs extends React.Component {
                
                 </View>
                 <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
-                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P1</Text>
+                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P2</Text>
                         {/* <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>64 GB</Text> */}
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
-                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Head Office</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0300-8487711</Text>
+                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Branch Office</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0320-4444211</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Email</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>headoffice@paradisecentre.pk</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>pc2@paradisecentre.pk</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Address</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Near Toyota Car Showroom, Peco Road Kot Lakhpat Lahore</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Main Almadina Road Township Store Lahore</Text>
                 </View>
             </View>
             <View
@@ -495,7 +495,7 @@ export default class AboutUs extends React.Component {
                   }}
                   >
                   <Image
-                    source={require('./../assets/images/map.png')}
+                    source={require('./../assets/images/map2.png')}
                     style={{height: 160, width: '100%'}}
                     resizeMode="cover"
                   />
@@ -515,20 +515,20 @@ export default class AboutUs extends React.Component {
                
                 </View>
                 <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
-                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P1</Text>
+                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P3</Text>
                         {/* <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>64 GB</Text> */}
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
-                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Head Office</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0300-8487711</Text>
+                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Branch</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0321-3311311</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Email</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>headoffice@paradisecentre.pk</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>pc3@paradisecentre.pk</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Address</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Near Toyota Car Showroom, Peco Road Kot Lakhpat Lahore</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Ismail Nagar Chungi Amer Sidhu Ferozepur Road Lahore</Text>
                 </View>
             </View>
             <View
@@ -557,7 +557,7 @@ export default class AboutUs extends React.Component {
                   }}
                   >
                   <Image
-                    source={require('./../assets/images/map.png')}
+                    source={require('./../assets/images/map3.png')}
                     style={{height: 160, width: '100%'}}
                     resizeMode="cover"
                   />
@@ -577,22 +577,86 @@ export default class AboutUs extends React.Component {
                
                 </View>
                 <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
-                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P1</Text>
+                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P4</Text>
                         {/* <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>64 GB</Text> */}
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Head Office</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0300-8487711</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}> 0306-5077771</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Email</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>headoffice@paradisecentre.pk</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>pc5@paradisecentre.pk</Text>
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Address</Text>
-                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Near Toyota Car Showroom, Peco Road Kot Lakhpat Lahore</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Qainchi Bazar Near Metro Bus Stop Ferozepur Road Lahore</Text>
                 </View>
             </View>
+            
+            <View
+                  style={{
+            
+                    width: '90%',
+                    alignSelf:'center',
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    marginVertical: 20,
+                    marginHorizontal: 10,
+         
+                    borderRadius: 7,
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                    paddingBottom:30
+                  }}
+                  >
+                  <Image
+                    source={require('./../assets/images/map4.png')}
+                    style={{height: 160, width: '100%'}}
+                    resizeMode="cover"
+                  />
+
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '80%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden',
+              paddingVertical: 10,
+            }}>
+               
+                </View>
+                <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
+                        <Text style={{fontWeight:'bold',fontSize:22,textAlign:'left' ,color:'#231F20'}}>Paradise Centre P5</Text>
+                        {/* <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>64 GB</Text> */}
+                </View>
+                <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
+                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Head Office</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>0321-1243222</Text>
+                </View>
+                <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
+                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Email</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>pc6@paradisecentre.pk</Text>
+                </View>
+                <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
+                        <Text style={{fontSize:10,textAlign:'left' ,color:'grey',textTransform:'uppercase'}}>Address</Text>
+                        <Text style={{fontSize:16,textAlign:'left' ,color:'#231F20'}}>Near Yasir Broast Chingi Amer Sidhu Ferozepur Road Lahore</Text>
+                </View>
+            </View>
+            
             <TouchableOpacity
            onPress={()=>this.setState({showMape:false})}
            style={{

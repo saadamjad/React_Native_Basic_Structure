@@ -16,24 +16,62 @@ import {
   Alert,
 } from 'react-native';
 
-// import {FontAwesome} from 'react-native-vector-icons/FontAwesome';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {NavigationActions, StackActions} from 'react-navigation';
 import {ScrollView} from 'react-native-gesture-handler';
+// import console = require('console');
+import { register } from '../Apis/Apis';
+import { Spinner } from 'native-base';
 
 export default class registration extends React.PureComponent {
   state = {
     username: '',
     password: '',
+    email:'',
     lang: 'en',
     pushtoken: '',
     showPassword: true,
     check: true,
+    showError:false,
+    isLoading:false
   };
   handleTextChange = newText => this.setState({username: newText});
-  handleTextChange1 = newText => this.setState({password: newText});
-  Login() {
-    this.props.navigation.navigate('Home');
+  handleTextChange1 = newText => this.setState({email: newText});
+  handleTextChange2 = newText => this.setState({password: newText});
+  Login=async()=> {
+    if(this.state.username!=''&&this.state.password!=''&&this.state.email!='')
+    {
+      this.setState({
+        showError:false,
+        isLoading:true
+      })
+      // this.props.navigation.navigate('Home');
+      console.log(this.state.password,this.state.username,this.state.email)
+      const response = await register(this.state.username,this.state.email,this.state.password)
+      console.log(response)
+      if(response.error)
+      {
+        alert(response.error)
+        this.setState({
+          showError:false,
+          isLoading:false
+        })
+      }
+      else{
+        this.setState({
+          showError:false,
+          isLoading:false
+        })
+        this.props.navigation.navigate('Login')
+      }
+    }
+    else{
+      this.setState({
+        showError:true
+      })
+    }
+  
   }
   render() {
     return (
@@ -98,16 +136,15 @@ export default class registration extends React.PureComponent {
                     justifyContent: 'center',
                     alignItems: 'center',
                   }}>
-                  <FontAwesome name={'lock'} size={20} color="#cccccc" />
+                  <FontAwesome name={'user'} size={20} color="#cccccc" />
                 </View>
               </View>
               <TextInput
                 style={{}}
-                maxLength={11}
-                keyboardType="numeric"
+           
                 value={this.state.number}
                 onChangeText={this.handleTextChange}
-                placeholder="300-1234567"></TextInput>
+                placeholder="Username"></TextInput>
             </View>
           </View>
 
@@ -119,8 +156,10 @@ export default class registration extends React.PureComponent {
                 height: '100%',
                 justifyContent: 'center',
                 alignItems: 'center',
-              }}>
-              <FontAwesome name={'lock'} size={20} color="#cccccc" />
+              }}
+            
+              >
+              <AntDesign name={'mail'} size={20} color="#cccccc" />
             </View>
 
             <TextInput
@@ -131,9 +170,10 @@ export default class registration extends React.PureComponent {
                 width: '80%',
                 // paddingLeft: 40,
               }}
-              value={this.state.password}
+              value={this.state.email}
               onChangeText={this.handleTextChange1}
-              secureTextEntry={true}
+              // secureTextEntry={true}
+              keyboardType={'email-address'}
               placeholder="  Email Address "></TextInput>
           </View>
 
@@ -158,11 +198,11 @@ export default class registration extends React.PureComponent {
                 // paddingLeft: 40,
               }}
               value={this.state.password}
-              onChangeText={this.handleTextChange1}
+              onChangeText={this.handleTextChange2}
               secureTextEntry={true}
-              placeholder="  password "></TextInput>
+              placeholder="  Password "></TextInput>
           </View>
-
+            {this.state.showError==true&&  <Text style={{margin:20,textAlign:"center",color:'red'}}>Please fill all required fields</Text>}
           <TouchableOpacity
             style={{marginRight: 20, marginTop: 10, marginLeft: 20}}
             onPress={() => this.props.navigation.navigate('VERIFY_NUM')}>
@@ -177,6 +217,7 @@ export default class registration extends React.PureComponent {
               alignItems: 'center',
               justifyContent: 'center',
               // borderWidth: 1,
+              height:50,
               backgroundColor: '#bd2e1e',
               paddingVertical: 10,
               marginVertical: 20,
@@ -185,7 +226,8 @@ export default class registration extends React.PureComponent {
               borderBottomEndRadius:0,
               borderTopStartRadius:0,
             }}>
-            <Text style={styles.logintext}> Register</Text>
+              {this.state.isLoading ==true?<Spinner  color={'white'}/>:
+            <Text style={styles.logintext}> Register</Text>}
           </TouchableOpacity>
 
           <TouchableOpacity

@@ -13,12 +13,15 @@ import {
   PureComponent,
   Platform,
   NetInfo,
-  Alert,
+  ScrollView,
 } from 'react-native';
 
-// import {FontAwesome} from 'react-native-vector-icons/FontAwesome';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {NavigationActions, StackActions} from 'react-navigation';
+import { login } from '../Apis/Apis';
+import { Spinner } from 'native-base';
+// import { ScrollView } from 'react-native-gesture-handler';
 
 export default class registration extends React.PureComponent {
   state = {
@@ -28,20 +31,76 @@ export default class registration extends React.PureComponent {
     pushtoken: '',
     showPassword: true,
     check: true,
+    
+    showError:false,
+    isLoading:false
   };
-  handleTextChange = newText => this.setState({username: newText});
+  handleTextChange = newText => this.setState({email: newText});
   handleTextChange1 = newText => this.setState({password: newText});
-  Login() {
-    this.props.navigation.navigate('Register');
+  componentDidMount=async()=>{
+    try {
+      let value = await AsyncStorage.getItem('user');
+      if (value !== null) {
+        // We have data!!
+        console.log(value);
+        value =JSON.parse(value)
+      // const resonse = await getOrders(value.user.id)
+      // this.setState({
+      //   orderSet:resonse
+      // })
+     
+        this.props.navigation.navigate('Home',{'user':value})
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
+  }
+  Login=async()=> {
+    if(this.state.password!=''&&this.state.email!='')
+    {
+      this.setState({
+        showError:false,
+        isLoading:true
+      })
+      // this.props.navigation.navigate('Home');
+      console.log(this.state.password,this.state.email)
+      const response = await login(this.state.email,this.state.password)
+      console.log(response)
+      if(response.error)
+      {
+        alert(response.error)
+        this.setState({
+          showError:false,
+          isLoading:false
+        })
+      }
+      else{
+        this.setState({
+          showError:false,
+          isLoading:false
+        })
+        try {
+          await AsyncStorage.setItem('user', JSON.stringify(response));
+        } catch (error) {
+          // Error saving data
+        }
+        this.props.navigation.goBack()
+      }
+    }
+    else{
+      this.setState({
+        showError:true
+      })
+    }
   }
   render() {
     return (
-      <View style={styles.parent}>
-        <View style={{height: '30%', width: '100%', borderWidth: 0,alignItems:'center'}}>
-          {/* <Image
+      <ScrollView style={styles.parent}>
+     <View style={{height: '25%', width: '100%', borderWidth: 0,alignItems:'center'}}>
+          <Image
             source={require('./../assets/images/logo.png')}
             resizeMode="contain"
-            style={{height: 170, width: 300}}></Image> */}
+            style={{height: 170, width: 300}}></Image>
         </View>
         <View
           style={{
@@ -70,32 +129,39 @@ export default class registration extends React.PureComponent {
             {' '}
             Login{' '}
           </Text>
+        
           <View style={styles.et1}>
-            <View style={styles.tocentertext}>
-              <View
-                style={{
-                  width: '20%',
-                  // borderWidth: 1,
-                  height: '100%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                <Text style={{marginRight: 20}}>+92</Text>
-              </View>
-              <TextInput
-                style={{marginLeft: 20}}
-                maxLength={11}
-                keyboardType="numeric"
-                value={this.state.number}
-                onChangeText={this.handleTextChange}
-                placeholder="300-1234567"></TextInput>
+            <View
+              style={{
+                width: '10%',
+                // borderWidth: 1,
+                height: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              <AntDesign name={'mail'} size={20} color="#cccccc" />
             </View>
+
+            <TextInput
+              style={{
+                paddingLeft: 0,
+                // borderWidth: 1,
+                height: '100%',
+                width: '80%',
+                paddingLeft: 40,
+              }}
+              value={this.state.email}
+              onChangeText={this.handleTextChange}
+              // secureTextEntry={true}
+              // keyboardType={'email-address'}
+              placeholder="Username"></TextInput>
           </View>
+
 
           <View style={styles.et1}>
             <View
               style={{
-                width: '20%',
+                width: '10%',
                 // borderWidth: 1,
                 height: '100%',
                 justifyContent: 'center',
@@ -115,12 +181,13 @@ export default class registration extends React.PureComponent {
               value={this.state.password}
               onChangeText={this.handleTextChange1}
               secureTextEntry={true}
-              placeholder="password"></TextInput>
+              placeholder="Password"></TextInput>
           </View>
+          {this.state.showError==true&&  <Text style={{margin:20,textAlign:"center",color:'red'}}>Please fill all required fields</Text>}
 
           <TouchableOpacity
-            style={{marginRight: 20, marginTop: 10, marginLeft: 20}}
-            onPress={() => this.props.navigation.navigate('VERIFY_NUM')}>
+            style={{marginRight: 20, margin: 20, marginLeft: 20}}
+            onPress={() => this.props.navigation.navigate('Password')}>
             <Text>Forgot Password?</Text>
           </TouchableOpacity>
 
@@ -133,6 +200,7 @@ export default class registration extends React.PureComponent {
               justifyContent: 'center',
               // borderWidth: 1,
               backgroundColor: '#bd2e1e',
+              height:50,
               paddingVertical: 10,
               marginVertical: 20,
               borderRadius: 5,
@@ -140,9 +208,10 @@ export default class registration extends React.PureComponent {
               borderBottomEndRadius:0,
               borderTopStartRadius:0,
             }}>
-            <Text style={styles.logintext}> login</Text>
+           {this.state.isLoading ==true?<Spinner  color={'white'}/>:
+            <Text style={styles.logintext}> Login</Text>}
           </TouchableOpacity>
-          <View
+          {/* <View
             style={{
               flexDirection: 'row',
               alignItems: 'center',
@@ -176,19 +245,19 @@ export default class registration extends React.PureComponent {
                 resizeMode="contain"
               />
             </View>
-          </View>
+          </View> */}
 
           <TouchableOpacity
             style={{marginTop: 10, borderWidth: 0}}
             onPress={() => this.props.navigation.navigate('Register')}>
             <Text>
               {' '}
-              dont have account ?{' '}
+              Dont have account ?{' '}
               <Text style={{color: '#DD3333'}}> Signup now </Text>
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }

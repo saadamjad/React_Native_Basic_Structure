@@ -24,12 +24,24 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import StackNavigator from './src/screens/Stacknavigator';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import Entypo from 'react-native-vector-icons/Entypo'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
+
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+MaterialIcons.loadFont();
+AntDesign.loadFont();
+Entypo.loadFont();
+EvilIcons.loadFont();
+FontAwesome.loadFont();
+
 
 const App: () => React$Node = () => {
   return (
-    <View style={{flex: 1, height: '100%', backgroundColor: 'red'}}>
+    <SafeAreaView style={{flex: 1, height: '100%', backgroundColor: 'white'}}>
       <StackNavigator />
-    </View>
+    </SafeAreaView>
   );
 };
 

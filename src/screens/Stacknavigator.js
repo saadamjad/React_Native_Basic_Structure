@@ -85,15 +85,26 @@ import MyProfile from './MyProfile';
 import MyOrders from './MyOrders';
 
 import Favourite from './Favourite';
+import Search from './Search';
+import Password from './Passwrod';
+// import Step1 from './Step1';
+// import Step2 from './Step2';
+// import Step3 from './Step3';
+// import Step4 from './Step4';
+// import Step5 from './Step5';
 
 
 const LoginNavigation = createStackNavigator({
   Welcome:{screen:Welcome},
-  Login: { screen: Login },
-  Register: { screen: Register },
+
+  // Step1:{screen:Step1},
+  // Step2:{screen:Step2},
+  // Step3:{screen:Step3},
+  // Step4:{screen:Step4},
+  // Step5:{screen:Step5},
 
 },{
-  initialRouteName: "Login",
+  initialRouteName: "Welcome",
   headerMode: "none"
 });
 
@@ -102,7 +113,8 @@ const LoginNavigation = createStackNavigator({
 const HomeNavigator = createStackNavigator({
   Home: { screen: Home },
   Category:{screen:Category},
-
+  ProductDetails:{screen:ProductDetails},
+  Search:{screen:Search}
 
 },{
   initialRouteName: "Home",
@@ -118,8 +130,11 @@ const Drawer = createDrawerNavigator(
 
     AboutUs:{screen:AboutUs},
     MyProfile:{screen: MyProfile},
-    MyOrders:{screen:MyOrders},  ProductDetails:{screen:ProductDetails},
-    Favourite:{screen:Favourite}
+    MyOrders:{screen:MyOrders}, 
+    Favourite:{screen:Favourite},
+    Login: { screen: Login },
+    Register: { screen: Register },
+    Password:{screen:Password},
 
   },
   {
@@ -144,7 +159,7 @@ const AppNavigator = createStackNavigator(
 
 const AppSwitchNavigator = createSwitchNavigator(
   {
-    Login: {screen: LoginNavigation},
+    // Login: {screen: LoginNavigation},
     Dashboard: {screen: AppNavigator},
    
    

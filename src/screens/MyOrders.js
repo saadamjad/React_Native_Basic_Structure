@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Text,
   View,
-  TextInput,
+  AsyncStorage,
   ActivityIndicator,
   I18nManager,
   ScrollView,
@@ -15,7 +15,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MainHeader from '../Component/MainHeader';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
-import { Row, Col } from 'native-base';
+import { Row, Col, Item, Spinner } from 'native-base';
+import { getOrders } from '../Apis/Apis';
 export default class MyOrders extends React.Component {
   constructor() {
     super();
@@ -178,6 +179,31 @@ export default class MyOrders extends React.Component {
   updateSearch = search => {
     this.setState({search});
   };
+  componentDidMount=async()=>{
+
+    try {
+      let value = await AsyncStorage.getItem('user');
+      if (value !== null) {
+        // We have data!!
+        console.log(value);
+        value =JSON.parse(value)
+      const resonse = await getOrders(value.user.id)
+      this.setState({
+        orderSet:resonse
+      })
+      if(resonse.length==0){
+        this.setState({
+          showNo:true
+        })
+      }
+      console.log(resonse)
+        console.log(value);
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
+    
+  }
   render() {
     return (
       <View
@@ -263,78 +289,83 @@ export default class MyOrders extends React.Component {
               My Orders
             </Text>
           </View>
-         
-           <View
-                  style={{
-            
-                    width: '90%',
-                    alignSelf:'center',
-                    backgroundColor: 'white',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    overflow: 'hidden',
-                    marginVertical: 20,
-                    marginHorizontal: 10,
-         
-                    borderRadius: 7,
-                    shadowColor: '#000',
-                    // flexDirection:'row',
-                    shadowOffset: {
-                      width: 0,
-                      height: 2,
-                    },
-                    shadowOpacity: 0.25,
-                    shadowRadius: 3.84,
+         {this.state.orderSet? this.state.orderSet.map((item,i) =>
+            <View
+            key={i}
+            style={{
+      
+              width: '90%',
+              alignSelf:'center',
+              backgroundColor: 'white',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden',
+              marginVertical: 20,
+              marginHorizontal: 10,
+   
+              borderRadius: 7,
+              shadowColor: '#000',
+              // flexDirection:'row',
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.25,
+              shadowRadius: 3.84,
 
-                    elevation: 2,
-                    paddingVertical:30
-                  }}
-                  >
-                    <Row>
-                      <Col>
-                    <Image
-                      source={require('./../assets/images/phone.png')}
-                      style={{height: 160, width: '100%'}}
-                      resizeMode="cover"
-                    />
-                    </Col>
-                    <Col>
-                    <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
-                            <Text style={{fontSize:13,textAlign:'left' ,color:'231F20'}}>Iphone X</Text>
-                            <Text style={{ fontSize:11,textAlign:'left' ,color:'grey'}}>128 Gb</Text>
-                    </View>
- 
-                    <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
-                            <Text style={{fontSize:13,textAlign:'left' ,color:'231F20'}}>Plan Status</Text>
-                            <Text style={{ fontWeight:'bold',fontSize:17,textAlign:'left' ,color:'#DD3333'}}>Incomplete</Text>
-                    </View>
-                    <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
-                    <TouchableOpacity
-           
-           style={{
-            //  width: '100%',
-           //   alignSelf: 'center',
-           //   alignItems: 'center',
-           //   justifyContent: 'center',
-             // borderWidth: 1,
-             backgroundColor: '#bd2e1e',
-             paddingVertical: 5,
-            //  marginVertical: 20,
-             borderRadius: 5,
-             borderBottomEndRadius:0,
-             borderTopStartRadius:0
-           }}>
-           <Text style={{paddingHorizontal:30,color:'white'}}>View Plan</Text>
-         </TouchableOpacity>
-                            </View>
-                    
-                    </Col>
-                    </Row>
-               
+              elevation: 2,
+              paddingVertical:30
+            }}
+            >
+              <Row>
+                <Col>
+              <Image
+                source={require('./../assets/images/phone.png')}
+                style={{height: 160, width: '100%'}}
+                resizeMode="cover"
+              />
+              </Col>
+              <Col>
+              <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
+                      <Text style={{fontSize:15,textAlign:'left' ,color:'#231F20'}}>{item.name}</Text>
+                      <Text style={{ fontSize:17,textAlign:'left' ,color:'#DD3333',marginTop:10}}>{item.price}</Text>
+              </View>
+
+              <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
+                      <Text style={{fontSize:13,textAlign:'left' ,color:'#231F20'}}>Plan Status</Text>
+                      <Text style={{ fontWeight:'bold',fontSize:17,textAlign:'left' ,color:'#DD3333'}}>Incomplete</Text>
+              </View>
+              <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
+              <TouchableOpacity
+     
+     style={{
+      //  width: '100%',
+     //   alignSelf: 'center',
+     //   alignItems: 'center',
+     //   justifyContent: 'center',
+       // borderWidth: 1,
+       backgroundColor: '#bd2e1e',
+       paddingVertical: 5,
+      //  marginVertical: 20,
+       borderRadius: 5,
+       borderBottomEndRadius:0,
+       borderTopStartRadius:0
+     }}>
+     <Text style={{paddingHorizontal:30,color:'white'}}>View Plan</Text>
+   </TouchableOpacity>
+                      </View>
+              
+              </Col>
+              </Row>
          
-           
-            </View>
-           
+   
+     
+      </View>
+
+)
+    :<Spinner color={'#DD3333'}/>}
+{this.state.showNo==true&&<Text style={{fontSize:20,margin:30,textAlign:'center'}}>No Record Found</Text>}
+{/*            
         
             <View
                   style={{
@@ -478,7 +509,7 @@ export default class MyOrders extends React.Component {
          
            
             </View>
-           
+            */}
         
        
          

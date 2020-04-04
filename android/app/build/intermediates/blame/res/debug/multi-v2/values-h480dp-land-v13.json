@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/macbook/React_Native_Basic_Structure/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml",
             "map": [
                 {
                     "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/values-h480dp-land-v13/values-h480dp-land-v13.xml",

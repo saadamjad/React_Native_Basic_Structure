@@ -7,7 +7,7 @@ import {
   Text,
   View,
   TextInput,
-  ActivityIndicator,
+  AsyncStorage,
   I18nManager,
   ScrollView,
 } from 'react-native';
@@ -15,7 +15,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MainHeader from '../Component/MainHeader';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
-import { Row, Col } from 'native-base';
+import { Row, Col, Spinner } from 'native-base';
+import { getFav, getProduct } from '../Apis/Apis';
 export default class Favourite extends React.Component {
   constructor() {
     super();
@@ -24,6 +25,7 @@ export default class Favourite extends React.Component {
       iconColour: true,
       washingMachine: true,
       bike: true,
+      // productSet:[],
       Category: [
         {
           name: 'bikes',
@@ -178,6 +180,44 @@ export default class Favourite extends React.Component {
   updateSearch = search => {
     this.setState({search});
   };
+  componentDidMount=async()=>{
+  try{
+    let value = await AsyncStorage.getItem('user');
+    let product = []
+    if (value !== null) {
+      // We have data!!
+      console.log(value);
+      value =JSON.parse(value)
+      const  responseFav = await getFav(value.cookie)
+      console.log(responseFav)
+      if(responseFav.product)
+      {
+        this.state.productSet=[]
+        let product = JSON.parse(responseFav.product)
+        for (var i =0 ;i<product.length; i++)
+        {
+          console.log(i)
+          const res = await getProduct(product[i])
+    
+          this.state.productSet.push(res)
+          this.setState({
+            productSet:this.state.productSet
+          })
+        }
+      
+        // this.setState({productSet:product})
+      }
+      else{
+        this.setState({productSet:[]})
+        this.state.productSet=[]
+      }
+     
+    }
+  } catch (error) {
+    // Error retrieving data
+    console.log(error)
+  }
+  }
   render() {
     return (
       <View
@@ -275,9 +315,12 @@ export default class Favourite extends React.Component {
               justifyContent: 'center',
               paddingVertical: 10,
             }}>
-          {this.state.bikesArray.map((item, i) => {
+          {this.state.productSet?
+          this.state.productSet.map((item, i) => {
               return (
-                <View
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item})}
+                key={i}
                   style={{
                     height: 270,
                     width: '45%',
@@ -301,70 +344,11 @@ export default class Favourite extends React.Component {
                   }}>
                   <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
                     <Image
-                      source={item.Image}
+                      source={{uri:item.images[0].src}}
                       style={{height: '100%', width: '100%'}}
                       resizeMode="contain"
                     />
-                    <View
-                      style={{
-                        height: 65,
-                        width: 39,
-                        // borderWidth: 1,
-                        position: 'absolute',
-                        left: 0,
-                        shadowColor: '#000',
-                        shadowOffset: {
-                          width: 0,
-                          height: 2,
-                        },
-                        shadowOpacity: 0.25,
-                        shadowRadius: 3.84,
-
-                        borderColor: '#e2e2e2',
-                        elevation: 7,
-                        backgroundColor: 'white',
-                      }}>
-                      <TouchableOpacity
-                        style={{
-                          height: '50%',
-                          width: '100%',
-                          flex: 1,
-                          // borderWidth: 1,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          backgroundColor: '#c32020',
-
-                          // borderWidth: 1,
-                        }}>
-                        <Entypo name={'eye'} size={15} color="white" />
-                      </TouchableOpacity>
-                      <TouchableOpacity
-                        style={{
-                          height: '50%',
-                          width: '100%',
-                          flex: 1,
-                          backgroundColor: 'white',
-                          // borderWidth: 1,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          borderTopLeftRadius: 5,
-
-                          // borderWidth: 1,
-                        }}
-                        onPress={() =>
-                          this.setState({iconColour: !this.state.iconColour})
-                        }>
-                        {this.state.iconColour ? (
-                          <Entypo name={'heart'} size={15} color="red" />
-                        ) : (
-                          <Entypo
-                            name={'heart-outlined'}
-                            size={15}
-                            color="red"
-                          />
-                        )}
-                      </TouchableOpacity>
-                    </View>
+                  
                   </View>
                   <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
                     <Text
@@ -378,7 +362,7 @@ export default class Favourite extends React.Component {
                         marginLeft: 20,
                         fontWeight: 'bold',
                       }}>
-                      {item.engineCapacity}
+                      {/* {item.engineCapacity} */}
                     </Text>
                     <Text
                       style={{
@@ -400,9 +384,9 @@ export default class Favourite extends React.Component {
                       Rs {item.price}{' '}
                     </Text>
                   </View>
-                </View>
+                </TouchableOpacity>
               );
-            })}
+            }):<Spinner color={'#DD3333'}/>}
             </View>
            
         </ScrollView>

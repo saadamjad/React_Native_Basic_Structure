@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import {
   ImageBackground,
   Image,
@@ -6,19 +6,24 @@ import {
   TouchableOpacity,
   Text,
   View,
-  TextInput,
+  Dimensions,
   ActivityIndicator,
   I18nManager,
   ScrollView,
+  AsyncStorage,
   
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import HTML from 'react-native-render-html';
 import MainHeader from '../Component/MainHeader';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';import Modal from "react-native-modal";
-import { Row, Col } from 'native-base';
+import { Row, Col, Spinner } from 'native-base';
 import { Container, Header, Content, Form, Item, Input, Label } from 'native-base';
-export default class ProductDetails extends React.Component {
+import { createOrder } from "../Apis/Apis";
+// import console = require('console');
+export default class ProductDetails extends Component {
+  // export default class Home extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,21 +32,23 @@ export default class ProductDetails extends React.Component {
       washingMachine: true,
       bike: true,
       showSubmit:false,
+      age:20,
+      isloading:false,
       Category: [
         {
-          name: 'bikes',
+          name: 3,
           Image: require('../assets/images/tv.png'),
         },
         {
-          name: 'mobile',
+          name: 6,
           Image: require('../assets/images/wash.png'),
         },
         {
-          name: 'Home Appliencce',
+          name: 9,
           Image: require('../assets/images/bike.png'),
         },
         {
-          name: 'fright',
+          name: 12,
           Image: require('../assets/images/phone.png'),
         },
         // {
@@ -177,10 +184,95 @@ export default class ProductDetails extends React.Component {
         },
       ],
     };
+    // this.props.navigation.addListener('willFocus', this.componentWillFocus)
+  }
+
+  componentWillFocus = () => {
+    // this.componentDidMount()
+    // this.setState({score:0})
   }
   updateSearch = search => {
     this.setState({search});
   };
+  componentDidMount=()=>{
+    let product = this.props.navigation.getParam('productObj')
+    console.log(product)
+    this.setState({
+      productDetails:product,
+      selectedPic:product.images.lenght!=0&&product.images[0].src,
+      productPics:product.images
+
+    },()=>{    this.getMonthlyPrice(4)})
+
+  }
+  makeLeaseForm=async()=>{
+
+    try {
+
+        let value = await AsyncStorage.getItem('user');
+        console.log(value)
+        if(value==null||value==undefined||value=='')
+        {
+
+          Alert.alert(
+            'You are not logged in',
+            'Please log in to continue',
+            [
+              // {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+              {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+              {text: 'Login', onPress: () => this.props.navigation.navigate('Login')},
+            ],
+            { cancelable: false }
+          )
+        }
+        else{
+          this.setState({showLeaseForm:true})
+        }
+      } 
+      catch{
+
+      }
+  }
+  componentWillReceiveProps(nextprops){
+    // console.log(nextprops)
+  }
+  createOrder=async()=>{
+    this.setState({isloading:true})
+    const response = await createOrder(this.state.productDetails.id,this.state.yourname,
+      this.state.fhname,
+      this.state.yourtel,
+      this.state.email,this.state.gender,this.state.age,this.state.job,this.state.occu,
+      this.state.work,this.state.office,this.state.residence,this.state.oficetel,
+      this.state.living,this.state.earn,this.state.idcard,this.state.bank,this.state.resiMun)
+      console.log(response)
+      if(response.invalidFields)
+      {
+        this.setState({isloading:false})
+        alert(response.invalidFields[0].message)
+      }
+      else{
+        this.setState({isloading:false})
+        this.setState({
+          showSubmit:true,
+          msg:'Thank you! you will recieve confirmation email shortly',
+          yourname:'',fhname:"",yourtel:'',email:'',gender:'',age:20,job:'',occu:'',
+    work:'',office:'',residence:'',oficetel:'',living:'',earn:'',idcard:'',bank:'',resiMun:''
+        })
+      }
+    }
+    getMonthlyPrice=(month)=>{
+     let price = parseInt(this.state.productDetails.price)
+     let downpayment = price*0.2
+     this.setState({selected:month,monthlyPay: Math.floor(downpayment/month),downpayment:"Rs. "+downpayment})
+
+    }
+    getdownPayment(){
+      let price = parseInt(this.state.productDetails.price)
+      let downpayment = price*0.2
+      this.setState({
+        downpayment:"Rs. "+downpayment
+      })
+    }
   render() {
     return (
       <View
@@ -189,6 +281,7 @@ export default class ProductDetails extends React.Component {
           backgroundColor: 'white',
           height: 100,
         }}>
+        {this.state.productDetails&&
         <ScrollView
           contentContainerStyle={{
             flexGrow: 1,
@@ -227,56 +320,10 @@ export default class ProductDetails extends React.Component {
 
          
 
-          <View
-            style={{
-              height: 48,
-              backgroundColor: '#ECECEC',
-              width: '90%',
-              alignSelf: 'center',
-              marginVertical: 10,
-              // borderWidth: 1,
-              borderRadius: 10,
-
-              alignItems: 'center',
-              overflow: 'hidden',
-            }}>
-            <SearchBar
-              placeholder=" search what you are looking fo "
-              // onChangeText={this.updateSearch}
-              value={this.state.search}
-              onChangeText={text => this.setState({search: text})}
-              containerStyle={{
-                // backgroundColor: this.props.reduxState.theme.searchBarColor,
-                borderTopWidth: 0,
-                padding: 0,
-
-                // borderBottomWidth: 1,
-
-                width: '100%',
-                alignSelf: 'center',
-
-                borderRadius: 10,
-              }}
-              inputContainerStyle={{
-                // backgroundColor: this.props.reduxState.theme.searchBarColor,
-                backgroundColor: '#ECECEC',
-                height: '100%',
-              }}
-              inputStyle={{
-                borderWidth: 0,
-                borderWidth: 0,
-                backgroundColor: '#ECECEC',
-                fontSize: 13,
-              }}
-              style={{borderWidth: 1}}
-              lightTheme={true}
-              backgroundColor={'#ECECEC'}
-            />
-          </View>
-
+        
           <View
                   style={{
-                    height: 400,
+                    // height: 800,
                     width: '90%',
                     alignSelf:'center',
                     backgroundColor: 'white',
@@ -299,8 +346,8 @@ export default class ProductDetails extends React.Component {
                   }}
                   >
                   <Image
-                    source={require('./../assets/images/mobilephone.jpg')}
-                    style={{height: '50%', width: '50%'}}
+                    source={{uri:this.state.selectedPic}}
+                    style={{height: 400, width: '100%'}}
                     resizeMode="contain"
                   />
 
@@ -320,8 +367,8 @@ export default class ProductDetails extends React.Component {
                         return (
                             <TouchableOpacity
                             style={{
-                                height: 60,
-                                width: 60,
+                                height: 80,
+                                width: 80,
                                 // backgroundColor: 'white',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -329,13 +376,15 @@ export default class ProductDetails extends React.Component {
                                 marginVertical: 5,
                                 // marginHorizontal: 10,
                                 borderRadius: 5,
+                                
                                
                              
                             }}
+                            onPress={()=>{this.setState({selectedPic:item.src})}}
                             // onPress={() => this.props.navigation.navigate('Category')}
                             >
                             <Image
-                                source={item.Image}
+                                source={{uri:item.src}}
                                 style={{height: '50%', width: '50%'}}
                                 resizeMode="contain"
                             />
@@ -344,15 +393,15 @@ export default class ProductDetails extends React.Component {
                         })}
                 </View>
                 <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
-                        <Text style={{textAlign:'left' ,color:'#231F20'}}>Real me Note 6</Text>
-                        <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>64 GB</Text>
+                        <Text style={{fontSize:20,textAlign:'left' ,color:'#231F20'}}>{this.state.productDetails.name}</Text>
+                        {/* <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>64 GB</Text> */}
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>only</Text>
-                        <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>Rs. 28,000</Text>
+                        <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
                 </View>
             </View>
-
+            {/* <HTML html={this.state.productDetails.description} imagesMaxWidth={Dimensions.get('window').width} /> */}
           <View
             style={{
               width: '70%',
@@ -419,8 +468,9 @@ export default class ProductDetails extends React.Component {
                     shadowColor: '#000',
                   
                   }}
-                  onPress={() => this.props.navigation.navigate('Category')}>
-                  <Text style={{color:'grey'}}>{i+4} Months</Text>
+                  onPress={() => this.getMonthlyPrice(item.name)}>
+                         <Text style={{color:this.state.selected==item.name?'#DD3333':'grey'}}>{item.name}</Text>
+                  <Text style={{color:this.state.selected==item.name?'#DD3333':'grey'}}>Months</Text>
                 </TouchableOpacity>
               );
             })}
@@ -450,12 +500,12 @@ export default class ProductDetails extends React.Component {
                   >
                         <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
                                 <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>Leasing Amount</Text>
-                                <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>Rs. 28,000</Text>
+                                <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
                         </View>
                   </View>
-                  <View
+                  <Row
                   style={{
-                    // height: 100,
+                    height: 70,
                     width: '90%',
                     alignSelf:'center',
                     backgroundColor: 'white',
@@ -477,12 +527,59 @@ export default class ProductDetails extends React.Component {
                     elevation: 2,
                   }}
                   >
-                        <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
+                        <Col style={{paddingLeft:20,alignSelf:'flex-start'}}>
                                 <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>Down Payment</Text>
-                                <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>10%</Text>
-                        </View>
-                        
-                  </View>
+                                <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>{this.state.downpayment}</Text>
+                        </Col>
+                        <Col style={{alignSelf:'flex-start'}}>
+                        <TouchableOpacity
+                            onPress={()=>this.setState({downpayment:"20%"})}
+                              style={{
+                                // width: '80%',
+                              //   alignSelf: 'center',
+                              //   alignItems: 'center',
+                              //   justifyContent: 'center',
+                                // borderWidth: 1,
+                                backgroundColor: 'white',
+                                borderColor:"#bd2e1e",
+                                borderWidth:1,
+                                paddingVertical: 7,
+                                // marginVertical: 20,
+                                borderRadius: 5,
+                                borderBottomEndRadius:0,
+                                borderTopStartRadius:0,
+                                alignSelf:'flex-end',marginTop:5
+                                // marginRight:20
+                                // marginBottom:20
+                              }}>
+                              <Text style={{textAlign:'center',color:'#bd2e1e',fontSize:13,paddingHorizontal:10}}> Percentage</Text>
+                            </TouchableOpacity>
+                        </Col>
+                        <Col style={{alignSelf:'flex-start'}}>
+                        <TouchableOpacity
+                            onPress={()=>this.setState({downpayment:"80%"})}
+                              style={{
+                                // width: '80%',
+                              //   alignSelf: 'center',
+                              //   alignItems: 'center',
+                              //   justifyContent: 'center',
+                                // borderWidth: 1,
+                                backgroundColor: 'white',
+                                borderColor:"#bd2e1e",
+                                borderWidth:1,
+                                paddingVertical: 7,
+                                // marginVertical: 20,
+                                borderRadius: 5,
+                                borderBottomEndRadius:0,
+                                borderTopStartRadius:0,
+                                alignSelf:'flex-end',
+                                marginRight:20,marginTop:5
+                                // marginBottom:20
+                              }}>
+                              <Text style={{textAlign:'center',color:'#bd2e1e',fontSize:13,paddingHorizontal:10}}> Amount</Text>
+                            </TouchableOpacity>
+                        </Col>
+                  </Row>
                   <Row
                   style={{
                     // height: 100,
@@ -510,12 +607,12 @@ export default class ProductDetails extends React.Component {
                     <Col>
                         <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
                                 <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>Monthly Installment</Text>
-                                <Text style={{fontWeight:'bold',fontSize:25,textAlign:'left' ,color:'#DD3333'}}>Rs. 5,000</Text>
+                                <Text style={{fontWeight:'bold',fontSize:25,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.monthlyPay}</Text>
                         </View>
                         </Col>
                         <Col>
                         <TouchableOpacity
-                            onPress={()=>this.setState({showLeaseForm:true})}
+                            onPress={this.makeLeaseForm}
                               style={{
                                 // width: '80%',
                               //   alignSelf: 'center',
@@ -570,64 +667,91 @@ export default class ProductDetails extends React.Component {
                         
                         <Text style={{fontSize:20,textAlign:'center' ,color:'#DD3333'}}>Lease Form</Text>
                       <View style={{alignItems:'flex-start',paddingHorizontal:20}}>
-                        <Item floatingLabel >
-                    <Label>Full Name</Label>
-                    <Input />
+                        <Item style={{marginTop:10}} floatingLabel >
+                    <Label>Full Name (as per CNIC) *</Label>
+                    <Input onChangeText={(text)=>{this.setState({yourname:text})}} />
                   </Item>
-                  <Item floatingLabel>
-                    <Label>Father or Spouse</Label>
-                    <Input />
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Father or Husband Name *</Label>
+                    <Input onChangeText={(text)=>{this.setState({fhname:text})}}  />
                   </Item>
-                  <Item floatingLabel>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Mobile *</Label>
+                    <Input keyboardType={'phone-pad'} maxLength={11} placeholder={'03121111111'} onChangeText={(text)=>{this.setState({yourtel:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Email *</Label>
+                    <Input keyboardType={'email-address'} onChangeText={(text)=>{this.setState({email:text})}}  />
+                  </Item>
+                  <Item  style={{marginTop:10}} floatingLabel>
                     <Label>Gender</Label>
-                    <Input />
+                    <Input  onChangeText={(text)=>{this.setState({gender:text})}} />
                   </Item>
-                  <Item floatingLabel>
-                    <Label>Mobile No</Label>
-                    <Input />
+                  <Item  style={{marginTop:10}} floatingLabel>
+                    <Label>Age</Label>
+                    <Input  onChangeText={(text)=>{this.setState({age:text})}} />
                   </Item>
-                  <Item floatingLabel>
-                    <Label>Email</Label>
-                    <Input />
-                  </Item>
-                  <Item floatingLabel>
-                    <Label>Occupation</Label>
-                    <Input />
-                  </Item>
-                  <Item floatingLabel>
+                  <Item style={{marginTop:10}}  floatingLabel>
                     <Label>Job Description / Title</Label>
-                    <Input />
+                    <Input onChangeText={(text)=>{this.setState({job:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Occupation</Label>
+                    <Input onChangeText={(text)=>{this.setState({occu:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Working Since</Label>
+                    <Input onChangeText={(text)=>{this.setState({work:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Address</Label>
+                    <Input onChangeText={(text)=>{this.setState({residence:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Office Address</Label>
+                    <Input onChangeText={(text)=>{this.setState({office:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Living Since</Label>
+                    <Input onChangeText={(text)=>{this.setState({living:text})}}  />
+                  </Item>
+                  <Item style={{marginTop:10}}  floatingLabel>
+                    <Label>Office Phone</Label>
+                    <Input onChangeText={(text)=>{this.setState({oficetel:text})}} />
                   </Item>
                   <Item floatingLabel>
-                    <Label>Earning Per Month</Label>
-                    <Input />
+                    <Label>Earnings Per Month</Label>
+                    <Input onChangeText={(text)=>{this.setState({earn:text})}} />
                   </Item>
-                  <Item floatingLabel>
-                    <Label>Bank Account</Label>
-                    <Input />
-                  </Item>
-                  <Item floatingLabel>
+                  <Item style={{marginTop:10}}  floatingLabel>
                     <Label>ID Card Number</Label>
-                    <Input />
+                    <Input onChangeText={(text)=>{this.setState({idcard:text})}} />
                   </Item>
+                  <Item  style={{marginTop:10}}  floatingLabel>
+                    <Label>Bank Account </Label>
+                    <Input onChangeText={(text)=>{this.setState({bank:text})}} />
+                  </Item>
+
                   <TouchableOpacity
-                    onPress={()=>this.setState({showSubmit:true})}
+                    onPress={this.createOrder}
                     style={{
                       width: '80%',
                     //   alignSelf: 'center',
                     //   alignItems: 'center',
                     //   justifyContent: 'center',
                       // borderWidth: 1,
+                      height:40,
                       backgroundColor: '#bd2e1e',
                       paddingVertical: 10,
                       marginVertical: 20,
+                      justifyContent:'center',
                       borderRadius: 5,
                       borderBottomEndRadius:0,
                       borderTopStartRadius:0,
                       alignSelf:'center',
                       marginBottom:20
                     }}>
-                    <Text style={{textAlign:'center',color:'white',paddingHorizontal:40}}> Submit Form</Text>
+                   {this.state.isloading==true?<Spinner color={'white'}/>:<Text style={{textAlign:'center',color:'white',paddingHorizontal:40}}> Submit Form</Text>}
                   </TouchableOpacity>
                   </View>
                 </View>
@@ -635,9 +759,9 @@ export default class ProductDetails extends React.Component {
           </View>
             :
           <View>
-            <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
+            {/* <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
                     <Text style={{fontSize:25,textAlign:'left' ,color:'#231F20'}}>Description</Text>
-                    {/* <Text style={{fontWeight:'bold',fontSize:25,textAlign:'left' ,color:'#DD3333'}}>Rs. 5,000</Text> */}
+                    {/* <Text style={{fontWeight:'bold',fontSize:25,textAlign:'left' ,color:'#DD3333'}}>Rs. 5,000</Text> 
             </View>
 
             <View
@@ -740,200 +864,23 @@ export default class ProductDetails extends React.Component {
                     <Text style={{textAlign:'left' ,color:'#231F20'}}>LTE band 1(2100), 2(1900), 3(1800), 4(1700/2100), 5(850), 7(2600), 8(900), 12(700), 13(700), 17(700), 18(800), 19(800), 20(800), 25(1900), 26(850), 28(700), 29(700), 30(2300), 34(2000), 38(2600), 39(1900), 40(2300), 41(2500), 66(1700/2100)</Text>
             </View>
 
+ */}
 
 
 
 
-
-            <View
-                style={{
-                  width: '70%',
-                  alignSelf: 'center',
-                  borderBottomWidth: 4,
-                  height: 50,
-                  borderRadius: 10,
-                  borderColor: '#dadada',
-                  justifyContent: 'center',
-                  marginTop:20
-                }}>
-                <View
-                  style={{
-                    width: '40%',
-                    alignSelf: 'center',
-                    borderBottomWidth: 4,
-                    position: 'absolute',
-                    bottom: -4,
-                    // height: 50,
-                    borderRadius: 10,
-                    borderColor: '#DD3333',
-                  }}></View>
-                <Text
-                  style={{
-                    width: '80%',
-                    alignSelf: 'center',
-                    // borderBottomWidth: 4,
-                    borderColor: '#DD3333',
-                    textAlign: 'center',
-                    // height: 20,
-                    borderRadius: 15,
-                    fontSize: 20,
-                    fontWeight: '600',marginBottom:10
-                  }}>
-                  {' '}
-                  Related Product
-                </Text>
-              </View>
-
-              <View
-                style={{
-                  flexDirection: 'row',
-                  flexWrap: 'wrap',
-                  width: '100%',
-                  // padding: 1,
-                  // borderWidth: 1,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  paddingVertical: 10,
-                }}>
-                {this.state.bikesArray.map((item, i) => {
-                  return (
-                    <View
-                      style={{
-                        height: 270,
-                        width: '45%',
-                        backgroundColor: 'white',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        marginVertical: 10,
-                        marginHorizontal: 5,
-                        borderRadius: 10,
-
-                        overflow: 'hidden',
-                        shadowColor: '#000',
-                        shadowOffset: {
-                          width: 0,
-                          height: 2,
-                        },
-                        shadowOpacity: 0.25,
-                        shadowRadius: 3.84,
-
-                        elevation: 2,
-                      }}>
-                      <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
-                        <Image
-                          source={item.Image}
-                          style={{height: '100%', width: '100%'}}
-                          resizeMode="contain"
-                        />
-                        <View
-                          style={{
-                            height: 65,
-                            width: 39,
-                            // borderWidth: 1,
-                            position: 'absolute',
-                            left: 0,
-                            shadowColor: '#000',
-                            shadowOffset: {
-                              width: 0,
-                              height: 2,
-                            },
-                            shadowOpacity: 0.25,
-                            shadowRadius: 3.84,
-
-                            borderColor: '#e2e2e2',
-                            elevation: 7,
-                            backgroundColor: 'white',
-                          }}>
-                          <TouchableOpacity
-                            style={{
-                              height: '50%',
-                              width: '100%',
-                              flex: 1,
-                              // borderWidth: 1,
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              backgroundColor: '#c32020',
-
-                              // borderWidth: 1,
-                            }}>
-                            <Entypo name={'eye'} size={15} color="white" />
-                          </TouchableOpacity>
-                          <TouchableOpacity
-                            style={{
-                              height: '50%',
-                              width: '100%',
-                              flex: 1,
-                              backgroundColor: 'white',
-                              // borderWidth: 1,
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              borderTopLeftRadius: 5,
-
-                              // borderWidth: 1,
-                            }}
-                            onPress={() =>
-                              this.setState({iconColour: !this.state.iconColour})
-                            }>
-                            {this.state.iconColour ? (
-                              <Entypo name={'heart'} size={15} color="red" />
-                            ) : (
-                              <Entypo
-                                name={'heart-outlined'}
-                                size={15}
-                                color="red"
-                              />
-                            )}
-                          </TouchableOpacity>
-                        </View>
-                      </View>
-                      <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
-                        <Text
-                          style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
-                          {item.name}
-                        </Text>
-                        <Text
-                          style={{
-                            fontSize: 15,
-                            color: '#918f8f',
-                            marginLeft: 20,
-                            fontWeight: 'bold',
-                          }}>
-                          {item.engineCapacity}
-                        </Text>
-                        <Text
-                          style={{
-                            fontSize: 8,
-                            marginTop: 10,
-                            color: '#918f8f',
-                            marginLeft: 30,
-                            fontWeight: 'bold',
-                          }}>
-                          only
-                        </Text>
-                        <Text
-                          style={{
-                            fontSize: 20,
-                            color: '#DD3333',
-                            fontWeight: 'bold',
-                            textAlign: 'center',
-                          }}>
-                          Rs {item.price}{' '}
-                        </Text>
-                      </View>
-                    </View>
-                  );
-                })}
-              </View>
-
+           
+            
          </View>
           }
            
         </ScrollView>
+        }
         <Modal isVisible={this.state.showSubmit} >
           <View style={{backgroundColor:'white'}}>
           <Image style={{top:-60,alignSelf:'center',width:300,height:150}} source={require('./../assets/images/done.png')}/>
         <Text style={{fontWeight:'bold',fontSize:25,textAlign:'center' ,color:'#231F20'}}>Done</Text>
-        <Text style={{marginTop:30,fontSize:13,textAlign:'center' ,color:'grey'}}>Your Order has been submitted.</Text>
+        <Text style={{marginTop:30,fontSize:13,textAlign:'center' ,color:'grey'}}>{this.state.msg}.</Text>
         <TouchableOpacity
                     onPress={()=>this.setState({showSubmit:false})}
                     style={{

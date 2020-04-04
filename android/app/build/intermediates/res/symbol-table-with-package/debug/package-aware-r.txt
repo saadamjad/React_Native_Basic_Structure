@@ -1,4 +1,4 @@
-com.cosmatic
+com.paradisecenter
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -1371,21 +1371,34 @@ drawable notify_panel_notification_icon_bg
 drawable redbox_top_border_background
 drawable src_assets_images_21
 drawable src_assets_images_22
+drawable src_assets_images_air
+drawable src_assets_images_air_white
 drawable src_assets_images_bike
+drawable src_assets_images_bike_white
 drawable src_assets_images_cover
+drawable src_assets_images_cover2
 drawable src_assets_images_done
-drawable src_assets_images_facebook
 drawable src_assets_images_focus
-drawable src_assets_images_googleplus
 drawable src_assets_images_hero
 drawable src_assets_images_homeappl
 drawable src_assets_images_kitchen
+drawable src_assets_images_lcd
+drawable src_assets_images_lcd_white
 drawable src_assets_images_logo
 drawable src_assets_images_map
+drawable src_assets_images_map1
+drawable src_assets_images_map2
+drawable src_assets_images_map3
+drawable src_assets_images_map4
 drawable src_assets_images_mobilephone
 drawable src_assets_images_phone
 drawable src_assets_images_phone1
+drawable src_assets_images_phone1_white
 drawable src_assets_images_scuty
+drawable src_assets_images_step1
+drawable src_assets_images_step2
+drawable src_assets_images_step3
+drawable src_assets_images_step4
 drawable src_assets_images_suziki
 drawable src_assets_images_tv
 drawable src_assets_images_user
@@ -1839,7 +1852,13 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw app
+raw node_modules_domserializer_foreignnames
+raw node_modules_entities_lib_maps_decode
+raw node_modules_entities_lib_maps_entities
+raw node_modules_entities_lib_maps_legacy
+raw node_modules_entities_lib_maps_xml
 raw node_modules_nativebase_dist_src_basic_icon_nbicons
+raw node_modules_reactnative_package
 raw node_modules_reactnativevectoricons_glyphmaps_antdesign
 raw node_modules_reactnativevectoricons_glyphmaps_entypo
 raw node_modules_reactnativevectoricons_glyphmaps_evilicons
@@ -2772,6 +2791,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_provider_paths
 xml rn_dev_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

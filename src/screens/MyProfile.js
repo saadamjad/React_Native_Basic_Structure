@@ -8,7 +8,7 @@ import {
   View,
   TextInput,
   ActivityIndicator,
-  I18nManager,
+  AsyncStorage,
   ScrollView,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -178,6 +178,19 @@ export default class MyProfile extends React.Component {
   updateSearch = search => {
     this.setState({search});
   };
+  componentDidMount=async()=>{
+    try{
+      let value = await AsyncStorage.getItem('user');
+      if (value !== null) {
+        console.log(value);
+        value =JSON.parse(value)
+        this.setState({userDetail:value.user})
+      }
+    } catch (error) {
+      // Error retrieving data
+      console.log(error)
+    }
+    }
   render() {
     return (
       <View
@@ -186,6 +199,7 @@ export default class MyProfile extends React.Component {
           backgroundColor: 'white',
           height: 100,
         }}>
+          {this.state.userDetail&&
         <ScrollView
           contentContainerStyle={{
             flexGrow: 1,
@@ -341,188 +355,9 @@ export default class MyProfile extends React.Component {
           
           }}>
          
-          <View style={styles.et1}>
-            <View style={styles.tocentertext}>
-              <View
-                style={{
-                  width: '20%',
-                  // borderWidth: 1,
-                  height: '100%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                <View
-                  style={{
-                    width: '20%',
-                    // borderWidth: 1,
-                    height: '100%',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}>
-                  <FontAwesome name={'lock'} size={20} color="#cccccc" />
-                </View>
-              </View>
-              <TextInput
-                style={{}}
-                maxLength={11}
-                keyboardType="numeric"
-                value={this.state.number}
-                onChangeText={this.handleTextChange}
-                placeholder="Full Name"></TextInput>
-            </View>
-          </View>
-
-          <View style={styles.et1}>
-            <View
-              style={{
-                width: '20%',
-                // borderWidth: 1,
-                height: '100%',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <FontAwesome name={'lock'} size={20} color="#cccccc" />
-            </View>
-
-            <TextInput
-              style={{
-                paddingLeft: 0,
-                // borderWidth: 1,
-                height: '100%',
-                width: '80%',
-                // paddingLeft: 40,
-              }}
-              value={this.state.password}
-              onChangeText={this.handleTextChange1}
-              secureTextEntry={true}
-              placeholder="  Email Address "></TextInput>
-          </View>
-
-          <View style={styles.et1}>
-            <View
-              style={{
-                width: '20%',
-                // borderWidth: 1,
-                height: '100%',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <FontAwesome name={'lock'} size={20} color="#cccccc" />
-            </View>
-
-            <TextInput
-              style={{
-                paddingLeft: 0,
-                // borderWidth: 1,
-                height: '100%',
-                width: '80%',
-                // paddingLeft: 40,
-              }}
-              value={this.state.password}
-              onChangeText={this.handleTextChange1}
-              secureTextEntry={true}
-              placeholder="  Password "></TextInput>
-          </View>
-
-          <View style={styles.et1}>
-            <View
-              style={{
-                width: '20%',
-                // borderWidth: 1,
-                height: '100%',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <FontAwesome name={'lock'} size={20} color="#cccccc" />
-            </View>
-
-            <TextInput
-              style={{
-                paddingLeft: 0,
-                // borderWidth: 1,
-                height: '100%',
-                width: '80%',
-                // paddingLeft: 40,
-              }}
-              value={this.state.password}
-              onChangeText={this.handleTextChange1}
-              secureTextEntry={true}
-              placeholder="  City "></TextInput>
-          </View>
-
-          <View style={styles.et1}>
-            <View
-              style={{
-                width: '20%',
-                // borderWidth: 1,
-                height: '100%',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <FontAwesome name={'lock'} size={20} color="#cccccc" />
-            </View>
-
-            <TextInput
-              style={{
-                paddingLeft: 0,
-                // borderWidth: 1,
-                height: '100%',
-                width: '80%',
-                // paddingLeft: 40,
-              }}
-              value={this.state.password}
-              onChangeText={this.handleTextChange1}
-              secureTextEntry={true}
-              placeholder="  Country "></TextInput>
-          </View>
-
-          <View style={styles.et1}>
-            <View
-              style={{
-                width: '20%',
-                // borderWidth: 1,
-                height: '100%',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <FontAwesome name={'lock'} size={20} color="#cccccc" />
-            </View>
-
-            <TextInput
-              style={{
-                paddingLeft: 0,
-                // borderWidth: 1,
-                height: '100%',
-                width: '80%',
-                // paddingLeft: 40,
-              }}
-              value={this.state.password}
-              onChangeText={this.handleTextChange1}
-              secureTextEntry={true}
-              placeholder="  Date Of Birth "></TextInput>
-          </View>
-
-          <TouchableOpacity
-           
-            style={{
-              width: '100%',
-            //   alignSelf: 'center',
-            //   alignItems: 'center',
-            //   justifyContent: 'center',
-              // borderWidth: 1,
-              backgroundColor: '#bd2e1e',
-              paddingVertical: 10,
-              marginVertical: 20,
-              borderRadius: 5,
-              borderBottomEndRadius:0,
-              borderTopStartRadius:0
-            }}>
-            <Text style={[styles.logintext,{paddingHorizontal:80}]}> Edit</Text>
-          </TouchableOpacity>
-        
-
-
-         
+         <Text style={{textAlign:'center',color:'#171717' , fontSize:18,fontWeight:'bold'}}>{this.state.userDetail.username}</Text>
+         <Text style={{marginTop:20,textAlign:'center',color:'#171717' , fontSize:18,fontWeight:'bold'}}>{this.state.userDetail.email}</Text>
+ 
         </View>
            
             </View>
@@ -534,7 +369,8 @@ export default class MyProfile extends React.Component {
          
            
         </ScrollView>
-      </View>
+          }
+     </View>
     );
   }
 }
