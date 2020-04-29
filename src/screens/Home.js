@@ -28,6 +28,7 @@ export default class Login extends React.Component {
       washingMachine: true,
       bike: true,
       CateName:'All',
+      // Category:[]
       Category: [
         {
           name: 'Smart Phones',
@@ -56,14 +57,14 @@ export default class Login extends React.Component {
       
         {
           name: 'Refrigerator',
-          id:0,
-          Image: require('../assets/images/tv.png'),
-          selectedImage: require('../assets/images/air_white.png'),
+          id:193,
+          Image: require('../assets/images/wash.png'),
+          selectedImage: require('../assets/images/wash_white.png'),
         },
         {
           name: 'Washing Machines',
           id:0,
-          Image: require('../assets/images/wash.png'),
+          Image: require('../assets/images/air.png'),
           selectedImage: require('../assets/images/air_white.png'),
         },
         // {
@@ -83,32 +84,68 @@ export default class Login extends React.Component {
     };
   }
   componentDidMount=async()=>{
+    console.log('fetching one')
+
     const responseTotal = await getAllProducts()
     console.log('Home _retrieveData responseTotal: ', responseTotal)
     this.setState({
       productSet:responseTotal,
       orignalData:responseTotal
     })
-    const responseatePhone= await getProductByCateId(125)
+    
+    if(responseTotal)
+    {
+      console.log('fetching one')
+      const responseatePhone= await getProductByCateId(125)
 
-    this.setState({
-      productSetPhone:responseatePhone
-    })
-    const responseateLcd= await getProductByCateId(177)
-
-    this.setState({
-      productSetLcd:responseateLcd
-    })
-    const responseateBike= await getProductByCateId(142)
+      this.setState({
+        productSetPhone:responseatePhone
+      })
+      if(responseatePhone)
+      {
+        console.log('fetching trwo')
+        const responseateLcd= await getProductByCateId(177)
   
-    this.setState({
-      productSetBike:responseateBike
-    })
-    const responseateair= await getProductByCateId(182)
-
-    this.setState({
-      productSetAir:responseateair
-    })
+        this.setState({
+          productSetLcd:responseateLcd
+        })
+        if(responseateLcd)
+        {
+          console.log('fetching 3')
+          const responseateBike= await getProductByCateId(142)
+    
+          this.setState({
+            productSetBike:responseateBike
+          })
+          if(responseateBike){
+            console.log('fetching 4')
+            const responseateair= await getProductByCateId(182)
+  
+            this.setState({
+              productSetAir:responseateair
+            })
+            if(responseateair)
+            {
+              console.log('fetching 5')
+              const responseate= await getProductByCateId(12)
+              console.log(responseate)
+              this.setState({
+                productSet:responseate
+              })
+              if(responseate){
+                const res = await getProductByCateId(193)
+                console.log(res)
+                this.setState({
+                  productSetRegrig:res
+                })
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  
 
     // const responseate= await getAllCategories()
     // console.log(responseate)
@@ -116,37 +153,63 @@ export default class Login extends React.Component {
     //   categorySet:responseate
     // })
 
-    // const responseate= await getProductByID(12)
-    // console.log(responseate)
-    // this.setState({
-    //   productSet:responseate
-    // })
   }
   getProductByCategoryID=async(id)=>{
     if(id==125){
       console.log(id)
       this.setState({
-        productSet:this.state.productSetPhone
+        productSet:[],
+       
+      },()=>{
+        this.setState({
+          productSet:this.state.productSetPhone
+        })
       })
     }
     else if(id==177){
       console.log(id)
       this.setState({
+        productSet:[],
+       
+      },()=>{
+        this.setState({
         productSet:this.state.productSetLcd
       })
-    }
+    })
+  }
     else if(id==142){
       console.log(id)
       this.setState({
+        productSet:[],
+       
+      },()=>{
+        this.setState({
         productSet:this.state.productSetBike
       })
-    }
+    })
+  }
     else if(id==182){
       console.log(id)
       this.setState({
+        productSet:[],
+       
+      },()=>{
+        this.setState({
         productSet:this.state.productSetAir
       })
-    }
+    })
+  }
+    else if(id==193){
+      console.log(id)
+      this.setState({
+        productSet:[],
+       
+      },()=>{
+        this.setState({
+        productSet:this.state.productSetRegrig
+      })
+    })
+  }
     else{
       const responseate= await getProductByCateId(id)
       console.log('car',responseate)
@@ -318,7 +381,7 @@ export default class Login extends React.Component {
           <View
             style={{
               width: '100%',
-              height: 240,
+              height: 170,
               elevation: 0,
               // borderWidth: ,
               borderColor: '#f1f1f1',
@@ -330,7 +393,7 @@ export default class Login extends React.Component {
               resizeMode="contain"
               style={{height: '100%', width: '100%'}}
             /> */}
-                    <ImageSlider   loopBothSides
+                    <ImageSlider style={{width:"100%",height:200}}   resizeMode="contain" style={{}} loopBothSides
           autoPlayWithInterval={3000} images={[
                    
            require('../assets/images/kitchen.png'),
@@ -693,20 +756,7 @@ export default class Login extends React.Component {
                         elevation: 7,
                         backgroundColor: 'white',
                       }}>
-                      {/* <TouchableOpacity
-                        style={{
-                          height: '50%',
-                          width: '100%',
-                          flex: 1,
-                          // borderWidth: 1,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          backgroundColor: '#c32020',
-
-                          // borderWidth: 1,
-                        }}>
-                        <Entypo name={'eye'} size={15} color="white" />
-                      </TouchableOpacity> */}
+                   
                       <TouchableOpacity
                         style={{
                           height: '50%',

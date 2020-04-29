@@ -14,8 +14,12 @@ import java.util.ArrayList;
 import com.paradisecenter.BuildConfig;
 import com.paradisecenter.R;
 
+// @react-native-community/google-signin
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// react-native-fbsdk
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-linear-gradient
@@ -75,7 +79,9 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new RNGoogleSigninPackage(),
       new RNCMaskedViewPackage(),
+      new FBSDKPackage(),
       new RNGestureHandlerPackage(),
       new LinearGradientPackage(),
       new ReanimatedPackage(),

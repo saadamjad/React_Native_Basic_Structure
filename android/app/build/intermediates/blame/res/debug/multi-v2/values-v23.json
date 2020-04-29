@@ -4,26 +4,7 @@
             "outputFile": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7dfefe272c511037bb980f06f8c3fc89/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "200"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "3407",
-                        "endLines": "50",
-                        "endColumns": "12",
-                        "endOffsets": "3552"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/38971bd5dd843507d09cf528dcd06c63/res/values-v23/values-v23.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,6",
                         "startColumns": "4,4",
@@ -42,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/50cece9221dae4da252b85ef4746b5b7/res/values-v23/values-v23.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -50,6 +31,25 @@
                         "endLines": "2,3,4,5,19,33,34,35,36,40,41,42,43,47",
                         "endColumns": "134,134,74,86,12,12,118,126,104,12,114,106,112,12",
                         "endOffsets": "185,320,395,482,1366,2262,2381,2508,2613,2837,2952,3059,3172,3402"
+                    }
+                },
+                {
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/1c0e6449d04abe9f2d7fe1f11b590566/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "3407",
+                        "endLines": "50",
+                        "endColumns": "12",
+                        "endOffsets": "3552"
                     }
                 }
             ]

@@ -1,4 +1,10 @@
-#Thu Apr 02 03:13:59 PKT 2020
-base.0=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Tue Apr 14 15:44:50 PKT 2020
+path.2=classes3.dex
+path.1=classes2.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/debug/0
+base.1=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/debug/0
+base.0=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/debug/0

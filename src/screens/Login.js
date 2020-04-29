@@ -15,14 +15,20 @@ import {
   NetInfo,
   ScrollView,
 } from 'react-native';
-
+// import {LoginManager, AccessToken} from 'react-native-fbsdk';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {NavigationActions, StackActions} from 'react-navigation';
-import { login } from '../Apis/Apis';
+import { login, register } from '../Apis/Apis';
 import { Spinner } from 'native-base';
 // import { ScrollView } from 'react-native-gesture-handler';
-
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+  statusCodes,
+} from '@react-native-community/google-signin';
+import {LoginManager, AccessToken} from 'react-native-fbsdk';
+GoogleSignin.configure();
 export default class registration extends React.PureComponent {
   state = {
     username: '',
@@ -31,6 +37,7 @@ export default class registration extends React.PureComponent {
     pushtoken: '',
     showPassword: true,
     check: true,
+    socail:false,
     
     showError:false,
     isLoading:false
@@ -55,7 +62,92 @@ export default class registration extends React.PureComponent {
       // Error retrieving data
     }
   }
-  Login=async()=> {
+  googleSignin=async()=>{
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      this.setState({ userInfo });
+      console.log(userInfo.user.email)
+      this.setState({email:userInfo.user.email,password:'social123'})
+      this.Login(true)
+      this.setState({social:false})
+    } catch (error) {
+      console.log(error)
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        // user cancelled the login flow
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        // operation (e.g. sign in) is in progress already
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        // play services not available or outdated
+      } else {
+        // some other error happened
+      }
+    }
+  }
+  loginFacebook = async () => {
+    try {
+      const loginFacebook = await LoginManager.logInWithPermissions([
+        'public_profile',
+        'email',
+      ]);
+      if (loginFacebook.isCancelled) {
+      } else {
+        let that = this;
+        AccessToken.getCurrentAccessToken().then(data => {
+          const token = data.accessToken.toString();
+          console.log(data)
+          // that.props.dispatch(signInWithFacebook(token));
+
+          fetch('https://graph.facebook.com/v2.5/me?fields=email,first_name,last_name,friends&access_token=' + token)
+          .then((response) => {
+              response.json().then((json) => {
+                  const ID = json.id
+                  console.log("ID " + ID);
+
+                  const EM = json.email
+                  console.log("Email " + EM);
+                  this.setState({
+                    email:json.email,
+                    password:'social123'
+                  })
+
+                  const FN = json.first_name
+                  console.log("First Name " + FN);
+                  this.Login(true)
+              })
+          })
+          .catch(() => {
+              console.log('ERROR GETTING DATA FROM FACEBOOK')
+              alert('Please enable your internet')
+          })
+        });
+      }
+    } catch (e) {
+      console.log('Login fail with error: ' + e);
+    }
+  };
+  register=async()=>{
+    this.setState({
+      showError:false,
+      isLoading:true
+    })
+    // this.props.navigation.navigate('Home');
+    console.log('registerLogin',this.state.password,this.state.username,this.state.email)
+    const response = await register(this.state.email,this.state.email,this.state.password)
+    console.log(response)
+    if(response.error)
+    {
+      this.Login()
+    }
+    else{
+      this.setState({
+        showError:false,
+        isLoading:false
+      })
+      this.Login()
+    }
+  }
+  Login=async(social)=> {
     if(this.state.password!=''&&this.state.email!='')
     {
       this.setState({
@@ -68,11 +160,21 @@ export default class registration extends React.PureComponent {
       console.log(response)
       if(response.error)
       {
-        alert(response.error)
-        this.setState({
-          showError:false,
-          isLoading:false
-        })
+        if(social==true)
+        {
+          if('Invalid username/email and/or password.'){
+            this.register()
+           
+          }
+        }
+        else{
+          alert(response.error)
+          this.setState({
+            showError:false,
+            isLoading:false
+          })
+        }
+       
       }
       else{
         this.setState({
@@ -211,13 +313,14 @@ export default class registration extends React.PureComponent {
            {this.state.isLoading ==true?<Spinner  color={'white'}/>:
             <Text style={styles.logintext}> Login</Text>}
           </TouchableOpacity>
-          {/* <View
+          <View
             style={{
               flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <View
+            <TouchableOpacity
+            onPress={this.googleSignin}
               style={{
                 height: 30,
                 width: 30,
@@ -230,8 +333,9 @@ export default class registration extends React.PureComponent {
                 style={{width: '100%', height: '100%'}}
                 resizeMode="contain"
               />
-            </View>
-            <View
+            </TouchableOpacity>
+            <TouchableOpacity
+            onPress={this.loginFacebook}
               style={{
                 height: 30,
                 width: 30,
@@ -244,8 +348,8 @@ export default class registration extends React.PureComponent {
                 style={{width: '100%', height: '100%'}}
                 resizeMode="contain"
               />
-            </View>
-          </View> */}
+            </TouchableOpacity>
+          </View> 
 
           <TouchableOpacity
             style={{marginTop: 10, borderWidth: 0}}

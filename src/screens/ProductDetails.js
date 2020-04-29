@@ -398,7 +398,7 @@ export default class ProductDetails extends Component {
                 </View>
                 <View style={{marginTop:10,paddingLeft:20,alignSelf:'flex-start'}}>
                         <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>only</Text>
-                        <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
+                        <Text style={{fontWeight:'bold',fontSize:18,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
                 </View>
             </View>
             {/* <HTML html={this.state.productDetails.description} imagesMaxWidth={Dimensions.get('window').width} /> */}
@@ -500,7 +500,7 @@ export default class ProductDetails extends Component {
                   >
                         <View style={{paddingLeft:20,alignSelf:'flex-start'}}>
                                 <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>Leasing Amount</Text>
-                                <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
+                                <Text style={{fontWeight:'bold',fontSize:18,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
                         </View>
                   </View>
                   <Row
@@ -529,7 +529,7 @@ export default class ProductDetails extends Component {
                   >
                         <Col style={{paddingLeft:20,alignSelf:'flex-start'}}>
                                 <Text style={{fontSize:11,textAlign:'left' ,color:'grey'}}>Down Payment</Text>
-                                <Text style={{fontWeight:'bold',fontSize:20,textAlign:'left' ,color:'#DD3333'}}>{this.state.downpayment}</Text>
+                                <Text style={{fontWeight:'bold',fontSize:17,textAlign:'left' ,color:'#DD3333'}}>{this.state.downpayment}</Text>
                         </Col>
                         <Col style={{alignSelf:'flex-start'}}>
                         <TouchableOpacity

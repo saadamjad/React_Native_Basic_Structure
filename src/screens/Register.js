@@ -40,15 +40,15 @@ export default class registration extends React.PureComponent {
   handleTextChange1 = newText => this.setState({email: newText});
   handleTextChange2 = newText => this.setState({password: newText});
   Login=async()=> {
-    if(this.state.username!=''&&this.state.password!=''&&this.state.email!='')
+    if(this.state.email!=''&&this.state.password!=''&&this.state.email!='')
     {
       this.setState({
         showError:false,
         isLoading:true
       })
       // this.props.navigation.navigate('Home');
-      console.log(this.state.password,this.state.username,this.state.email)
-      const response = await register(this.state.username,this.state.email,this.state.password)
+      console.log(this.state.password,this.state.email,this.state.email)
+      const response = await register(this.state.email,this.state.email,this.state.password)
       console.log(response)
       if(response.error)
       {
@@ -118,7 +118,7 @@ export default class registration extends React.PureComponent {
             {' '}
             Signup{' '}
           </Text>
-          <View style={styles.et1}>
+          {/* <View style={styles.et1}>
             <View style={styles.tocentertext}>
               <View
                 style={{
@@ -146,7 +146,7 @@ export default class registration extends React.PureComponent {
                 onChangeText={this.handleTextChange}
                 placeholder="Username"></TextInput>
             </View>
-          </View>
+          </View> */}
 
           <View style={styles.et1}>
             <View
