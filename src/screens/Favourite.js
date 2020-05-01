@@ -26,6 +26,7 @@ export default class Favourite extends React.Component {
       washingMachine: true,
       bike: true,
       // productSet:[],
+      showLogin:true,
       Category: [
         {
           name: 'bikes',
@@ -213,6 +214,12 @@ export default class Favourite extends React.Component {
       }
      
     }
+    else{
+
+        this.setState({
+          showLogin:true
+        })
+    }
   } catch (error) {
     // Error retrieving data
     console.log(error)
@@ -265,7 +272,28 @@ export default class Favourite extends React.Component {
          
 
          
+          {this.state.showLogin==true?
+     <TouchableOpacity
+     onPress={() => this.props.navigation.navigate('Login')}
+     style={{
+       width: '90%',
+       alignSelf: 'center',
+       alignItems: 'center',
+       justifyContent: 'center',
+       // borderWidth: 1,
+       backgroundColor: '#bd2e1e',
+       height:50,
+       paddingVertical: 10,
+       marginVertical: 20,
+       borderRadius: 5,
+       borderRadius: 5,
+       borderBottomEndRadius:0,
+       borderTopStartRadius:0,
+     }}>
 
+     <Text style={styles.logintext}>Please login to continue</Text>
+   </TouchableOpacity>
+    : <View>
         
           <View
             style={{
@@ -304,6 +332,8 @@ export default class Favourite extends React.Component {
               Favourites
             </Text>
           </View>
+     
+     
           <View
             style={{
               flexDirection: 'row',
@@ -388,9 +418,80 @@ export default class Favourite extends React.Component {
               );
             }):<Spinner color={'#DD3333'}/>}
             </View>
+            </View>}
            
         </ScrollView>
       </View>
     );
   }
 }
+const styles = StyleSheet.create({
+  parent: {
+    flex: 1,
+    backgroundColor: '#f8f8f8',
+    paddingVertical: 20,
+  },
+  tocenterview: {
+    // height:50,bw
+    alignItems: 'center',
+    width: '90%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    justifyContent: 'flex-end',
+  },
+  hello: {
+    // marginTop: 20,
+    fontSize: 15,
+    color: 'black',
+  },
+  moving: {
+    fontSize: 25,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  et1: {
+    borderColor: '#d3d3d3',
+
+    backgroundColor: 'white',
+    height: 50,
+    marginTop: 10,
+    borderBottomWidth: 1,
+    width: '90%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  et2: {
+    borderColor: '#d3d3d3',
+    borderRadius: 5,
+    backgroundColor: 'white',
+    height: 50,
+    marginTop: 10,
+    borderBottomWidth: 1,
+    width: '90%',
+    // marginRight: 40,
+    // marginLeft: 40,
+  },
+  ext: {
+    justifyContent: 'center',
+    color: 'black',
+    fontSize: 15,
+    alignItems: 'center',
+  },
+  tocentertext: {
+    flex: 1,
+
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  logintext: {
+    color: 'white',
+    fontSize: 18,
+
+    alignItems: 'center',
+  },
+  
+});

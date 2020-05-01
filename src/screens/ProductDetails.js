@@ -11,6 +11,7 @@ import {
   I18nManager,
   ScrollView,
   AsyncStorage,
+  Alert
   
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -34,6 +35,7 @@ export default class ProductDetails extends Component {
       showSubmit:false,
       age:20,
       isloading:false,
+      downpayment:'0%',
       Category: [
         {
           name: 3,
@@ -196,8 +198,42 @@ export default class ProductDetails extends Component {
   };
   componentDidMount=()=>{
     let product = this.props.navigation.getParam('productObj')
+    let cat  = this.props.navigation.getParam('category')
+    if(cat=='Honda'){
+      this.setState({
+        downpayment:'20%',
+        Category: [
+          {
+            name: 3,
+            Image: require('../assets/images/tv.png'),
+          },
+          {
+            name: 6,
+            Image: require('../assets/images/wash.png'),
+          },
+          {
+            name: 9,
+            Image: require('../assets/images/bike.png'),
+          },
+          {
+            name: 12,
+            Image: require('../assets/images/phone.png'),
+          },
+          {
+            name: 15,
+            Image: require('../assets/images/facebook.png'),
+          },
+          {
+            name: 18,
+            Image: require('../assets/images/facebook.png'),
+          },
+        ]
+      })
+    }
     console.log(product)
+
     this.setState({
+      cat:cat,
       productDetails:product,
       selectedPic:product.images.lenght!=0&&product.images[0].src,
       productPics:product.images
@@ -261,17 +297,46 @@ export default class ProductDetails extends Component {
       }
     }
     getMonthlyPrice=(month)=>{
-     let price = parseInt(this.state.productDetails.price)
-     let downpayment = price*0.2
-     this.setState({selected:month,monthlyPay: Math.floor(downpayment/month),downpayment:"Rs. "+downpayment})
+      if(this.state.cat=='Honda')
+      {
+        let price = parseInt(this.state.productDetails.price)
+        // let downpayment = price
+        let downpayment = price*0.2
+       let total = price - downpayment
+       total = total*0.24
+       total = total/month
+       this.setState({selected:month,monthlyPay:Math.floor(total)})
+      }
+      else{
+        let price = parseInt(this.state.productDetails.price)
+        let downpayment = price
+       //  let downpayment = price*0.2
+       let total = price 
+       total = total*0.24
+       total = total/month
+       this.setState({selected:month,monthlyPay:Math.floor(total)})
+       //  this.setState({selected:month,monthlyPay: Math.floor(downpayment/month),downpayment:"Rs. "+downpayment})
+      }
+
 
     }
     getdownPayment(){
+      if(this.state.cat=='Honda')
+      {
       let price = parseInt(this.state.productDetails.price)
       let downpayment = price*0.2
       this.setState({
         downpayment:"Rs. "+downpayment
       })
+      }
+      else{
+        let price = parseInt(this.state.productDetails.price)
+        let downpayment = price
+        this.setState({
+          downpayment:"Rs. 0"
+        })
+      }
+     
     }
   render() {
     return (
@@ -401,7 +466,47 @@ export default class ProductDetails extends Component {
                         <Text style={{fontWeight:'bold',fontSize:18,textAlign:'left' ,color:'#DD3333'}}>Rs. {this.state.productDetails.price}</Text>
                 </View>
             </View>
-            {/* <HTML html={this.state.productDetails.description} imagesMaxWidth={Dimensions.get('window').width} /> */}
+            <View
+            style={{
+              width: '70%',
+              alignSelf: 'center',
+              borderBottomWidth: 4,
+              height: 50,
+              borderRadius: 10,
+              borderColor: '#dadada',
+              justifyContent: 'center',
+            }}>
+            <View
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                position: 'absolute',
+                bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: '#DD3333',
+              }}></View>
+            <Text
+              style={{
+                width: '80%',
+                alignSelf: 'center',
+                // borderBottomWidth: 4,
+                borderColor: '#DD3333',
+                textAlign: 'center',
+                // height: 20,
+                borderRadius: 15,
+                fontSize: 20,
+                fontWeight: '600',marginBottom:10
+              }}>
+              {' '}
+              Description
+            </Text>
+          </View>
+      <View style={{padding:20}}>      
+      <HTML html={this.state.productDetails.description.replace(/\s*\[.*?\]\s*/g, '')} imagesMaxWidth={Dimensions.get('window').width} />
+        <HTML html={this.state.productDetails.short_description} imagesMaxWidth={Dimensions.get('window').width} />
+        </View>
           <View
             style={{
               width: '70%',
@@ -452,7 +557,48 @@ export default class ProductDetails extends Component {
               overflow: 'hidden',
               paddingVertical: 10,
             }}>
+              {this.state.cat=='Honda'?
+                 <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              // flexDirection: 'row',
+              // flexWrap: 'wrap',
+              // width:this.state.CategorySet&& this.state.CategorySet.length<3?'100%':'200%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              // overflow: 'hidden',
+              paddingVertical: 10,marginTop:10,
+              // marginHorizontal:'10%'
+              // paddingHorizontal:200
+            }}>
+
             {this.state.Category.map((item, i) => {
+              return (
+                <TouchableOpacity
+                  style={{
+                    height: 60,
+                    width: 60,
+                    // backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    marginVertical: 5,
+                    marginHorizontal: 10,
+                    borderRadius: 90,
+                    shadowColor: '#000',
+                  
+                  }}
+                  onPress={() => this.getMonthlyPrice(item.name)}>
+                         <Text style={{color:this.state.selected==item.name?'#DD3333':'grey'}}>{item.name}</Text>
+                  <Text style={{color:this.state.selected==item.name?'#DD3333':'grey'}}>Months</Text>
+                </TouchableOpacity>
+              );
+            })}
+            </ScrollView>:
+             this.state.Category.map((item, i) => {
               return (
                 <TouchableOpacity
                   style={{
@@ -533,7 +679,7 @@ export default class ProductDetails extends Component {
                         </Col>
                         <Col style={{alignSelf:'flex-start'}}>
                         <TouchableOpacity
-                            onPress={()=>this.setState({downpayment:"20%"})}
+                            onPress={()=>this.setState({downpayment:this.state.cat=='Honda'?'20%':"0%"})}
                               style={{
                                 // width: '80%',
                               //   alignSelf: 'center',
@@ -557,7 +703,7 @@ export default class ProductDetails extends Component {
                         </Col>
                         <Col style={{alignSelf:'flex-start'}}>
                         <TouchableOpacity
-                            onPress={()=>this.setState({downpayment:"80%"})}
+                            onPress={()=>this.getdownPayment()}
                               style={{
                                 // width: '80%',
                               //   alignSelf: 'center',

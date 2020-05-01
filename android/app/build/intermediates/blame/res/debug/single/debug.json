@@ -13,7 +13,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_portrait.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/animator_mtrl_fab_transformation_sheet_expand_spec.xml.flat",
@@ -181,7 +181,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_catalyst_push_up_out.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/anim/catalyst_push_up_out.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/anim/catalyst_push_up_out.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -217,11 +217,11 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_square.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_fragment_close_enter.xml.flat",
@@ -241,7 +241,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_com_facebook_send_button_text_color.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/color/com_facebook_send_button_text_color.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/color/com_facebook_send_button_text_color.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -250,6 +250,10 @@
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-xhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_banner3.jpeg.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_banner3.jpeg"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/animator_mtrl_chip_state_list_anim.xml.flat",
@@ -357,7 +361,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/interpolator_btn_checkbox_checked_mtrl_animation_interpolator_0.xml.flat",
@@ -405,7 +409,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/interpolator_mtrl_fast_out_linear_in.xml.flat",
@@ -449,7 +453,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-xhdpi-v4/com_facebook_close.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-xhdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -489,7 +493,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_node_modules_reactnavigationstack_lib_module_views_assets_backicon.png.flat",
@@ -541,7 +545,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_mobilephone.jpg.flat",
@@ -553,7 +557,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_send_button_icon.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable/com_facebook_send_button_icon.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable/com_facebook_send_button_icon.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -629,11 +633,11 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_fps_view.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/layout/fps_view.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/layout/fps_view.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -757,7 +761,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_redbox_item_title.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/layout/redbox_item_title.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/layout/redbox_item_title.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/animator_mtrl_extended_fab_hide_motion_spec.xml.flat",
@@ -901,7 +905,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-hdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-hdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -909,7 +913,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_button_icon.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_button_icon.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_button_icon.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
@@ -917,7 +921,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-hdpi-v4/com_facebook_close.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-hdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
@@ -1024,12 +1028,12 @@
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_cover2.jpg"
     },
     {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_mtrl_dialog_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/drawable/mtrl_dialog_background.xml"
-    },
-    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_mtrl_dialog_background.xml.flat",
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/drawable/mtrl_dialog_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
@@ -1049,15 +1053,15 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_button_like_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_button_like_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_button_like_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_focus.png.flat",
@@ -1085,7 +1089,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-xhdpi-v4/com_facebook_button_send_icon_blue.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-xhdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_material_on_background_emphasis_high_type.xml.flat",
@@ -1121,7 +1125,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_catalyst_fade_in.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/anim/catalyst_fade_in.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/anim/catalyst_fade_in.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_phone.png.flat",
@@ -1152,6 +1156,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_launch_screen.xml.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/layout/launch_screen.xml"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -1161,7 +1169,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-mdpi-v4/com_facebook_button_send_icon_blue.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-mdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_common_google_signin_btn_text_light.xml.flat",
@@ -1237,7 +1245,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_select_dialog_multichoice_material.xml.flat",
@@ -1353,7 +1361,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_auth_dialog_cancel_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_auth_dialog_cancel_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_mtrl_picker_header_title_text.xml.flat",
@@ -1381,7 +1389,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-mdpi-v4/com_facebook_close.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-mdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -1457,11 +1465,11 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_topnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_button_send_icon_blue.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_ic_edit_black_24dp.xml.flat",
@@ -1473,7 +1481,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -1569,7 +1577,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_catalyst_slide_up.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/anim/catalyst_slide_up.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/anim/catalyst_slide_up.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_mtrl_chip_text_color.xml.flat",
@@ -1589,7 +1597,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-xxhdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-xxhdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_design_layout_tab_text.xml.flat",
@@ -1628,6 +1636,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_banner1.jpeg.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_banner1.jpeg"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/raw_node_modules_domserializer_foreignnames.json.flat",
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/raw/node_modules_domserializer_foreignnames.json"
     },
@@ -1656,6 +1668,10 @@
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_map1.png"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_launch_screen.png.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/launch_screen.png"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_abc_screen_simple_overlay_action_mode.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
@@ -1681,7 +1697,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-xhdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
@@ -1713,11 +1729,11 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_com_facebook_device_auth_dialog_fragment.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/layout/com_facebook_device_auth_dialog_fragment.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/layout/com_facebook_device_auth_dialog_fragment.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar_include.xml.flat",
@@ -1725,7 +1741,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_mtrl_tabs_default_indicator.xml.flat",
@@ -1765,7 +1781,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_com_facebook_button_text_color.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/color/com_facebook_button_text_color.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/color/com_facebook_button_text_color.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_googleg_standard_color_18.png.flat",
@@ -1773,7 +1789,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-hdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_light_normal.xml.flat",
@@ -1793,7 +1809,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_com_facebook_login_fragment.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/layout/com_facebook_login_fragment.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/layout/com_facebook_login_fragment.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -1817,7 +1833,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
@@ -1889,7 +1905,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_black_xout.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_abc_btn_default_mtrl_shape.xml.flat",
@@ -1933,7 +1949,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_button_send_icon_white.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable-mdpi-v4/com_facebook_button_send_icon_white.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable-mdpi-v4/com_facebook_button_send_icon_white.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility.xml.flat",
@@ -1941,7 +1957,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_catalyst_fade_out.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/anim/catalyst_fade_out.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/anim/catalyst_fade_out.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_mtrl_ic_arrow_drop_up.xml.flat",
@@ -1953,7 +1969,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -2024,6 +2040,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/drawable/mtrl_ic_cancel.xml"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi_launch_screen.png.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-hdpi/launch_screen.png"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/raw_node_modules_reactnativevectoricons_glyphmaps_foundation.json.flat",
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/raw/node_modules_reactnativevectoricons_glyphmaps_foundation.json"
     },
@@ -2037,15 +2057,15 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_catalyst_slide_down.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/anim/catalyst_slide_down.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/anim/catalyst_slide_down.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-v21_abc_dialog_material_background.xml.flat",
@@ -2057,7 +2077,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_auth_dialog_header_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_auth_dialog_header_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_auth_dialog_header_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_abc_slide_out_top.xml.flat",
@@ -2077,7 +2097,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_background.9.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_mtrl_chip_ripple_color.xml.flat",
@@ -2089,7 +2109,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_dev_loading_view.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/layout/dev_loading_view.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/layout/dev_loading_view.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_wash.png.flat",
@@ -2149,7 +2169,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_redbox_view.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/layout/redbox_view.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/layout/redbox_view.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
@@ -2177,7 +2197,11 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_black_bottomnub.png"
+    },
+    {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_launch_screen.png.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-xxhdpi/launch_screen.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -2265,7 +2289,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_redbox_item_frame.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/layout/redbox_item_frame.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/layout/redbox_item_frame.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -2289,7 +2313,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_redbox_top_border_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/drawable/redbox_top_border_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/drawable/redbox_top_border_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_circle.xml.flat",
@@ -2301,7 +2325,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_auth_dialog_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_auth_dialog_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_auth_dialog_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_abc_screen_content_include.xml.flat",
@@ -2356,6 +2380,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/216eee600a3229c6033f4e81c0e47728/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_cover3.png.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_cover3.png"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
@@ -2369,7 +2397,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_com_facebook_smart_device_dialog_fragment.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/layout/com_facebook_smart_device_dialog_fragment.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/layout/com_facebook_smart_device_dialog_fragment.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/raw_node_modules_entities_lib_maps_xml.json.flat",
@@ -2429,7 +2457,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_phone1.png.flat",
@@ -2484,6 +2512,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_launch_screen.png.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-xxxhdpi/launch_screen.png"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_btn_radio_off_mtrl.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable/btn_radio_off_mtrl.xml"
     },
@@ -2525,7 +2557,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-mdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_abc_btn_colored_borderless_text_material.xml.flat",
@@ -2549,7 +2581,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/xml_rn_dev_preferences.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/xml/rn_dev_preferences.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/xml/rn_dev_preferences.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_mtrl_alert_dialog_actions.xml.flat",
@@ -2654,6 +2686,10 @@
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-ldrtl-mdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi_launch_screen.png.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-xhdpi/launch_screen.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/xml_standalone_badge_gravity_top_start.xml.flat",
@@ -2761,7 +2797,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_com_facebook_activity_layout.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/layout/com_facebook_activity_layout.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/layout/com_facebook_activity_layout.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_map4.png.flat",
@@ -2933,7 +2969,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_black_topnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_mtrl_error.xml.flat",
@@ -2957,7 +2993,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_com_facebook_tooltip_bubble.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/layout/com_facebook_tooltip_bubble.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/layout/com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_abc_tooltip.xml.flat",
@@ -3029,7 +3065,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_button_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_button_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_button_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_text_material.xml.flat",
@@ -3045,7 +3081,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_button_send_background.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7a5ebd3980855b408d27e007847449bc/res/drawable/com_facebook_button_send_background.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/07d41d0ab09b6e10b320947479b4e437/res/drawable/com_facebook_button_send_background.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -3117,11 +3153,11 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-hdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_button_like_icon_selected.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -3177,7 +3213,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_com_facebook_favicon_blue.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable/com_facebook_favicon_blue.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable/com_facebook_favicon_blue.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -3189,7 +3225,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_catalyst_push_up_in.xml.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/e5227fb623ca421066a10f0d5e24bb55/res/anim/catalyst_push_up_in.xml"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/00797a3839d74e4781e83d697f436fad/res/anim/catalyst_push_up_in.xml"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_switch_thumb_material_light.xml.flat",
@@ -3204,12 +3240,12 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-v21/abc_edit_text_material.xml"
     },
     {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_close.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0e7b29eb8b8522c071025389d6ca748c/res/drawable-xxhdpi-v4/com_facebook_close.png"
-    },
-    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_facebook.png.flat",
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_facebook.png"
+    },
+    {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_close.png.flat",
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/14d2e1dd4e74d6ccce4d6ac609ed9c9d/res/drawable-xxhdpi-v4/com_facebook_close.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/color_mtrl_tabs_colored_ripple_color.xml.flat",
@@ -3260,6 +3296,10 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/216eee600a3229c6033f4e81c0e47728/res/drawable-xhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
+        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_banner2.jpeg.flat",
+        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_banner2.jpeg"
+    },
+    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_design_layout_tab_icon.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/layout/design_layout_tab_icon.xml"
     },
@@ -3301,7 +3341,7 @@
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_blue_bottomnub.png.flat",
-        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
+        "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/drawable-xhdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",

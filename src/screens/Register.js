@@ -77,7 +77,7 @@ export default class registration extends React.PureComponent {
     return (
       <View style={styles.parent}>
        
-        <View style={{height: '25%', width: '100%', borderWidth: 0,alignItems:'center'}}>
+        <View style={{width: '100%', borderWidth: 0,alignItems:'center'}}>
           <Image
             source={require('./../assets/images/logo.png')}
             resizeMode="contain"
@@ -86,10 +86,11 @@ export default class registration extends React.PureComponent {
         {/* </View> */}
         <View
           style={{
-            height: '70%',
+            // height: '70%',
             // borderWidth: 1,
             borderRadius: 10,
             // paddingLeft: 15,
+            marginBottom:30,
             // paddingRight: 15,
             // justifyContent: 'center',
             alignItems: 'center',
@@ -231,7 +232,7 @@ export default class registration extends React.PureComponent {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={{marginTop: 10, borderWidth: 0}}
+            style={{marginBottom:30,marginTop: 10, borderWidth: 0}}
             onPress={() => this.props.navigation.navigate('Login')}>
             <Text>
               {' '}

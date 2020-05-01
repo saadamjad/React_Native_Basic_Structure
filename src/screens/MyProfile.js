@@ -23,6 +23,7 @@ export default class MyProfile extends React.Component {
       search: '',
       iconColour: true,
       washingMachine: true,
+      showLogin:true,
       bike: true,
       Category: [
         {
@@ -186,6 +187,12 @@ export default class MyProfile extends React.Component {
         value =JSON.parse(value)
         this.setState({userDetail:value.user})
       }
+      else{
+
+        this.setState({
+          showLogin:true
+        })
+    }
     } catch (error) {
       // Error retrieving data
       console.log(error)
@@ -199,7 +206,7 @@ export default class MyProfile extends React.Component {
           backgroundColor: 'white',
           height: 100,
         }}>
-          {this.state.userDetail&&
+        
         <ScrollView
           contentContainerStyle={{
             flexGrow: 1,
@@ -235,8 +242,30 @@ export default class MyProfile extends React.Component {
             </Text>
             </Col>
           </Row>
+          {this.state.showLogin==true?
+     <TouchableOpacity
+     onPress={() => this.props.navigation.navigate('Login')}
+     style={{
+       width: '90%',
+       alignSelf: 'center',
+       alignItems: 'center',
+       justifyContent: 'center',
+       // borderWidth: 1,
+       backgroundColor: '#bd2e1e',
+       height:50,
+       paddingVertical: 10,
+       marginVertical: 20,
+       borderRadius: 5,
+       borderRadius: 5,
+       borderBottomEndRadius:0,
+       borderTopStartRadius:0,
+     }}>
 
-         
+     <Text style={styles.logintext}>Please login to continue</Text>
+   </TouchableOpacity>
+    : 
+          this.state.userDetail&&
+         <View>
           <View
             style={{
               width: '70%',
@@ -366,10 +395,10 @@ export default class MyProfile extends React.Component {
 
 
          
-         
-           
+         </View>
+                 }
         </ScrollView>
-          }
+    
      </View>
     );
   }

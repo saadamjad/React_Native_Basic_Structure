@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/5a751799e161b0c9b6ebb40ca41770f2/res/values-sq/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "187",
+                        "endOffsets": "434"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4020",
+                        "endColumns": "187",
+                        "endOffsets": "4203"
+                    }
+                },
+                {
                     "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/5b9f8632225d11aabe407aba069771ea/res/values-sq/values-sq.xml",
                     "from": {
                         "startLines": "2",
@@ -35,23 +52,6 @@
                         "startOffsets": "5719",
                         "endColumns": "100",
                         "endOffsets": "5815"
-                    }
-                },
-                {
-                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/8d2b3ea78415faeb1dd779d784b7e8c7/res/values-sq/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "187",
-                        "endOffsets": "434"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4020",
-                        "endColumns": "187",
-                        "endOffsets": "4203"
                     }
                 },
                 {

@@ -198,7 +198,7 @@ export default class registration extends React.PureComponent {
   render() {
     return (
       <ScrollView style={styles.parent}>
-     <View style={{height: '25%', width: '100%', borderWidth: 0,alignItems:'center'}}>
+     <View style={{width: '100%', borderWidth: 0,alignItems:'center'}}>
           <Image
             source={require('./../assets/images/logo.png')}
             resizeMode="contain"
@@ -206,12 +206,13 @@ export default class registration extends React.PureComponent {
         </View>
         <View
           style={{
-            height: '70%',
+            // height: '70%',
             // borderWidth: 1,
             borderRadius: 10,
             // paddingLeft: 15,
             // paddingRight: 15,
             // justifyContent: 'center',
+            marginBottom:20,
             alignItems: 'center',
             width: '90%',
             alignSelf: 'center',
@@ -352,7 +353,7 @@ export default class registration extends React.PureComponent {
           </View> 
 
           <TouchableOpacity
-            style={{marginTop: 10, borderWidth: 0}}
+            style={{marginTop: 10, borderWidth: 0,marginBottom:30}}
             onPress={() => this.props.navigation.navigate('Register')}>
             <Text>
               {' '}

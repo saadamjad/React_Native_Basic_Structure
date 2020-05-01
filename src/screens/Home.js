@@ -18,6 +18,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {SearchBar} from 'react-native-elements';
 import MainHeader from '../Component/MainHeader';
 import { Row, Col, Spinner } from 'native-base';
+import SplashScreen from 'react-native-splash-screen'
 import {getAllProducts,getProductByCateId,getAllCategories, getFav, addToFav} from './../Apis/Apis'
 export default class Login extends React.Component {
   constructor() {
@@ -28,6 +29,8 @@ export default class Login extends React.Component {
       washingMachine: true,
       bike: true,
       CateName:'All',
+      showProduct:true,
+      showBrand:false,
       // Category:[]
       Category: [
         {
@@ -61,12 +64,12 @@ export default class Login extends React.Component {
           Image: require('../assets/images/wash.png'),
           selectedImage: require('../assets/images/wash_white.png'),
         },
-        {
-          name: 'Washing Machines',
-          id:0,
-          Image: require('../assets/images/air.png'),
-          selectedImage: require('../assets/images/air_white.png'),
-        },
+        // {
+        //   name: 'Washing Machines',
+        //   id:0,
+        //   Image: require('../assets/images/air.png'),
+        //   selectedImage: require('../assets/images/air_white.png'),
+        // },
         // {
         //   name: 'fright',
         //   Image: require('../assets/images/phone1.png'),
@@ -84,6 +87,12 @@ export default class Login extends React.Component {
     };
   }
   componentDidMount=async()=>{
+    SplashScreen.hide()
+    const res = await getAllCategories()
+    console.log(res)
+    this.setState({
+      CategorySet:res
+    })
     console.log('fetching one')
 
     const responseTotal = await getAllProducts()
@@ -93,58 +102,58 @@ export default class Login extends React.Component {
       orignalData:responseTotal
     })
     
-    if(responseTotal)
-    {
-      console.log('fetching one')
-      const responseatePhone= await getProductByCateId(125)
+    // if(responseTotal)
+    // {
+    //   console.log('fetching one')
+    //   const responseatePhone= await getProductByCateId(125)
 
-      this.setState({
-        productSetPhone:responseatePhone
-      })
-      if(responseatePhone)
-      {
-        console.log('fetching trwo')
-        const responseateLcd= await getProductByCateId(177)
+    //   this.setState({
+    //     productSetPhone:responseatePhone
+    //   })
+    //   if(responseatePhone)
+    //   {
+    //     console.log('fetching trwo')
+    //     const responseateLcd= await getProductByCateId(177)
   
-        this.setState({
-          productSetLcd:responseateLcd
-        })
-        if(responseateLcd)
-        {
-          console.log('fetching 3')
-          const responseateBike= await getProductByCateId(142)
+    //     this.setState({
+    //       productSetLcd:responseateLcd
+    //     })
+    //     if(responseateLcd)
+    //     {
+    //       console.log('fetching 3')
+    //       const responseateBike= await getProductByCateId(142)
     
-          this.setState({
-            productSetBike:responseateBike
-          })
-          if(responseateBike){
-            console.log('fetching 4')
-            const responseateair= await getProductByCateId(182)
+    //       this.setState({
+    //         productSetBike:responseateBike
+    //       })
+    //       if(responseateBike){
+    //         console.log('fetching 4')
+    //         const responseateair= await getProductByCateId(182)
   
-            this.setState({
-              productSetAir:responseateair
-            })
-            if(responseateair)
-            {
-              console.log('fetching 5')
-              const responseate= await getProductByCateId(12)
-              console.log(responseate)
-              this.setState({
-                productSet:responseate
-              })
-              if(responseate){
-                const res = await getProductByCateId(193)
-                console.log(res)
-                this.setState({
-                  productSetRegrig:res
-                })
-              }
-            }
-          }
-        }
+    //         this.setState({
+    //           productSetAir:responseateair
+    //         })
+    //         if(responseateair)
+    //         {
+    //           console.log('fetching 5')
+    //           const responseate= await getProductByCateId(12)
+    //           console.log(responseate)
+    //           this.setState({
+    //             productSet:responseate
+    //           })
+    //           if(responseate){
+    //             const res = await getProductByCateId(193)
+    //             console.log(res)
+    //             this.setState({
+    //               productSetRegrig:res
+    //             })
+    //           }
+    //         }
+    //       }
+    //     }
         
-      }
-    }
+    //   }
+    // }
   
 
     // const responseate= await getAllCategories()
@@ -162,7 +171,7 @@ export default class Login extends React.Component {
        
       },()=>{
         this.setState({
-          productSet:this.state.productSetPhone
+          // productSet:this.state.productSetPhone
         })
       })
     }
@@ -173,7 +182,7 @@ export default class Login extends React.Component {
        
       },()=>{
         this.setState({
-        productSet:this.state.productSetLcd
+        // productSet:this.state.productSetLcd
       })
     })
   }
@@ -184,29 +193,29 @@ export default class Login extends React.Component {
        
       },()=>{
         this.setState({
-        productSet:this.state.productSetBike
+        // productSet:this.state.productSetBike
       })
     })
   }
     else if(id==182){
       console.log(id)
       this.setState({
-        productSet:[],
+        // productSet:[],
        
       },()=>{
         this.setState({
-        productSet:this.state.productSetAir
+        // productSet:this.state.productSetAir
       })
     })
   }
     else if(id==193){
       console.log(id)
       this.setState({
-        productSet:[],
+        // productSet:[],
        
       },()=>{
         this.setState({
-        productSet:this.state.productSetRegrig
+        // productSet:this.state.productSetRegrig
       })
     })
   }
@@ -214,10 +223,24 @@ export default class Login extends React.Component {
       const responseate= await getProductByCateId(id)
       console.log('car',responseate)
       this.setState({
-        productSet:responseate
+        // productSet:responseate
       })
     }
    
+  }
+  getProductSub =async(id,name)=>{
+    this.setState({
+      CateName:name,
+      productSet:undefined,
+      selectedIDSub:id,
+      showProduct:true
+    })
+    console.log('car')
+    const responseate= await getProductByCateId(id)
+    console.log('car',responseate)
+    this.setState({
+      productSet:responseate
+    })
   }
   updateSearch = search => {
     this.setState({search});
@@ -226,9 +249,10 @@ export default class Login extends React.Component {
     this.setState({
       CateName:name,
       productSet:undefined,
-      selectedID:id
+      selectedID:id,
+      showProduct:false,showBrand:true
     })
-    this.getProductByCategoryID(id,name)
+    // this.getProductByCategoryID(id,name)
   }
   addToFav=async(item)=>{
    
@@ -326,9 +350,6 @@ export default class Login extends React.Component {
             </Text>
             </Col>
           </Row>
-
-         
-
           <TouchableOpacity
           onPress={()=>this.props.navigation.navigate('Search')}
             style={{
@@ -398,7 +419,8 @@ export default class Login extends React.Component {
                    
            require('../assets/images/kitchen.png'),
            require('../assets/images/cover.jpg'),
-           require('../assets/images/cover2.jpg'),
+           require('../assets/images/cover3.png'),
+          //  require('../assets/images/cover2.jpg'),
           ]}/>
           </View>
         
@@ -489,6 +511,102 @@ export default class Login extends React.Component {
             })}
   
           </View>
+        {this.state.showBrand==true&&  <View>
+          <View
+            style={{
+              width: '70%',
+              alignSelf: 'center',
+              borderBottomWidth: 4,
+              height: 50,
+              borderRadius: 10,
+              borderColor: '#dadada',
+              justifyContent: 'center',
+            }}>
+            <View
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                borderBottomWidth: 4,
+                position: 'absolute',
+                bottom: -4,
+                // height: 50,
+                borderRadius: 10,
+                borderColor: '#DD3333',
+              }}></View>
+            <Text
+              style={{
+                width: '40%',
+                alignSelf: 'center',
+                // borderBottomWidth: 4,
+                borderColor: '#DD3333',
+                textAlign: 'center',
+                // height: 20,
+                borderRadius: 15,
+                fontSize: 20,
+                fontWeight: '600',
+              }}>
+              {' '}
+              Brand
+            </Text>
+          </View>
+          <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              // flexDirection: 'row',
+              // flexWrap: 'wrap',
+              // width:this.state.CategorySet&& this.state.CategorySet.length<3?'100%':'200%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              // overflow: 'hidden',
+              paddingVertical: 10,marginTop:10,
+              // marginHorizontal:'10%'
+              // paddingHorizontal:200
+            }}>
+
+             {this.state.CategorySet&&this.state.CategorySet.map((item, i) => {
+          
+              return (
+              item.parent==this.state.selectedID&&
+              <View style={{      alignSelf:'center',}}>
+                <TouchableOpacity
+                disabled={item.id==0&&true}
+                  style={{
+                    height: 80,
+                    width: 100,
+                 alignSelf:'center',
+                 borderColor:this.state.selectedIDSub==item.id?'#DD3333':'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    alignSelf:'center',
+                    marginVertical: 5,
+                    marginHorizontal: 10,
+                    borderRadius: 15,
+                    shadowColor: '#000',
+                    backgroundColor:'white',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}
+                  onPress={()=>this.getProductSub(item.id,item.name)}>
+                <Text style={{textAlign:'center',color:this.state.selectedIDSub==item.id?'#DD3333':'black'}}>{item.name}</Text>
+                </TouchableOpacity>
+              </View>
+              );
+            })}
+  
+          </ScrollView>
+          </View>}
+       
+      {this.state.showProduct==true&& <View>
           <View
             style={{
               width: '70%',
@@ -541,9 +659,9 @@ export default class Login extends React.Component {
                  {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
             {this.state.productSet?this.state.productSet.map((item, i) => {
               return (
-                i<4&&
+                i<6&&
                 <TouchableOpacity
-                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item})}
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item,'category':this.state.CateName})}
                   style={{
                     height: 270,
                     width: '45%',
@@ -675,7 +793,7 @@ export default class Login extends React.Component {
        
             
           </View>
-          <View
+          {this.state.showBrand==false&&   <View
             style={{
               flexDirection: 'row',
               flexWrap: 'wrap',
@@ -688,11 +806,11 @@ export default class Login extends React.Component {
               paddingVertical: 10,
             }}>
           <Image
-              source={require('../assets/images/kitchen.png')}
+              source={require('../assets/images/banner1.jpeg')}
               resizeMode="contain"
               style={{height: 250, width: '100%'}}
             />
-            </View>
+            </View>}
             <View
             style={{
               flexDirection: 'row',
@@ -705,11 +823,12 @@ export default class Login extends React.Component {
               paddingVertical: 10,
             }}>
                  {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
-            {this.state.productSet?this.state.productSet.slice(4, this.state.productSet.length).map((item, i) => {
-              return (
+            {this.state.productSet&&this.state.productSet.slice(6, this.state.productSet.length).map((item, i) => {
             
+             return (
+              i<6&&
                 <TouchableOpacity
-                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item})}
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item,'category':this.state.CateName})}
                   style={{
                     height: 270,
                     width: '45%',
@@ -824,10 +943,329 @@ export default class Login extends React.Component {
                   </View>
                 </TouchableOpacity>
               );
-            }):<Spinner color={'#DD3333'}/>}
+            })}
        
             
           </View>
+        {this.state.showBrand==false&&  <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              flex:1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+          <Image
+              source={require('../assets/images/banner2.jpeg')}
+              resizeMode="contain"
+              style={{height: 250, width: '100%'}}
+            />
+            </View>
+            }
+            <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+                 {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
+            {this.state.productSet&&this.state.productSet.slice(12, this.state.productSet.length).map((item, i) => {
+   
+             return (
+              i<6&&
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item,'category':this.state.CateName})}
+                  style={{
+                    height: 270,
+                    width: '45%',
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginVertical: 10,
+                    marginHorizontal: 5,
+                    borderRadius: 10,
+
+                    overflow: 'hidden',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}>
+                  <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
+                    <Image
+                      source={{uri:item.images[0].src}}
+                      style={{height: '100%', width: '100%'}}
+                      resizeMode="contain"
+                    />
+                    <View
+                      style={{
+                        height: 30,
+                        width: 39,
+                        // borderWidth: 1,
+                        position: 'absolute',
+                        left: 0,
+                        shadowColor: '#000',
+                        shadowOffset: {
+                          width: 0,
+                          height: 2,
+                        },
+                        shadowOpacity: 0.25,
+                        shadowRadius: 3.84,
+
+                        borderColor: '#e2e2e2',
+                        elevation: 7,
+                        backgroundColor: 'white',
+                      }}>
+                   
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          backgroundColor: 'white',
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderTopLeftRadius: 5,
+
+                          // borderWidth: 1,
+                        }}
+                        onPress={() =>
+                          // this.setState({iconColour: !this.state.iconColour})
+                          this.addToFav(item)
+                        }>
+                        {this.state[item.id]==item.id ? (
+                          <Entypo      name={'heart'} size={15} color="red" />
+                        ) : (
+                          <Entypo
+                     
+
+                          name={'heart-outlined'} 
+                            size={15}
+                            color="red"
+                          />
+                        )}
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                  <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
+                    <Text
+                      style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
+                      {item.name}
+                    </Text>
+                    {/* <Text
+                      style={{
+                        fontSize: 15,
+                        color: '#918f8f',
+                        marginLeft: 20,
+                        fontWeight: 'bold',
+                      }}>
+                      {item.stock_status}
+                    </Text> */}
+                    <Text
+                      style={{
+                        fontSize: 8,
+                        marginTop: 10,
+                        color: '#918f8f',
+                        marginLeft: 30,
+                        fontWeight: 'bold',
+                      }}>
+                      only
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: '#DD3333',
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                      }}>
+                      Rs {item.price}{' '}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            })}
+       
+            
+          </View>
+
+
+
+
+
+
+
+          {this.state.showBrand==false&&    <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              flex:1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+          <Image
+              source={require('../assets/images/banner3.jpeg')}
+              resizeMode="contain"
+              style={{height: 250, width: '100%'}}
+            />
+            </View>}
+            <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              width: '100%',
+              // padding: 1,
+              // borderWidth: 1,
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingVertical: 10,
+            }}>
+                 {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
+            {this.state.productSet&&this.state.productSet.slice(18, this.state.productSet.length).map((item, i) => {
+       
+             return (
+            
+                <TouchableOpacity
+                onPress={()=>this.props.navigation.navigate('ProductDetails',{'productObj':item,'category':this.state.CateName})}
+                  style={{
+                    height: 270,
+                    width: '45%',
+                    backgroundColor: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginVertical: 10,
+                    marginHorizontal: 5,
+                    borderRadius: 10,
+
+                    overflow: 'hidden',
+                    shadowColor: '#000',
+                    shadowOffset: {
+                      width: 0,
+                      height: 2,
+                    },
+                    shadowOpacity: 0.25,
+                    shadowRadius: 3.84,
+
+                    elevation: 2,
+                  }}>
+                  <View style={{height: '60%', borderWidth: 0, width: '100%'}}>
+                    <Image
+                      source={{uri:item.images[0].src}}
+                      style={{height: '100%', width: '100%'}}
+                      resizeMode="contain"
+                    />
+                    <View
+                      style={{
+                        height: 30,
+                        width: 39,
+                        // borderWidth: 1,
+                        position: 'absolute',
+                        left: 0,
+                        shadowColor: '#000',
+                        shadowOffset: {
+                          width: 0,
+                          height: 2,
+                        },
+                        shadowOpacity: 0.25,
+                        shadowRadius: 3.84,
+
+                        borderColor: '#e2e2e2',
+                        elevation: 7,
+                        backgroundColor: 'white',
+                      }}>
+                   
+                      <TouchableOpacity
+                        style={{
+                          height: '50%',
+                          width: '100%',
+                          flex: 1,
+                          backgroundColor: 'white',
+                          // borderWidth: 1,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          borderTopLeftRadius: 5,
+
+                          // borderWidth: 1,
+                        }}
+                        onPress={() =>
+                          // this.setState({iconColour: !this.state.iconColour})
+                          this.addToFav(item)
+                        }>
+                        {this.state[item.id]==item.id ? (
+                          <Entypo      name={'heart'} size={15} color="red" />
+                        ) : (
+                          <Entypo
+                     
+
+                          name={'heart-outlined'} 
+                            size={15}
+                            color="red"
+                          />
+                        )}
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                  <View style={{height: '40%', borderWidth: 0, width: '100%'}}>
+                    <Text
+                      style={{fontSize: 15, color: '#231f20', marginLeft: 20}}>
+                      {item.name}
+                    </Text>
+                    {/* <Text
+                      style={{
+                        fontSize: 15,
+                        color: '#918f8f',
+                        marginLeft: 20,
+                        fontWeight: 'bold',
+                      }}>
+                      {item.stock_status}
+                    </Text> */}
+                    <Text
+                      style={{
+                        fontSize: 8,
+                        marginTop: 10,
+                        color: '#918f8f',
+                        marginLeft: 30,
+                        fontWeight: 'bold',
+                      }}>
+                      only
+                    </Text>
+                    <Text
+                      style={{
+                        fontSize: 20,
+                        color: '#DD3333',
+                        fontWeight: 'bold',
+                        textAlign: 'center',
+                      }}>
+                      Rs {item.price}{' '}
+                    </Text>
+                  </View>
+                </TouchableOpacity>
+              );
+            })}
+       
+            
+          </View>
+
+          </View>
+      }
  </ScrollView>
       </View>
     );

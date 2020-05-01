@@ -34,6 +34,8 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
+// react-native-splash-screen
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
 public class PackageList {
   private Application application;
@@ -88,7 +90,8 @@ public class PackageList {
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new VectorIconsPackage(),
-      new RNCWebViewPackage()
+      new RNCWebViewPackage(),
+      new SplashScreenReactPackage()
     ));
   }
 }

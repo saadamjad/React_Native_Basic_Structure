@@ -4,7 +4,7 @@
             "outputFile": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/0d196ae56df26aab1462dbe4f7d5e690/res/values-pt/values-pt.xml",
+                    "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/6e7ddcb1e856663be45a1b856039728d/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
