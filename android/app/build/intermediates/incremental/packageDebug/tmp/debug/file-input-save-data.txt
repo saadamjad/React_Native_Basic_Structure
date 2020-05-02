@@ -1,12 +1,12 @@
 #Internal package file, do not edit.
-#Sun Apr 05 20:18:26 PKT 2020
+#Sat May 02 15:08:05 PKT 2020
 60.set=NATIVE_RESOURCE
 52.set=NATIVE_RESOURCE
 53.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 44.set=NATIVE_RESOURCE
 36.set=NATIVE_RESOURCE
 79.baseType=DIRECTORY
-28.set=ASSET
+28.set=DEX
 39.baseType=DIRECTORY
 40.path=lib/x86/libfolly_futures.so
 82.baseType=DIRECTORY
@@ -22,7 +22,7 @@
 9.set=NATIVE_RESOURCE
 22.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 14.path=lib/arm64-v8a/libglog.so
-29.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/debug/0
+29.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/merged_assets/debug/out
 61.path=lib/x86/libc++_shared.so
 76.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/merged_assets/debug/out
 51.set=NATIVE_RESOURCE
@@ -71,7 +71,7 @@
 13.path=fonts/Ionicons.ttf
 67.baseType=DIRECTORY
 27.baseType=DIRECTORY
-28.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/merged_assets/debug/out
+28.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/debug/0
 60.path=lib/x86/libfolly_json.so
 75.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/merged_assets/debug/out
 70.baseType=DIRECTORY
@@ -88,7 +88,7 @@
 79.set=DEX
 60.baseType=DIRECTORY
 22.path=lib/armeabi-v7a/libimagepipeline.so
-29.path=classes3.dex
+29.path=fonts/FontAwesome5_Brands.ttf
 2.baseType=DIRECTORY
 76.path=fonts/Octicons.ttf
 6.set=NATIVE_RESOURCE
@@ -137,7 +137,7 @@
 69.set=NATIVE_RESOURCE
 4.baseType=DIRECTORY
 21.path=lib/x86_64/libyoga.so
-28.path=fonts/FontAwesome5_Brands.ttf
+28.path=classes3.dex
 75.path=fonts/Fontisto.ttf
 4.set=ASSET
 55.baseType=DIRECTORY
@@ -324,7 +324,7 @@ count=84
 30.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 37.set=ASSET
 64.path=lib/x86_64/libfolly_futures.so
-29.set=DEX
+29.set=ASSET
 37.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/merged_assets/debug/out
 5.baseType=DIRECTORY
 24.path=lib/x86_64/libjscexecutor.so

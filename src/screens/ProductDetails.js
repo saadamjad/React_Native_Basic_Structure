@@ -115,7 +115,7 @@ export default class ProductDetails extends Component {
           engineCapacity: '12 cc',
           price: ' 10,500 ',
 
-          Image: require('../assets/images/scuty.png'),
+          Image: require('../assets/images/21.png'),
         },
         // {
         //   name: 'bikes',

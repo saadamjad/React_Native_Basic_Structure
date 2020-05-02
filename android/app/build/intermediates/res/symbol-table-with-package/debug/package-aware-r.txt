@@ -1497,7 +1497,6 @@ drawable src_assets_images_banner3
 drawable src_assets_images_bike
 drawable src_assets_images_bike_white
 drawable src_assets_images_cover
-drawable src_assets_images_cover2
 drawable src_assets_images_cover3
 drawable src_assets_images_done
 drawable src_assets_images_facebook
@@ -1518,11 +1517,6 @@ drawable src_assets_images_mobilephone
 drawable src_assets_images_phone
 drawable src_assets_images_phone1
 drawable src_assets_images_phone1_white
-drawable src_assets_images_scuty
-drawable src_assets_images_step1
-drawable src_assets_images_step2
-drawable src_assets_images_step3
-drawable src_assets_images_step4
 drawable src_assets_images_suziki
 drawable src_assets_images_tv
 drawable src_assets_images_user

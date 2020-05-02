@@ -36,10 +36,6 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml"
     },
     {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_step2.png.flat",
-        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_step2.png"
-    },
-    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
@@ -880,10 +876,6 @@
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_step3.png.flat",
-        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_step3.png"
-    },
-    {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_ic_mtrl_chip_checked_black.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/drawable/ic_mtrl_chip_checked_black.xml"
     },
@@ -946,10 +938,6 @@
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_step1.png.flat",
-        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_step1.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -1022,10 +1010,6 @@
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/7075408a09c50fd4c7b613991ff700d4/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
-    },
-    {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_cover2.jpg.flat",
-        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_cover2.jpg"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
@@ -1270,10 +1254,6 @@
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/layout_mtrl_calendar_months.xml.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/ea0d048c7ff6cb7c461f0e40dee3a14d/res/layout/mtrl_calendar_months.xml"
-    },
-    {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_scuty.png.flat",
-        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_scuty.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/anim_fragment_open_enter.xml.flat",
@@ -1750,10 +1730,6 @@
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "/Users/macbook/.gradle/caches/transforms-2/files-2.1/216eee600a3229c6033f4e81c0e47728/res/drawable-xhdpi-v4/googleg_disabled_color_18.png"
-    },
-    {
-        "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_step4.png.flat",
-        "source": "/Users/macbook/ParadiseCenter/android/app/src/main/res/drawable-mdpi/src_assets_images_step4.png"
     },
     {
         "merged": "/Users/macbook/ParadiseCenter/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_light_focused.xml.flat",
