@@ -20,6 +20,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in getAllProducts : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -41,6 +42,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in getProduct : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -63,6 +65,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in getAllCategories : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -84,6 +87,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in getProductByID : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -106,6 +110,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in searchProduct : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -133,6 +138,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in register : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -154,6 +160,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in login : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -174,6 +181,7 @@ export const getAllProducts = async () => {
       })
       .catch(function (handleError) {
         console.log('error recieved in resetPassword : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -272,6 +280,7 @@ return res;
       })
       .catch(function (handleError) {
         console.log('error recieved in getOrders : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
@@ -292,7 +301,9 @@ return res;
         res.status = response.status
       })
       .catch(function (handleError) {
+     
         console.log('error recieved in getOrders : ', handleError)
+        res = undefined
       })
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res

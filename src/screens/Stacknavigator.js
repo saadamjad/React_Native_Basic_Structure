@@ -87,6 +87,7 @@ import MyOrders from './MyOrders';
 import Favourite from './Favourite';
 import Search from './Search';
 import Password from './Passwrod';
+import TryAgain from './TryAgain';
 // import Step1 from './Step1';
 // import Step2 from './Step2';
 // import Step3 from './Step3';
@@ -114,7 +115,8 @@ const HomeNavigator = createStackNavigator({
   Home: { screen: Home },
   Category:{screen:Category},
   ProductDetails:{screen:ProductDetails},
-  Search:{screen:Search}
+  Search:{screen:Search},
+
 
 },{
   initialRouteName: "Home",
@@ -135,6 +137,7 @@ const Drawer = createDrawerNavigator(
     Login: { screen: Login },
     Register: { screen: Register },
     Password:{screen:Password},
+    TryAgain:{screen:TryAgain}
 
   },
   {

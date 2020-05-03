@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat May 02 15:08:05 PKT 2020
+#Mon May 04 02:10:26 PKT 2020
 60.set=NATIVE_RESOURCE
 52.set=NATIVE_RESOURCE
 53.base=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
