@@ -1,4 +1,4 @@
-#Tue May 05 16:03:49 PKT 2020
+#Sat May 23 02:31:35 PKT 2020
 base.0=/Users/macbook/ParadiseCenter/android/app/build/intermediates/transforms/dexMerger/release/0
 path.1=classes2.dex
 renamed.1=classes2.dex
