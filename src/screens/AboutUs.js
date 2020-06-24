@@ -212,7 +212,7 @@ export default class AboutUs extends React.Component {
             <Text
               style={{marginHorizontal: 5,fontSize:12, color: 'white', fontWeight: '400'}}>
               {' '}
-              0300- 53193358{' '}
+              03008487711{' '}
             </Text>
             </Col>
             <Col>
@@ -267,7 +267,12 @@ export default class AboutUs extends React.Component {
             </Text>
           </View>
           <View style={{padding:20,}}>
-            <Text style={{color:'#231F20'}}>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex. Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my brave ghost pled. Five quacking zephyrs jolt my wax bed. Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls. Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek"s fun TV quiz game. The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox. Bright vixens</Text>
+            <Text style={{color:'#231F20'}}>Every time when you think of buying a good quality product on installments with reasonable prices, the name of our trusted leasing company will definitely click your mind. When the dire necessity of any home appliance forces you to look for a trustworthy company, PARADISE CENTRE is always there to facilitate you. By the grace of God, our company deals with high standard products and does not give any chance of complaint to its clients.</Text>
+            <Text style={{color:'#231F20'}}>Our foremost priority is to provide you with our best services in accordance with the quality of our motor cycles, mobile phones, laptops, air coolers, washing machines, air conditioners, LEDs and many other home appliances. Now you need not to worry when you require any of the above mentioned electronics. The only work you have to do is to come to Paradise centre and purchase the product of your choice by the easiest method  you have ever heard  about. It does not count whether you are in any area of the country. As for the convenience of our customers, we have opened many branches in Lahore.
+
+</Text>
+
+          
           </View>
           <View
             style={{

@@ -132,7 +132,7 @@ export default class Login extends React.Component {
     })
     console.log('fetching one')
 
-    const responseTotal = await getAllProducts()
+    const responseTotal = await getAllProducts(20)
     console.log('Home _retrieveData responseTotal: ', responseTotal)
     this.setState({
       productSet:responseTotal,
@@ -381,7 +381,7 @@ export default class Login extends React.Component {
                 fontWeight: '400',
               }}>
               {' '}
-              0300- 53193358{' '}
+              03008487711{' '}
             </Text>
           </Col>
           <Col>

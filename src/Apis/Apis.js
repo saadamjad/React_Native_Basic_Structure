@@ -3,7 +3,7 @@ export const baseUrl = 'https://paradisecentre.pk/wp-json/wc/v3/'
 const Consumer_key='ck_b4d6a251cb8042c47da97bca8f6175b92f6f889e';
 const Consumer_secret= 'cs_4767d987b39c0d33ba7fd29f43b07c8e92ee67b7'
 const keys='consumer_key=ck_b4d6a251cb8042c47da97bca8f6175b92f6f889e&consumer_secret=cs_4767d987b39c0d33ba7fd29f43b07c8e92ee67b7'
-export const getAllProducts = async () => {
+export const getAllProducts = async (num) => {
     const headersconfig = {
       headers: {
         Accept: 'application/json',
@@ -12,7 +12,7 @@ export const getAllProducts = async () => {
       }
     }
     var res = {}
-    await axios.get(baseUrl + 'products?per_page=100&'+keys, headersconfig)
+    await axios.get(baseUrl + 'products?per_page='+num+'&'+keys, headersconfig)
       .then(function (response) {
         console.log('response recieved in getAllProducts : ', response)
         res = response.data
@@ -25,6 +25,7 @@ export const getAllProducts = async () => {
     // console.log('RETURN getActionsForIntervention res: ', res)
     return res
   }
+  
   export const getProduct = async (id) => {
     const headersconfig = {
       headers: {

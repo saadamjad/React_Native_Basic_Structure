@@ -47,6 +47,7 @@ export default class SideBar extends Component {
             { id: '2', name: "Your Profile", key: "MyProfile",icon:<Entypo name={'user'} color={'white'} size={17}/>  },
             { id: '5', name: "Your Order", key: "MyOrders",icon:<MaterialIcons name={'settings-backup-restore'} color={'white'} size={17}/>  },
             { id: '6', name: "Favourites", key: "Favourite",icon:<Entypo name={'heart'} color={'white'} size={17}/>  },
+            { id: '6', name: "Calculator", key: "Calculator",icon:<Entypo name={'cal'} color={'white'} size={17}/>  },
             { id: '7', name: "About us", key: "AboutUs", icon:<Entypo name={'info'} color={'white'} size={17}/> },
             { id: '8', name: "Logout", key: "Login", icon:<Entypo name={'log-out'} color={'white'} size={17}/> },
           ]})
@@ -56,6 +57,7 @@ export default class SideBar extends Component {
             { id: '2', name: "Your Profile", key: "MyProfile",icon:<Entypo name={'user'} color={'white'} size={17}/>  },
             { id: '5', name: "Your Order", key: "MyOrders",icon:<MaterialIcons name={'settings-backup-restore'} color={'white'} size={17}/>  },
             { id: '6', name: "Favourites", key: "Favourite",icon:<Entypo name={'heart'} color={'white'} size={17}/>  },
+            { id: '8', name: "Calculator", key: "Calculator",icon:<Entypo name={'calculator'} color={'white'} size={17}/>  },
             { id: '7', name: "About us", key: "AboutUs", icon:<Entypo name={'info'} color={'white'} size={17}/> },
             // { id: '8', name: "Logout", key: "Login", icon:<Entypo name={'log-out'} color={'white'} size={17}/> },
           ]})
@@ -74,7 +76,7 @@ logout=async()=>{
     <TouchableOpacity activeOpacity={1} style={{ paddingLeft:20,flexDirection: 'row', backgroundColor:'white',alignItems:"center"}}
           onPress={()=>item.name=='Logout'?this.logout(): this.props.navigation.navigate(item.key)}
            >
-        <View style={{zIndex:30,padding:10,paddingVertical:item.name=='Logout'?140: 15,backgroundColor:'#B51616',borderTopStartRadius:item.name=='Home'?20:0,borderTopEndRadius:item.name=='Home'?20:0}}>       
+        <View style={{zIndex:50,padding:10,paddingVertical:item.name=='Logout'?140: 15,backgroundColor:'#B51616',borderTopStartRadius:item.name=='Home'?20:0,borderTopEndRadius:item.name=='Home'?20:0}}>       
           {item.icon}
         </View>
         <View style={{marginLeft:20,width:'60%',borderBottomColor:"#cccccc",borderBottomWidth:1}}>

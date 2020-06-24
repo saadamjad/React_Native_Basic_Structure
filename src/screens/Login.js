@@ -15,6 +15,7 @@ import {
   NetInfo,
   ScrollView,
 } from 'react-native';
+
 // import {LoginManager, AccessToken} from 'react-native-fbsdk';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -28,8 +29,9 @@ import {
   statusCodes,
 } from '@react-native-community/google-signin';
 import {LoginManager, AccessToken} from 'react-native-fbsdk';
+
 GoogleSignin.configure();
-export default class registration extends React.PureComponent {
+export default class Login extends React.PureComponent {
   state = {
     username: '',
     password: '',
@@ -44,7 +46,10 @@ export default class registration extends React.PureComponent {
   };
   handleTextChange = newText => this.setState({email: newText});
   handleTextChange1 = newText => this.setState({password: newText});
+
   componentDidMount=async()=>{
+
+ 
     try {
       let value = await AsyncStorage.getItem('user');
       if (value !== null) {

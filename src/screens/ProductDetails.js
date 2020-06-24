@@ -371,7 +371,7 @@ export default class ProductDetails extends Component {
             <Text
               style={{marginHorizontal: 5,fontSize:12, color: 'white', fontWeight: '400'}}>
               {' '}
-              0300- 53193358{' '}
+              03008487711{' '}
             </Text>
             </Col>
             <Col>

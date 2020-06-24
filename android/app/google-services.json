@@ -1,4 +1,3 @@
-
 {
   "project_info": {
     "project_number": "727517104798",
@@ -15,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "727517104798-akq4k1pfakfu2oa2ds2vmeqhk8felokl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paradisecenter",
+            "certificate_hash": "4095f60c2c1bd88d279e3e05e623dbbc7679dd8c"
+          }
+        },
         {
           "client_id": "727517104798-vqn01ap6uuvf159qrolt62bg5trp44g3.apps.googleusercontent.com",
           "client_type": 1,
@@ -39,6 +46,13 @@
             {
               "client_id": "727517104798-u4scf6cvoqvaaski19j3s04d1opkjq37.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "727517104798-fj0g9roit1g48kgfvu7he35bib00ij9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.ParadiseCenter"
+              }
             }
           ]
         }

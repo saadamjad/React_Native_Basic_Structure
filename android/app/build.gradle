@@ -131,7 +131,7 @@ android {
         applicationId "com.paradisecenter"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 7
+        versionCode 13
         multiDexEnabled true
         versionName "2.0"
     }

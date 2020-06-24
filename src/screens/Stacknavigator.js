@@ -88,6 +88,7 @@ import Favourite from './Favourite';
 import Search from './Search';
 import Password from './Passwrod';
 import TryAgain from './TryAgain';
+import Calculator from './Calculator';
 // import Step1 from './Step1';
 // import Step2 from './Step2';
 // import Step3 from './Step3';
@@ -137,7 +138,8 @@ const Drawer = createDrawerNavigator(
     Login: { screen: Login },
     Register: { screen: Register },
     Password:{screen:Password},
-    TryAgain:{screen:TryAgain}
+    TryAgain:{screen:TryAgain},
+    Calculator:{screen:Calculator}
 
   },
   {
