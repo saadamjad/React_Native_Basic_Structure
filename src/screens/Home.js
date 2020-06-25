@@ -10,6 +10,7 @@ import {
   AsyncStorage,
   I18nManager,
   ScrollView,
+  StyleSheet,
   Alert,
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -117,7 +118,17 @@ export default class Login extends React.Component {
     }
   };
 
+getMoreProduct=async()=>{
 
+  this.setState({isLoading:true})
+  const responseTotal = await getAllProducts(50)
+  console.log('Home _retrieveData responseTotal: ', responseTotal)
+  this.setState({
+    productSet:responseTotal,
+    isLoading:false,
+    orignalData:responseTotal
+  })
+}
   componentDidMount=async()=>{
     SplashScreen.hide()
     const res = await getAllCategories()
@@ -1432,8 +1443,102 @@ export default class Login extends React.Component {
             </View>
           </View>
         )}
+       {this.state.productSet &&   <TouchableOpacity
+            onPress={() => this.getMoreProduct()}
+            style={{
+              width: '30%',
+              alignSelf: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+              // borderWidth: 1,
+              backgroundColor: 'white',
+              height:40,
+              borderColor:'#bd2e1e',
+              borderWidth:1,
+              paddingVertical: 5,
+              marginVertical: 20,
+              borderRadius: 5,
+              borderRadius: 5,
+              borderBottomEndRadius:0,
+              borderTopStartRadius:0,
+            }}>
+           {this.state.isLoading ==true?<Spinner  color={'#bd2e1e'}/>:
+            <Text style={styles.logintext}> Show More</Text>}
+          </TouchableOpacity>}
       </ScrollView>
+     
     </View>
       );
   }
 }
+
+const styles = StyleSheet.create({
+  parent: {
+    flex: 1,
+    backgroundColor: '#f8f8f8',
+    paddingVertical: 20,
+  },
+  tocenterview: {
+    // height:50,bw
+    alignItems: 'center',
+    width: '90%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    justifyContent: 'flex-end',
+  },
+  hello: {
+    // marginTop: 20,
+    fontSize: 15,
+    color: 'black',
+  },
+  moving: {
+    fontSize: 25,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  et1: {
+    borderColor: '#d3d3d3',
+
+    backgroundColor: 'white',
+    height: 50,
+    marginTop: 10,
+    borderBottomWidth: 1,
+    width: '90%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  et2: {
+    borderColor: '#d3d3d3',
+    borderRadius: 5,
+    backgroundColor: 'white',
+    height: 50,
+    marginTop: 10,
+    borderBottomWidth: 1,
+    width: '90%',
+    // marginRight: 40,
+    // marginLeft: 40,
+  },
+  ext: {
+    justifyContent: 'center',
+    color: 'black',
+    fontSize: 15,
+    alignItems: 'center',
+  },
+  tocentertext: {
+    flex: 1,
+
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  logintext: {
+    color: '#bd2e1e',
+    fontSize: 13,
+
+    alignItems: 'center',
+  },
+  
+});
