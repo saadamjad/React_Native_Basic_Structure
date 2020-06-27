@@ -231,7 +231,7 @@ export default class ProductDetails extends Component {
       })
     }
     console.log(product)
-
+if(product.images[0]){
     this.setState({
       cat:cat,
       productDetails:product,
@@ -241,6 +241,7 @@ export default class ProductDetails extends Component {
     },()=>{    this.getMonthlyPrice(4)})
 
   }
+}
   makeLeaseForm=async()=>{
 
     try {

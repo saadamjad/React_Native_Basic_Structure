@@ -21,6 +21,8 @@ import MainHeader from '../Component/MainHeader';
 import { Row, Col, Spinner } from 'native-base';
 import SplashScreen from 'react-native-splash-screen'
 import {getAllProducts,getProductByCateId,getAllCategories, getFav, addToFav} from './../Apis/Apis'
+let no =12
+let no_no=12
 export default class Login extends React.Component {
   constructor() {
     super();
@@ -33,6 +35,7 @@ export default class Login extends React.Component {
       showProduct:true,
       showBrand:false,
       // Category:[]
+     
       Category: [
         {
           name: 'Smart Phones',
@@ -119,12 +122,13 @@ export default class Login extends React.Component {
   };
 
 getMoreProduct=async()=>{
-
+  no = no +5
   this.setState({isLoading:true})
-  const responseTotal = await getAllProducts(50)
+  const responseTotal = await getAllProducts(no)
   console.log('Home _retrieveData responseTotal: ', responseTotal)
   this.setState({
     productSet:responseTotal,
+    noShow:true,
     isLoading:false,
     orignalData:responseTotal
   })
@@ -143,11 +147,13 @@ getMoreProduct=async()=>{
     })
     console.log('fetching one')
 
-    const responseTotal = await getAllProducts(20)
+    const responseTotal = await getAllProducts(10)
     console.log('Home _retrieveData responseTotal: ', responseTotal)
     this.setState({
       productSet:responseTotal,
-      orignalData:responseTotal
+      orignalData:responseTotal,
+      noShow:true,
+
     })
     
     // if(responseTotal)
@@ -268,13 +274,33 @@ getMoreProduct=async()=>{
     })
   }
     else{
-      const responseate= await getProductByCateId(id)
-      console.log('car',responseate)
-      this.setState({
-        // productSet:responseate
-      })
+      // const responseate= await getProductByCateId(id)
+      // console.log('car',responseate)
+      // this.setState({
+      //   // productSet:responseate
+      // })
     }
    
+  }
+  getMoreProductSub=async()=>{
+    no_no = no_no +5
+    this.setState({isLoading:true})
+    const responseate= await getProductByCateId(this.state.selectedIDSub,no_no)
+    if(responseate.length>no_no){
+      this.setState({
+        noshowSub:true
+      })
+    }
+    else{
+      this.setState({
+        noshowSub:false
+      })
+    }
+    console.log('car',responseate)
+    this.setState({
+      noShow:false,
+      productSet:responseate
+    })
   }
   getProductSub =async(id,name)=>{
     this.setState({
@@ -284,9 +310,18 @@ getMoreProduct=async()=>{
       showProduct:true
     })
     console.log('car')
-    const responseate= await getProductByCateId(id)
+    const responseate= await getProductByCateId(id,no_no)
+    if(responseate.length>no_no){
+      this.setState({
+        noshowSub:true
+      })
+    }
+    else{
+
+    }
     console.log('car',responseate)
     this.setState({
+      noShow:false,
       productSet:responseate
     })
   }
@@ -295,6 +330,7 @@ getMoreProduct=async()=>{
   };
   getProduct=(id,name)=>{
     this.setState({
+      noShow:false,
       CateName:name,
       productSet:undefined,
       selectedID:id,
@@ -550,7 +586,7 @@ getMoreProduct=async()=>{
             paddingVertical: 10,
             marginTop: 30,
           }}>
-          {this.state.Category.map((item, i) => {
+         {this.state.Category.map((item, i) => {
             return (
               <TouchableOpacity
                 disabled={item.id == 0 && true}
@@ -561,19 +597,11 @@ getMoreProduct=async()=>{
                     this.state.selectedID == item.id ? '#DD3333' : 'white',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  overflow: 'hidden',
+                  // overflow: 'hidden',
                   marginVertical: 5,
                   marginHorizontal: 10,
                   borderRadius: 90,
-                  shadowColor: '#000',
-                  shadowOffset: {
-                    width: 0,
-                    height: 2,
-                  },
-                  shadowOpacity: 0.25,
-                  shadowRadius: 3.84,
-
-                  elevation: 2,
+                 
                 }}
                 onPress={() => this.getProduct(item.id, item.name)}>
                 <Image
@@ -587,7 +615,7 @@ getMoreProduct=async()=>{
                 />
               </TouchableOpacity>
             );
-          })}
+          })} 
         </View>
         {this.state.showBrand == true && (
           <View>
@@ -755,7 +783,7 @@ getMoreProduct=async()=>{
               {this.state.productSet ? (
                 this.state.productSet.map((item, i) => {
                   return (
-                    i < 6 && (
+                    i < 4 && (
                       <TouchableOpacity
                         onPress={() =>
                           this.props.navigation.navigate('ProductDetails', {
@@ -790,11 +818,12 @@ getMoreProduct=async()=>{
                             borderWidth: 0,
                             width: '100%',
                           }}>
+                           { item.images.length>0&&
                           <Image
                             source={{uri: item.images[0].src}}
                             style={{height: '100%', width: '100%'}}
                             resizeMode="contain"
-                          />
+                          />}
                           <View
                             style={{
                               height: 30,
@@ -945,10 +974,10 @@ getMoreProduct=async()=>{
               {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
               {this.state.productSet &&
                 this.state.productSet
-                  .slice(6, this.state.productSet.length)
+                  .slice(4, this.state.productSet.length)
                   .map((item, i) => {
                     return (
-                      i < 6 && (
+                      i < 4 && (
                         <TouchableOpacity
                           onPress={() =>
                             this.props.navigation.navigate('ProductDetails', {
@@ -983,11 +1012,12 @@ getMoreProduct=async()=>{
                               borderWidth: 0,
                               width: '100%',
                             }}>
+                                  { item.images.length>0&&
                             <Image
                               source={{uri: item.images[0].src}}
                               style={{height: '100%', width: '100%'}}
                               resizeMode="contain"
-                            />
+                            />}
                             <View
                               style={{
                                 height: 30,
@@ -1122,10 +1152,10 @@ getMoreProduct=async()=>{
               {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
               {this.state.productSet &&
                 this.state.productSet
-                  .slice(12, this.state.productSet.length)
+                  .slice(8, this.state.productSet.length)
                   .map((item, i) => {
                     return (
-                      i < 6 && (
+                      i < 4 && (
                         <TouchableOpacity
                           onPress={() =>
                             this.props.navigation.navigate('ProductDetails', {
@@ -1160,11 +1190,12 @@ getMoreProduct=async()=>{
                               borderWidth: 0,
                               width: '100%',
                             }}>
+                                  { item.images.length>0&&
                             <Image
                               source={{uri: item.images[0].src}}
                               style={{height: '100%', width: '100%'}}
                               resizeMode="contain"
-                            />
+                            />}
                             <View
                               style={{
                                 height: 30,
@@ -1300,7 +1331,7 @@ getMoreProduct=async()=>{
               {/* <Image style={{width:'100%',height:200}} src={require('./../assets/images/cover.jpg')}/> */}
               {this.state.productSet &&
                 this.state.productSet
-                  .slice(18, this.state.productSet.length)
+                  .slice(12, this.state.productSet.length)
                   .map((item, i) => {
                     return (
                       <TouchableOpacity
@@ -1336,12 +1367,13 @@ getMoreProduct=async()=>{
                             height: '60%',
                             borderWidth: 0,
                             width: '100%',
-                          }}>
+                          }}>    
+                          {item.images.length>0&&
                           <Image
                             source={{uri: item.images[0].src}}
                             style={{height: '100%', width: '100%'}}
                             resizeMode="contain"
-                          />
+                          />}
                           <View
                             style={{
                               height: 30,
@@ -1443,8 +1475,31 @@ getMoreProduct=async()=>{
             </View>
           </View>
         )}
-       {this.state.productSet &&   <TouchableOpacity
+       {this.state.noShow==true &&   <TouchableOpacity
             onPress={() => this.getMoreProduct()}
+            style={{
+              width: '30%',
+              alignSelf: 'center',
+              alignItems: 'center',
+              justifyContent: 'center',
+              // borderWidth: 1,
+              backgroundColor: 'white',
+              height:40,
+              borderColor:'#bd2e1e',
+              borderWidth:1,
+              paddingVertical: 5,
+              marginVertical: 20,
+              borderRadius: 5,
+              borderRadius: 5,
+              borderBottomEndRadius:0,
+              borderTopStartRadius:0,
+            }}>
+           {this.state.isLoading ==true?<Spinner  color={'#bd2e1e'}/>:
+            <Text style={styles.logintext}> Show More</Text>}
+          </TouchableOpacity>}
+
+          {this.state.noshowSub==true &&   <TouchableOpacity
+            onPress={() => this.getMoreProductSub()}
             style={{
               width: '30%',
               alignSelf: 'center',
